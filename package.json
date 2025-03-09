@@ -1,0 +1,10 @@
+{
+  "name": "grafig",
+  "version": "0.0.0",
+  "author": "Adam Evans",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
