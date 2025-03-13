@@ -1,0 +1,21 @@
+{
+  "name": "figsyntax",
+  "version": "0.0.2",
+  "bin": "bin/figsyntax",
+  "scripts": {
+    "build": "scripts/build.sh",
+    "clean": "scripts/clean.sh",
+    "download": "scripts/download.sh",
+    "generate": "scripts/generate.sh",
+    "preinstall": "scripts/preinstall.sh",
+    "transform": "scripts/transform.sh",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parse": "bin/figsyntax parse",
+    "analyse": "bin/figsyntax analyse",
+    "transpile": "bin/figsyntax transpile"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "description": ""
+}
