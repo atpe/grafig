@@ -9,7 +9,6 @@ const DELTA = 1000 / 120
 const canvas = document.createElement('canvas')
 document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
-if (!ctx) return
 
 canvas.width = CANVAS_SIZE
 canvas.height = CANVAS_SIZE
@@ -25,7 +24,7 @@ const random = () => normalize([2 * Math.random() - 1, 2 * Math.random() - 1])
 
 const scaled = () => [Math.random() * CANVAS_SIZE, Math.random() * CANVAS_SIZE]
 
-const tiles = Array((CANVAS_SIZE * CANVAS_SIZE) / TILE_SIZE ** 2)
+const tiles = Array((CANVAS_SIZE * CANVAS_SIZE) / (TILE_SIZE * TILE_SIZE))
   .fill([])
   .map(random)
 
@@ -36,7 +35,7 @@ let points = Array(POINT_COUNT)
     velocity: random(),
   }))
 
-const draw = () => {
+function draw() {
   points = points.map((point) => {
     const index =
       Math.floor(point.position[0] / TILE_SIZE) +

@@ -9,7 +9,8 @@
     "generate": "scripts/generate.sh",
     "preinstall": "scripts/preinstall.sh",
     "transform": "scripts/transform.sh",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "scripts/test.sh",
+    "posttest": "node scripts/test_compare.js",
     "parse": "bin/figsyntax parse",
     "analyse": "bin/figsyntax analyse",
     "transpile": "bin/figsyntax transpile"

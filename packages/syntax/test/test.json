@@ -1,0 +1,5711 @@
+[
+  {
+    "file": "test/bootstrap.js",
+    "function": "program",
+    "line": 5,
+    "sloc": 368,
+    "lloc": 65,
+    "params": 15,
+    "halstead": {
+      "operatorsTotal": 20,
+      "operatorsUnique": 265,
+      "operandsTotal": 118,
+      "operandsUnique": 226,
+      "vocabulary": 138,
+      "length": 491,
+      "difficulty": 19.152542372881356,
+      "volume": 3490.285508278081,
+      "effort": 66847.84109074969,
+      "time": 3713.768949486094,
+      "bugs": 1.1634285027593603
+    },
+    "cyclomatic": {
+      "complexity": 18,
+      "density": 0.27692307692307694
+    },
+    "functions": [
+      {
+        "file": "test/bootstrap.js",
+        "function": "makeEventUid",
+        "line": 68,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 11,
+          "operandsTotal": 8,
+          "operandsUnique": 17,
+          "vocabulary": 17,
+          "length": 28,
+          "difficulty": 9.5625,
+          "volume": 114.4489595550095,
+          "effort": 1094.4181757447782,
+          "time": 60.801009763598785,
+          "bugs": 0.038149653185003164
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 3
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "getElementEvents",
+        "line": 72,
+        "sloc": 8,
+        "lloc": 4,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 14,
+          "operandsTotal": 6,
+          "operandsUnique": 14,
+          "vocabulary": 15,
+          "length": 28,
+          "difficulty": 10.5,
+          "volume": 109.39293667703852,
+          "effort": 1148.6258351089045,
+          "time": 63.81254639493914,
+          "bugs": 0.03646431222567951
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "bootstrapHandler",
+        "line": 81,
+        "sloc": 11,
+        "lloc": 1,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 4,
+          "operatorsUnique": 4,
+          "operandsTotal": 3,
+          "operandsUnique": 3,
+          "vocabulary": 7,
+          "length": 7,
+          "difficulty": 2,
+          "volume": 19.651484454403228,
+          "effort": 39.302968908806456,
+          "time": 2.1834982727114696,
+          "bugs": 0.00655049481813441
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/bootstrap.js",
+            "function": "handler",
+            "line": 82,
+            "sloc": 9,
+            "lloc": 4,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 19,
+              "operandsTotal": 11,
+              "operandsUnique": 18,
+              "vocabulary": 20,
+              "length": 37,
+              "difficulty": 7.363636363636364,
+              "volume": 159.91133951083242,
+              "effort": 1177.5289545797662,
+              "time": 65.41827525443145,
+              "bugs": 0.05330377983694414
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "bootstrapDelegationHandler",
+        "line": 93,
+        "sloc": 25,
+        "lloc": 1,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 4,
+          "operatorsUnique": 5,
+          "operandsTotal": 4,
+          "operandsUnique": 4,
+          "vocabulary": 8,
+          "length": 9,
+          "difficulty": 2,
+          "volume": 27,
+          "effort": 54,
+          "time": 3,
+          "bugs": 0.009
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/bootstrap.js",
+            "function": "handler",
+            "line": 94,
+            "sloc": 23,
+            "lloc": 11,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 17,
+              "operatorsUnique": 43,
+              "operandsTotal": 18,
+              "operandsUnique": 35,
+              "vocabulary": 35,
+              "length": 78,
+              "difficulty": 16.52777777777778,
+              "volume": 400.08407532170736,
+              "effort": 6612.500689344886,
+              "time": 367.36114940804924,
+              "bugs": 0.13336135844056912
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.45454545454545453
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "findHandler",
+        "line": 119,
+        "sloc": 7,
+        "lloc": 1,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 17,
+          "operandsTotal": 9,
+          "operandsUnique": 16,
+          "vocabulary": 18,
+          "length": 33,
+          "difficulty": 8,
+          "volume": 137.6075250475963,
+          "effort": 1100.8602003807705,
+          "time": 61.15890002115392,
+          "bugs": 0.04586917501586544
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "normalizeParameters",
+        "line": 127,
+        "sloc": 14,
+        "lloc": 6,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 17,
+          "operatorsUnique": 27,
+          "operandsTotal": 11,
+          "operandsUnique": 23,
+          "vocabulary": 28,
+          "length": 50,
+          "difficulty": 17.772727272727273,
+          "volume": 240.36774610288018,
+          "effort": 4271.990396646644,
+          "time": 237.33279981370242,
+          "bugs": 0.08012258203429339
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "addHandler",
+        "line": 142,
+        "sloc": 65,
+        "lloc": 20,
+        "params": 5,
+        "halstead": {
+          "operatorsTotal": 19,
+          "operatorsUnique": 86,
+          "operandsTotal": 30,
+          "operandsUnique": 81,
+          "vocabulary": 49,
+          "length": 167,
+          "difficulty": 25.650000000000002,
+          "volume": 937.6565439672398,
+          "effort": 24050.890352759703,
+          "time": 1336.1605751533168,
+          "bugs": 0.3125521813224133
+        },
+        "cyclomatic": {
+          "complexity": 9,
+          "density": 0.45
+        },
+        "functions": [
+          {
+            "file": "test/bootstrap.js",
+            "function": "wrapFunction",
+            "line": 162,
+            "sloc": 11,
+            "lloc": 1,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 3,
+              "operatorsUnique": 3,
+              "operandsTotal": 1,
+              "operandsUnique": 1,
+              "vocabulary": 4,
+              "length": 4,
+              "difficulty": 1.5,
+              "volume": 8,
+              "effort": 12,
+              "time": 0.6666666666666666,
+              "bugs": 0.0026666666666666666
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            },
+            "functions": [
+              {
+                "file": "test/bootstrap.js",
+                "function": "anonymous",
+                "line": 163,
+                "sloc": 9,
+                "lloc": 2,
+                "params": 1,
+                "halstead": {
+                  "operatorsTotal": 11,
+                  "operatorsUnique": 22,
+                  "operandsTotal": 7,
+                  "operandsUnique": 16,
+                  "vocabulary": 18,
+                  "length": 38,
+                  "difficulty": 12.571428571428571,
+                  "volume": 158.45715005480787,
+                  "effort": 1992.032743546156,
+                  "time": 110.66848575256422,
+                  "bugs": 0.05281905001826929
+                },
+                "cyclomatic": {
+                  "complexity": 3,
+                  "density": 1.5
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "removeHandler",
+        "line": 208,
+        "sloc": 16,
+        "lloc": 5,
+        "params": 5,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 25,
+          "operandsTotal": 11,
+          "operandsUnique": 23,
+          "vocabulary": 23,
+          "length": 48,
+          "difficulty": 12.545454545454545,
+          "volume": 217.13097389073664,
+          "effort": 2724.006763356514,
+          "time": 151.3337090753619,
+          "bugs": 0.07237699129691222
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.4
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "removeNamespacedHandlers",
+        "line": 225,
+        "sloc": 15,
+        "lloc": 5,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 29,
+          "operandsTotal": 14,
+          "operandsUnique": 24,
+          "vocabulary": 26,
+          "length": 53,
+          "difficulty": 10.285714285714285,
+          "volume": 249.12330506147785,
+          "effort": 2562.4111377752006,
+          "time": 142.35617432084447,
+          "bugs": 0.08304110168715928
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.8
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "getTypeEvent",
+        "line": 241,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 9,
+          "operandsTotal": 6,
+          "operandsUnique": 10,
+          "vocabulary": 15,
+          "length": 19,
+          "difficulty": 7.5,
+          "volume": 74.23092131656186,
+          "effort": 556.731909874214,
+          "time": 30.929550548567445,
+          "bugs": 0.024743640438853954
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/bootstrap.js",
+        "function": "hydrateObj",
+        "line": 357,
+        "sloc": 16,
+        "lloc": 7,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 30,
+          "operandsTotal": 12,
+          "operandsUnique": 21,
+          "vocabulary": 26,
+          "length": 51,
+          "difficulty": 12.25,
+          "volume": 239.72242562519568,
+          "effort": 2936.599713908647,
+          "time": 163.1444285504804,
+          "bugs": 0.07990747520839857
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.42857142857142855
+        }
+      }
+    ]
+  },
+  {
+    "file": "test/mocha.js",
+    "function": "program",
+    "line": 1,
+    "sloc": 267,
+    "lloc": 23,
+    "params": 0,
+    "halstead": {
+      "operatorsTotal": 5,
+      "operatorsUnique": 63,
+      "operandsTotal": 29,
+      "operandsUnique": 67,
+      "vocabulary": 34,
+      "length": 130,
+      "difficulty": 5.775862068965517,
+      "volume": 661.3701693625441,
+      "effort": 3819.9828747664183,
+      "time": 212.22127082035658,
+      "bugs": 0.22045672312084802
+    },
+    "cyclomatic": {
+      "complexity": 1,
+      "density": 0.043478260869565216
+    },
+    "functions": [
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat",
+        "line": 34,
+        "sloc": 40,
+        "lloc": 16,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 60,
+          "operandsTotal": 31,
+          "operandsUnique": 58,
+          "vocabulary": 41,
+          "length": 118,
+          "difficulty": 9.354838709677418,
+          "volume": 632.1911365449339,
+          "effort": 5914.0461160655095,
+          "time": 328.55811755919495,
+          "bugs": 0.2107303788483113
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.0625
+        },
+        "functions": [
+          {
+            "file": "test/mocha.js",
+            "function": "anonymous",
+            "line": 49,
+            "sloc": 4,
+            "lloc": 2,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 7,
+              "operandsTotal": 5,
+              "operandsUnique": 5,
+              "vocabulary": 9,
+              "length": 12,
+              "difficulty": 2,
+              "volume": 38.03910001730775,
+              "effort": 76.0782000346155,
+              "time": 4.226566668589751,
+              "bugs": 0.012679700005769252
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mocha.js",
+            "function": "anonymous",
+            "line": 54,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 4,
+              "operandsTotal": 2,
+              "operandsUnique": 2,
+              "vocabulary": 6,
+              "length": 6,
+              "difficulty": 2,
+              "volume": 15.509775004326936,
+              "effort": 31.019550008653873,
+              "time": 1.723308333814104,
+              "bugs": 0.005169925001442312
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/mocha.js",
+            "function": "anonymous",
+            "line": 58,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 4,
+              "operandsTotal": 2,
+              "operandsUnique": 2,
+              "vocabulary": 6,
+              "length": 6,
+              "difficulty": 2,
+              "volume": 15.509775004326936,
+              "effort": 31.019550008653873,
+              "time": 1.723308333814104,
+              "bugs": 0.005169925001442312
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/mocha.js",
+            "function": "anonymous",
+            "line": 62,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 4,
+              "operandsTotal": 2,
+              "operandsUnique": 2,
+              "vocabulary": 6,
+              "length": 6,
+              "difficulty": 2,
+              "volume": 15.509775004326936,
+              "effort": 31.019550008653873,
+              "time": 1.723308333814104,
+              "bugs": 0.005169925001442312
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/mocha.js",
+            "function": "anonymous",
+            "line": 66,
+            "sloc": 7,
+            "lloc": 5,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 17,
+              "operandsTotal": 12,
+              "operandsUnique": 15,
+              "vocabulary": 21,
+              "length": 32,
+              "difficulty": 5.625,
+              "volume": 140.55415752892034,
+              "effort": 790.6171361001769,
+              "time": 43.923174227787605,
+              "bugs": 0.04685138584297345
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.draw",
+        "line": 86,
+        "sloc": 7,
+        "lloc": 5,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 14,
+          "operandsTotal": 6,
+          "operandsUnique": 12,
+          "vocabulary": 12,
+          "length": 26,
+          "difficulty": 6,
+          "volume": 93.20902501875005,
+          "effort": 559.2541501125004,
+          "time": 31.069675006250023,
+          "bugs": 0.03106967500625002
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.2
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.drawScoreboard",
+        "line": 101,
+        "sloc": 16,
+        "lloc": 7,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 20,
+          "operandsTotal": 15,
+          "operandsUnique": 23,
+          "vocabulary": 22,
+          "length": 43,
+          "difficulty": 5.366666666666667,
+          "volume": 191.75555960140377,
+          "effort": 1029.088169860867,
+          "time": 57.17156499227039,
+          "bugs": 0.0639185198671346
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.14285714285714285
+        },
+        "functions": [
+          {
+            "file": "test/mocha.js",
+            "function": "draw",
+            "line": 104,
+            "sloc": 5,
+            "lloc": 3,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 15,
+              "operandsTotal": 10,
+              "operandsUnique": 18,
+              "vocabulary": 15,
+              "length": 33,
+              "difficulty": 4.5,
+              "volume": 128.92738965508113,
+              "effort": 580.1732534478651,
+              "time": 32.23184741377028,
+              "bugs": 0.04297579655169371
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.3333333333333333
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.appendRainbow",
+        "line": 124,
+        "sloc": 12,
+        "lloc": 8,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 31,
+          "operandsTotal": 16,
+          "operandsUnique": 28,
+          "vocabulary": 30,
+          "length": 59,
+          "difficulty": 12.25,
+          "volume": 289.50654514090263,
+          "effort": 3546.4551779760573,
+          "time": 197.02528766533652,
+          "bugs": 0.09650218171363421
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.drawRainbow",
+        "line": 143,
+        "sloc": 11,
+        "lloc": 3,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 10,
+          "operandsTotal": 6,
+          "operandsUnique": 9,
+          "vocabulary": 12,
+          "length": 19,
+          "difficulty": 4.5,
+          "volume": 68.11428751370197,
+          "effort": 306.51429381165883,
+          "time": 17.028571878425492,
+          "bugs": 0.022704762504567322
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        },
+        "functions": [
+          {
+            "file": "test/mocha.js",
+            "function": "anonymous",
+            "line": 146,
+            "sloc": 5,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 16,
+              "operandsTotal": 11,
+              "operandsUnique": 18,
+              "vocabulary": 16,
+              "length": 34,
+              "difficulty": 4.090909090909091,
+              "volume": 136,
+              "effort": 556.3636363636364,
+              "time": 30.90909090909091,
+              "bugs": 0.04533333333333334
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.3333333333333333
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.drawNyanCat",
+        "line": 160,
+        "sloc": 28,
+        "lloc": 21,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 82,
+          "operandsTotal": 33,
+          "operandsUnique": 95,
+          "vocabulary": 43,
+          "length": 177,
+          "difficulty": 14.393939393939394,
+          "volume": 960.4488615822713,
+          "effort": 13824.6427045933,
+          "time": 768.0357058107388,
+          "bugs": 0.3201496205274238
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 0.23809523809523808
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.face",
+        "line": 196,
+        "sloc": 11,
+        "lloc": 10,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 20,
+          "operandsTotal": 9,
+          "operandsUnique": 13,
+          "vocabulary": 17,
+          "length": 33,
+          "difficulty": 5.777777777777778,
+          "volume": 134.88627376126118,
+          "effort": 779.3429150650646,
+          "time": 43.29682861472581,
+          "bugs": 0.04496209125375373
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.4
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.cursorUp",
+        "line": 215,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 6,
+          "operandsUnique": 7,
+          "vocabulary": 11,
+          "length": 14,
+          "difficulty": 2.916666666666667,
+          "volume": 48.432042660922164,
+          "effort": 141.26012442768965,
+          "time": 7.847784690427202,
+          "bugs": 0.01614401422030739
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.cursorDown",
+        "line": 226,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 6,
+          "operandsUnique": 7,
+          "vocabulary": 11,
+          "length": 14,
+          "difficulty": 2.916666666666667,
+          "volume": 48.432042660922164,
+          "effort": 141.26012442768965,
+          "time": 7.847784690427202,
+          "bugs": 0.01614401422030739
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.generateColors",
+        "line": 236,
+        "sloc": 14,
+        "lloc": 10,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 59,
+          "operandsTotal": 21,
+          "operandsUnique": 54,
+          "vocabulary": 35,
+          "length": 113,
+          "difficulty": 18,
+          "volume": 579.6089809147812,
+          "effort": 10432.961656466063,
+          "time": 579.6089809147812,
+          "bugs": 0.1932029936382604
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.2
+        }
+      },
+      {
+        "file": "test/mocha.js",
+        "function": "NyanCat.prototype.rainbowify",
+        "line": 258,
+        "sloc": 8,
+        "lloc": 5,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 22,
+          "operandsTotal": 12,
+          "operandsUnique": 20,
+          "vocabulary": 24,
+          "length": 42,
+          "difficulty": 10,
+          "volume": 192.56842503028855,
+          "effort": 1925.6842503028856,
+          "time": 106.98245835016031,
+          "bugs": 0.06418947501009618
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.4
+        }
+      }
+    ]
+  },
+  {
+    "file": "test/mui.js",
+    "function": "program",
+    "line": 1,
+    "sloc": 1248,
+    "lloc": 9,
+    "params": 1,
+    "halstead": {
+      "operatorsTotal": 7,
+      "operatorsUnique": 19,
+      "operandsTotal": 14,
+      "operandsUnique": 17,
+      "vocabulary": 21,
+      "length": 36,
+      "difficulty": 4.25,
+      "volume": 158.12342722003538,
+      "effort": 672.0245656851504,
+      "time": 37.334698093619465,
+      "bugs": 0.05270780907334513
+    },
+    "cyclomatic": {
+      "complexity": 1,
+      "density": 0.1111111111111111
+    },
+    "functions": [
+      {
+        "file": "test/mui.js",
+        "function": "stripDiacritics",
+        "line": 4,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 8,
+          "operandsTotal": 7,
+          "operandsUnique": 8,
+          "vocabulary": 13,
+          "length": 16,
+          "difficulty": 3.4285714285714284,
+          "volume": 59.207035490257475,
+          "effort": 202.99555025231132,
+          "time": 11.277530569572852,
+          "bugs": 0.019735678496752493
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/mui.js",
+        "function": "createFilterOptions",
+        "line": 8,
+        "sloc": 40,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 18,
+          "operandsTotal": 11,
+          "operandsUnique": 13,
+          "vocabulary": 17,
+          "length": 31,
+          "difficulty": 3.545454545454546,
+          "volume": 126.71134807876051,
+          "effort": 449.2493250065146,
+          "time": 24.958295833695257,
+          "bugs": 0.042237116026253504
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        },
+        "functions": [
+          {
+            "file": "test/mui.js",
+            "function": "anonymous",
+            "line": 18,
+            "sloc": 29,
+            "lloc": 7,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 36,
+              "operandsTotal": 15,
+              "operandsUnique": 28,
+              "vocabulary": 30,
+              "length": 64,
+              "difficulty": 14,
+              "volume": 314.0409981189452,
+              "effort": 4396.573973665233,
+              "time": 244.2541096480685,
+              "bugs": 0.10468033270631506
+            },
+            "cyclomatic": {
+              "complexity": 6,
+              "density": 0.8571428571428571
+            },
+            "functions": [
+              {
+                "file": "test/mui.js",
+                "function": "filteredOptions",
+                "line": 29,
+                "sloc": 13,
+                "lloc": 6,
+                "params": 1,
+                "halstead": {
+                  "operatorsTotal": 12,
+                  "operatorsUnique": 25,
+                  "operandsTotal": 13,
+                  "operandsUnique": 21,
+                  "vocabulary": 25,
+                  "length": 46,
+                  "difficulty": 9.692307692307693,
+                  "volume": 213.6173847296373,
+                  "effort": 2070.4454212257156,
+                  "time": 115.02474562365086,
+                  "bugs": 0.0712057949098791
+                },
+                "cyclomatic": {
+                  "complexity": 5,
+                  "density": 0.8333333333333334
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "test/mui.js",
+        "function": "getInputValue",
+        "line": 59,
+        "sloc": 7,
+        "lloc": 4,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 18,
+          "operandsTotal": 8,
+          "operandsUnique": 15,
+          "vocabulary": 22,
+          "length": 33,
+          "difficulty": 13.125,
+          "volume": 147.1612434150308,
+          "effort": 1931.4913198222794,
+          "time": 107.30507332345996,
+          "bugs": 0.04905374780501027
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/mui.js",
+        "function": "useAutocomplete",
+        "line": 67,
+        "sloc": 1182,
+        "lloc": 66,
+        "params": 9,
+        "halstead": {
+          "operatorsTotal": 22,
+          "operatorsUnique": 521,
+          "operandsTotal": 185,
+          "operandsUnique": 453,
+          "vocabulary": 207,
+          "length": 974,
+          "difficulty": 26.935135135135134,
+          "volume": 7493.456296604343,
+          "effort": 201837.25797826724,
+          "time": 11213.180998792624,
+          "bugs": 2.497818765534781
+        },
+        "cyclomatic": {
+          "complexity": 16,
+          "density": 0.24242424242424243
+        },
+        "functions": [
+          {
+            "file": "test/mui.js",
+            "function": "getOptionLabel",
+            "line": 114,
+            "sloc": 18,
+            "lloc": 7,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 13,
+              "operatorsUnique": 30,
+              "operandsTotal": 48,
+              "operandsUnique": 113,
+              "vocabulary": 61,
+              "length": 143,
+              "difficulty": 15.302083333333332,
+              "volume": 848.0954392714928,
+              "effort": 12977.62708635232,
+              "time": 720.9792825751289,
+              "bugs": 0.2826984797571642
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.5714285714285714
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "resetInputValue",
+            "line": 164,
+            "sloc": 21,
+            "lloc": 9,
+            "params": 3,
+            "halstead": {
+              "operatorsTotal": 16,
+              "operatorsUnique": 35,
+              "operandsTotal": 15,
+              "operandsUnique": 27,
+              "vocabulary": 31,
+              "length": 62,
+              "difficulty": 14.4,
+              "volume": 307.16017124398627,
+              "effort": 4423.106465913403,
+              "time": 245.72813699518903,
+              "bugs": 0.10238672374799543
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.5555555555555556
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "filteredOptions",
+            "line": 212,
+            "sloc": 12,
+            "lloc": 3,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 18,
+              "operandsTotal": 10,
+              "operandsUnique": 14,
+              "vocabulary": 22,
+              "length": 32,
+              "difficulty": 8.399999999999999,
+              "volume": 142.7018117963935,
+              "effort": 1198.6952190897052,
+              "time": 66.59417883831696,
+              "bugs": 0.04756727059879784
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "anonymous",
+            "line": 240,
+            "sloc": 14,
+            "lloc": 6,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 20,
+              "operandsTotal": 8,
+              "operandsUnique": 12,
+              "vocabulary": 20,
+              "length": 32,
+              "difficulty": 9,
+              "volume": 138.3016990363956,
+              "effort": 1244.7152913275604,
+              "time": 69.1508495181978,
+              "bugs": 0.0461005663454652
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "focusTag",
+            "line": 257,
+            "sloc": 7,
+            "lloc": 4,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 8,
+              "operatorsUnique": 16,
+              "operandsTotal": 23,
+              "operandsUnique": 33,
+              "vocabulary": 31,
+              "length": 49,
+              "difficulty": 5.739130434782608,
+              "volume": 242.75561920895686,
+              "effort": 1393.206162416622,
+              "time": 77.400342356479,
+              "bugs": 0.08091853973631895
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "anonymous",
+            "line": 266,
+            "sloc": 6,
+            "lloc": 3,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 8,
+              "operatorsUnique": 12,
+              "operandsTotal": 7,
+              "operandsUnique": 9,
+              "vocabulary": 15,
+              "length": 21,
+              "difficulty": 5.142857142857143,
+              "volume": 82.0447025077789,
+              "effort": 421.9441843257201,
+              "time": 23.441343573651114,
+              "bugs": 0.02734823416925963
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.6666666666666666
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "validOptionIndex",
+            "line": 273,
+            "sloc": 40,
+            "lloc": 14,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 23,
+              "operatorsUnique": 67,
+              "operandsTotal": 40,
+              "operandsUnique": 78,
+              "vocabulary": 63,
+              "length": 145,
+              "difficulty": 22.425,
+              "volume": 866.7055889074879,
+              "effort": 19435.872831250417,
+              "time": 1079.7707128472455,
+              "bugs": 0.28890186296916265
+            },
+            "cyclomatic": {
+              "complexity": 11,
+              "density": 0.7857142857142857
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "setHighlightedIndex",
+            "line": 314,
+            "sloc": 87,
+            "lloc": 36,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 23,
+              "operatorsUnique": 153,
+              "operandsTotal": 69,
+              "operandsUnique": 255,
+              "vocabulary": 92,
+              "length": 408,
+              "difficulty": 42.5,
+              "volume": 2661.6132780712614,
+              "effort": 113118.56431802861,
+              "time": 6284.364684334923,
+              "bugs": 0.8872044260237538
+            },
+            "cyclomatic": {
+              "complexity": 16,
+              "density": 0.4444444444444444
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "changeHighlightedIndex",
+            "line": 403,
+            "sloc": 72,
+            "lloc": 14,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 18,
+              "operatorsUnique": 66,
+              "operandsTotal": 26,
+              "operandsUnique": 51,
+              "vocabulary": 44,
+              "length": 117,
+              "difficulty": 17.653846153846153,
+              "volume": 638.7534993805638,
+              "effort": 11276.456008295338,
+              "time": 626.4697782386298,
+              "bugs": 0.21291783312685458
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.35714285714285715
+            },
+            "functions": [
+              {
+                "file": "test/mui.js",
+                "function": "getNextIndex",
+                "line": 408,
+                "sloc": 46,
+                "lloc": 21,
+                "params": 0,
+                "halstead": {
+                  "operatorsTotal": 16,
+                  "operatorsUnique": 70,
+                  "operandsTotal": 17,
+                  "operandsUnique": 48,
+                  "vocabulary": 33,
+                  "length": 118,
+                  "difficulty": 22.58823529411765,
+                  "volume": 595.2385060842975,
+                  "effort": 13445.387431551191,
+                  "time": 746.9659684195107,
+                  "bugs": 0.19841283536143248
+                },
+                "cyclomatic": {
+                  "complexity": 12,
+                  "density": 0.5714285714285714
+                }
+              }
+            ]
+          },
+          {
+            "file": "test/mui.js",
+            "function": "getPreviousHighlightedOptionIndex",
+            "line": 477,
+            "sloc": 32,
+            "lloc": 6,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 16,
+              "operatorsUnique": 56,
+              "operandsTotal": 16,
+              "operandsUnique": 43,
+              "vocabulary": 32,
+              "length": 99,
+              "difficulty": 21.5,
+              "volume": 495,
+              "effort": 10642.5,
+              "time": 591.25,
+              "bugs": 0.165
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.6666666666666666
+            },
+            "functions": [
+              {
+                "file": "test/mui.js",
+                "function": "isSameValue",
+                "line": 478,
+                "sloc": 5,
+                "lloc": 3,
+                "params": 2,
+                "halstead": {
+                  "operatorsTotal": 10,
+                  "operatorsUnique": 16,
+                  "operandsTotal": 6,
+                  "operandsUnique": 14,
+                  "vocabulary": 16,
+                  "length": 30,
+                  "difficulty": 11.666666666666668,
+                  "volume": 120,
+                  "effort": 1400.0000000000002,
+                  "time": 77.77777777777779,
+                  "bugs": 0.04
+                },
+                "cyclomatic": {
+                  "complexity": 3,
+                  "density": 1
+                }
+              },
+              {
+                "file": "test/mui.js",
+                "function": "anonymous",
+                "line": 500,
+                "sloc": 5,
+                "lloc": 1,
+                "params": 1,
+                "halstead": {
+                  "operatorsTotal": 5,
+                  "operatorsUnique": 8,
+                  "operandsTotal": 3,
+                  "operandsUnique": 5,
+                  "vocabulary": 8,
+                  "length": 13,
+                  "difficulty": 4.166666666666667,
+                  "volume": 39,
+                  "effort": 162.5,
+                  "time": 9.027777777777779,
+                  "bugs": 0.013
+                },
+                "cyclomatic": {
+                  "complexity": 1,
+                  "density": 1
+                }
+              }
+            ]
+          },
+          {
+            "file": "test/mui.js",
+            "function": "syncHighlightedIndex",
+            "line": 510,
+            "sloc": 61,
+            "lloc": 26,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 22,
+              "operatorsUnique": 94,
+              "operandsTotal": 25,
+              "operandsUnique": 67,
+              "vocabulary": 47,
+              "length": 161,
+              "difficulty": 29.48,
+              "volume": 894.2888051200997,
+              "effort": 26363.63397494054,
+              "time": 1464.6463319411412,
+              "bugs": 0.29809626837336656
+            },
+            "cyclomatic": {
+              "complexity": 11,
+              "density": 0.4230769230769231
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleListboxRef",
+            "line": 584,
+            "sloc": 9,
+            "lloc": 4,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 9,
+              "operandsTotal": 4,
+              "operandsUnique": 6,
+              "vocabulary": 11,
+              "length": 15,
+              "difficulty": 5.25,
+              "volume": 51.89147427955946,
+              "effort": 272.43023996768716,
+              "time": 15.135013331538175,
+              "bugs": 0.017297158093186486
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "anonymous",
+            "line": 596,
+            "sloc": 25,
+            "lloc": 5,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 44,
+              "operandsTotal": 55,
+              "operandsUnique": 502,
+              "vocabulary": 70,
+              "length": 546,
+              "difficulty": 68.45454545454545,
+              "volume": 3346.5885272519517,
+              "effort": 229089.19645642905,
+              "time": 12727.177580912725,
+              "bugs": 1.1155295090839839
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleOpen",
+            "line": 627,
+            "sloc": 12,
+            "lloc": 6,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 10,
+              "operandsTotal": 6,
+              "operandsUnique": 9,
+              "vocabulary": 11,
+              "length": 19,
+              "difficulty": 3.75,
+              "volume": 65.72920075410865,
+              "effort": 246.48450282790742,
+              "time": 13.693583490439302,
+              "bugs": 0.02190973358470288
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleClose",
+            "line": 640,
+            "sloc": 11,
+            "lloc": 5,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 12,
+              "operandsTotal": 6,
+              "operandsUnique": 9,
+              "vocabulary": 13,
+              "length": 21,
+              "difficulty": 5.25,
+              "volume": 77.70923408096293,
+              "effort": 407.97347892505536,
+              "time": 22.665193273614186,
+              "bugs": 0.025903078026987644
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.6
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleValue",
+            "line": 652,
+            "sloc": 18,
+            "lloc": 9,
+            "params": 6,
+            "halstead": {
+              "operatorsTotal": 11,
+              "operatorsUnique": 34,
+              "operandsTotal": 12,
+              "operandsUnique": 26,
+              "vocabulary": 23,
+              "length": 60,
+              "difficulty": 11.916666666666666,
+              "volume": 271.4137173634208,
+              "effort": 3234.3467985807642,
+              "time": 179.6859332544869,
+              "bugs": 0.09047123912114027
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.5555555555555556
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "selectNewValue",
+            "line": 673,
+            "sloc": 57,
+            "lloc": 21,
+            "params": 6,
+            "halstead": {
+              "operatorsTotal": 20,
+              "operatorsUnique": 110,
+              "operandsTotal": 84,
+              "operandsUnique": 258,
+              "vocabulary": 104,
+              "length": 368,
+              "difficulty": 30.714285714285715,
+              "volume": 2465.761816275922,
+              "effort": 75734.11292847474,
+              "time": 4207.450718248597,
+              "bugs": 0.8219206054253072
+            },
+            "cyclomatic": {
+              "complexity": 12,
+              "density": 0.5714285714285714
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "validTagIndex",
+            "line": 731,
+            "sloc": 31,
+            "lloc": 11,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 20,
+              "operatorsUnique": 60,
+              "operandsTotal": 35,
+              "operandsUnique": 62,
+              "vocabulary": 55,
+              "length": 122,
+              "difficulty": 17.714285714285715,
+              "volume": 705.3258850500085,
+              "effort": 12494.344249457296,
+              "time": 694.1302360809609,
+              "bugs": 0.23510862835000285
+            },
+            "cyclomatic": {
+              "complexity": 10,
+              "density": 0.9090909090909091
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleFocusTag",
+            "line": 763,
+            "sloc": 32,
+            "lloc": 17,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 18,
+              "operatorsUnique": 54,
+              "operandsTotal": 18,
+              "operandsUnique": 42,
+              "vocabulary": 36,
+              "length": 96,
+              "difficulty": 21,
+              "volume": 496.31280013846197,
+              "effort": 10422.568802907701,
+              "time": 579.0316001615389,
+              "bugs": 0.165437600046154
+            },
+            "cyclomatic": {
+              "complexity": 8,
+              "density": 0.47058823529411764
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleClear",
+            "line": 796,
+            "sloc": 10,
+            "lloc": 5,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 10,
+              "operatorsUnique": 16,
+              "operandsTotal": 11,
+              "operandsUnique": 16,
+              "vocabulary": 21,
+              "length": 32,
+              "difficulty": 7.272727272727273,
+              "volume": 140.55415752892034,
+              "effort": 1022.2120547557844,
+              "time": 56.789558597543575,
+              "bugs": 0.04685138584297345
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.6
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleKeyDown",
+            "line": 807,
+            "sloc": 176,
+            "lloc": 74,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 24,
+              "operatorsUnique": 298,
+              "operandsTotal": 73,
+              "operandsUnique": 233,
+              "vocabulary": 97,
+              "length": 531,
+              "difficulty": 38.3013698630137,
+              "volume": 3504.553719201365,
+              "effort": 134229.20820393172,
+              "time": 7457.178233551762,
+              "bugs": 1.1681845730671216
+            },
+            "cyclomatic": {
+              "complexity": 32,
+              "density": 0.43243243243243246
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleFocus",
+            "line": 984,
+            "sloc": 7,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 9,
+              "operandsTotal": 7,
+              "operandsUnique": 8,
+              "vocabulary": 14,
+              "length": 17,
+              "difficulty": 4,
+              "volume": 64.72503367497927,
+              "effort": 258.9001346999171,
+              "time": 14.383340816662061,
+              "bugs": 0.02157501122499309
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.6666666666666666
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleBlur",
+            "line": 992,
+            "sloc": 25,
+            "lloc": 15,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 13,
+              "operatorsUnique": 46,
+              "operandsTotal": 26,
+              "operandsUnique": 42,
+              "vocabulary": 39,
+              "length": 88,
+              "difficulty": 10.5,
+              "volume": 465.1153952598779,
+              "effort": 4883.711650228718,
+              "time": 271.31731390159547,
+              "bugs": 0.15503846508662597
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.3333333333333333
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleInputChange",
+            "line": 1018,
+            "sloc": 20,
+            "lloc": 11,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 13,
+              "operatorsUnique": 32,
+              "operandsTotal": 17,
+              "operandsUnique": 26,
+              "vocabulary": 30,
+              "length": 58,
+              "difficulty": 9.941176470588236,
+              "volume": 284.5996545452941,
+              "effort": 2829.2553893032177,
+              "time": 157.18085496128987,
+              "bugs": 0.09486655151509803
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.45454545454545453
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleOptionMouseMove",
+            "line": 1039,
+            "sloc": 10,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 10,
+              "operatorsUnique": 19,
+              "operandsTotal": 11,
+              "operandsUnique": 15,
+              "vocabulary": 21,
+              "length": 34,
+              "difficulty": 6.8181818181818175,
+              "volume": 149.33879237447786,
+              "effort": 1018.2190389168944,
+              "time": 56.56772438427191,
+              "bugs": 0.04977959745815929
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.6666666666666666
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleOptionTouchStart",
+            "line": 1050,
+            "sloc": 8,
+            "lloc": 2,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 15,
+              "operandsTotal": 12,
+              "operandsUnique": 14,
+              "vocabulary": 19,
+              "length": 29,
+              "difficulty": 4.083333333333334,
+              "volume": 123.18989788986397,
+              "effort": 503.0254163836113,
+              "time": 27.945856465756183,
+              "bugs": 0.04106329929662132
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleOptionClick",
+            "line": 1059,
+            "sloc": 6,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 8,
+              "operatorsUnique": 14,
+              "operandsTotal": 12,
+              "operandsUnique": 15,
+              "vocabulary": 20,
+              "length": 29,
+              "difficulty": 5,
+              "volume": 125.33591475173351,
+              "effort": 626.6795737586675,
+              "time": 34.815531875481526,
+              "bugs": 0.041778638250577836
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.3333333333333333
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleTagDelete",
+            "line": 1066,
+            "sloc": 7,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 17,
+              "operandsTotal": 10,
+              "operandsUnique": 15,
+              "vocabulary": 19,
+              "length": 32,
+              "difficulty": 6.75,
+              "volume": 135.93368043019473,
+              "effort": 917.5523429038144,
+              "time": 50.97513016132302,
+              "bugs": 0.04531122681006491
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.3333333333333333
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handlePopupIndicator",
+            "line": 1074,
+            "sloc": 7,
+            "lloc": 4,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 6,
+              "operatorsUnique": 9,
+              "operandsTotal": 5,
+              "operandsUnique": 7,
+              "vocabulary": 11,
+              "length": 16,
+              "difficulty": 4.199999999999999,
+              "volume": 55.35090589819676,
+              "effort": 232.47380477242635,
+              "time": 12.915211376245908,
+              "bugs": 0.018450301966065584
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleMouseDown",
+            "line": 1083,
+            "sloc": 9,
+            "lloc": 4,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 8,
+              "operatorsUnique": 19,
+              "operandsTotal": 8,
+              "operandsUnique": 13,
+              "vocabulary": 16,
+              "length": 32,
+              "difficulty": 6.5,
+              "volume": 128,
+              "effort": 832,
+              "time": 46.22222222222222,
+              "bugs": 0.042666666666666665
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.75
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleClick",
+            "line": 1094,
+            "sloc": 17,
+            "lloc": 6,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 11,
+              "operatorsUnique": 30,
+              "operandsTotal": 14,
+              "operandsUnique": 25,
+              "vocabulary": 25,
+              "length": 55,
+              "difficulty": 9.821428571428571,
+              "volume": 255.41209043760983,
+              "effort": 2508.5116025122393,
+              "time": 139.3617556951244,
+              "bugs": 0.08513736347920328
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "handleInputMouseDown",
+            "line": 1112,
+            "sloc": 5,
+            "lloc": 2,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 8,
+              "operatorsUnique": 12,
+              "operandsTotal": 6,
+              "operandsUnique": 7,
+              "vocabulary": 14,
+              "length": 19,
+              "difficulty": 4.666666666666667,
+              "volume": 72.33974351909448,
+              "effort": 337.5854697557743,
+              "time": 18.754748319765238,
+              "bugs": 0.024113247839698163
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 1.5
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "groupedOptions",
+            "line": 1127,
+            "sloc": 27,
+            "lloc": 11,
+            "params": 3,
+            "halstead": {
+              "operatorsTotal": 18,
+              "operatorsUnique": 56,
+              "operandsTotal": 55,
+              "operandsUnique": 143,
+              "vocabulary": 73,
+              "length": 199,
+              "difficulty": 23.400000000000002,
+              "volume": 1231.7750872171234,
+              "effort": 28823.537040880692,
+              "time": 1601.3076133822606,
+              "bugs": 0.41059169573904114
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.36363636363636365
+            }
+          },
+          {
+            "file": "test/mui.js",
+            "function": "anonymous",
+            "line": 1217,
+            "sloc": 19,
+            "lloc": 3,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 48,
+              "operandsTotal": 35,
+              "operandsUnique": 53,
+              "vocabulary": 50,
+              "length": 101,
+              "difficulty": 11.357142857142858,
+              "volume": 570.0294751672471,
+              "effort": 6473.906182256593,
+              "time": 359.6614545698107,
+              "bugs": 0.19000982505574904
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 1.3333333333333333
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "test/p5.js",
+    "function": "program",
+    "line": 78,
+    "sloc": 3972,
+    "lloc": 53,
+    "params": 0,
+    "halstead": {
+      "operatorsTotal": 6,
+      "operatorsUnique": 179,
+      "operandsTotal": 57,
+      "operandsUnique": 176,
+      "vocabulary": 63,
+      "length": 355,
+      "difficulty": 9.263157894736842,
+      "volume": 2121.9343728424706,
+      "effort": 19655.8131379092,
+      "time": 1091.9896187727334,
+      "bugs": 0.7073114576141568
+    },
+    "cyclomatic": {
+      "complexity": 3,
+      "density": 0.05660377358490566
+    },
+    "functions": [
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.select",
+        "line": 78,
+        "sloc": 10,
+        "lloc": 7,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 22,
+          "operandsTotal": 13,
+          "operandsUnique": 19,
+          "vocabulary": 23,
+          "length": 41,
+          "difficulty": 7.3076923076923075,
+          "volume": 185.46604019833754,
+          "effort": 1355.3287552955435,
+          "time": 75.29604196086353,
+          "bugs": 0.061822013399445847
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.2857142857142857
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.selectAll",
+        "line": 172,
+        "sloc": 13,
+        "lloc": 10,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 34,
+          "operandsTotal": 18,
+          "operandsUnique": 31,
+          "vocabulary": 32,
+          "length": 65,
+          "difficulty": 12.055555555555557,
+          "volume": 325,
+          "effort": 3918.055555555556,
+          "time": 217.66975308641977,
+          "bugs": 0.10833333333333334
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.3
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype._getContainer",
+        "line": 189,
+        "sloc": 11,
+        "lloc": 10,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 13,
+          "operatorsUnique": 26,
+          "operandsTotal": 9,
+          "operandsUnique": 21,
+          "vocabulary": 22,
+          "length": 47,
+          "difficulty": 15.166666666666668,
+          "volume": 209.59328607595296,
+          "effort": 3178.831505485287,
+          "time": 176.60175030473818,
+          "bugs": 0.06986442869198432
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype._wrapElement",
+        "line": 204,
+        "sloc": 31,
+        "lloc": 16,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 86,
+          "operandsTotal": 26,
+          "operandsUnique": 62,
+          "vocabulary": 42,
+          "length": 148,
+          "difficulty": 19.076923076923077,
+          "volume": 798.0629785712566,
+          "effort": 15224.586052743973,
+          "time": 845.8103362635541,
+          "bugs": 0.2660209928570855
+        },
+        "cyclomatic": {
+          "complexity": 7,
+          "density": 0.4375
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "converted.checked",
+            "line": 208,
+            "sloc": 10,
+            "lloc": 8,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 10,
+              "operatorsUnique": 24,
+              "operandsTotal": 8,
+              "operandsUnique": 18,
+              "vocabulary": 18,
+              "length": 42,
+              "difficulty": 11.25,
+              "volume": 175.1368500605771,
+              "effort": 1970.2895631814924,
+              "time": 109.46053128786069,
+              "bugs": 0.05837895002019237
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.375
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 225,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 6,
+              "operatorsUnique": 10,
+              "operandsTotal": 4,
+              "operandsUnique": 7,
+              "vocabulary": 10,
+              "length": 17,
+              "difficulty": 5.25,
+              "volume": 56.47277761308516,
+              "effort": 296.48208246869706,
+              "time": 16.471226803816503,
+              "bugs": 0.018824259204361718
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 2
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.removeElements",
+        "line": 302,
+        "sloc": 7,
+        "lloc": 4,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 20,
+          "operandsTotal": 15,
+          "operandsUnique": 20,
+          "vocabulary": 24,
+          "length": 40,
+          "difficulty": 6,
+          "volume": 183.39850002884623,
+          "effort": 1100.3910001730774,
+          "time": 61.13283334294874,
+          "bugs": 0.06113283334294874
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.25
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.changed",
+        "line": 380,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 8,
+          "operandsTotal": 6,
+          "operandsUnique": 8,
+          "vocabulary": 12,
+          "length": 16,
+          "difficulty": 4,
+          "volume": 57.3594000115385,
+          "effort": 229.437600046154,
+          "time": 12.746533335897444,
+          "bugs": 0.019119800003846166
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.input",
+        "line": 453,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 8,
+          "operandsTotal": 6,
+          "operandsUnique": 8,
+          "vocabulary": 12,
+          "length": 16,
+          "difficulty": 4,
+          "volume": 57.3594000115385,
+          "effort": 229.437600046154,
+          "time": 12.746533335897444,
+          "bugs": 0.019119800003846166
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "addElement",
+        "line": 461,
+        "sloc": 7,
+        "lloc": 5,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 29,
+          "operandsTotal": 15,
+          "operandsUnique": 29,
+          "vocabulary": 26,
+          "length": 58,
+          "difficulty": 10.633333333333333,
+          "volume": 272.62550365218334,
+          "effort": 2898.917855501549,
+          "time": 161.05099197230828,
+          "bugs": 0.09087516788406111
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.6
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createDiv",
+        "line": 515,
+        "sloc": 5,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 12,
+          "operandsTotal": 9,
+          "operandsUnique": 12,
+          "vocabulary": 17,
+          "length": 24,
+          "difficulty": 5.333333333333333,
+          "volume": 98.09910819000814,
+          "effort": 523.1952436800434,
+          "time": 29.06640242666908,
+          "bugs": 0.032699702730002715
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createP",
+        "line": 550,
+        "sloc": 5,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 12,
+          "operandsTotal": 9,
+          "operandsUnique": 12,
+          "vocabulary": 17,
+          "length": 24,
+          "difficulty": 5.333333333333333,
+          "volume": 98.09910819000814,
+          "effort": 523.1952436800434,
+          "time": 29.06640242666908,
+          "bugs": 0.032699702730002715
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createSpan",
+        "line": 621,
+        "sloc": 5,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 12,
+          "operandsTotal": 9,
+          "operandsUnique": 12,
+          "vocabulary": 17,
+          "length": 24,
+          "difficulty": 5.333333333333333,
+          "volume": 98.09910819000814,
+          "effort": 523.1952436800434,
+          "time": 29.06640242666908,
+          "bugs": 0.032699702730002715
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createImg",
+        "line": 680,
+        "sloc": 21,
+        "lloc": 12,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 46,
+          "operandsTotal": 22,
+          "operandsUnique": 43,
+          "vocabulary": 37,
+          "length": 89,
+          "difficulty": 14.65909090909091,
+          "volume": 463.64134954097653,
+          "effort": 6796.56069213477,
+          "time": 377.58670511859833,
+          "bugs": 0.15454711651365885
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.25
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 693,
+            "sloc": 6,
+            "lloc": 5,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 22,
+              "operandsTotal": 11,
+              "operandsUnique": 21,
+              "vocabulary": 23,
+              "length": 43,
+              "difficulty": 11.454545454545455,
+              "volume": 194.51316411045156,
+              "effort": 2228.059879810627,
+              "time": 123.78110443392373,
+              "bugs": 0.06483772137015052
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.8
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createA",
+        "line": 756,
+        "sloc": 8,
+        "lloc": 7,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 21,
+          "operandsTotal": 14,
+          "operandsUnique": 24,
+          "vocabulary": 23,
+          "length": 45,
+          "difficulty": 7.7142857142857135,
+          "volume": 203.5602880225656,
+          "effort": 1570.322221888363,
+          "time": 87.24012343824239,
+          "bugs": 0.0678534293408552
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.2857142857142857
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createSlider",
+        "line": 887,
+        "sloc": 14,
+        "lloc": 13,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 38,
+          "operandsTotal": 19,
+          "operandsUnique": 38,
+          "vocabulary": 31,
+          "length": 76,
+          "difficulty": 12,
+          "volume": 376.5189195894025,
+          "effort": 4518.22703507283,
+          "time": 251.01261305960168,
+          "bugs": 0.12550630652980083
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.3076923076923077
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createButton",
+        "line": 978,
+        "sloc": 7,
+        "lloc": 6,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 18,
+          "operandsTotal": 13,
+          "operandsUnique": 20,
+          "vocabulary": 22,
+          "length": 38,
+          "difficulty": 6.923076923076923,
+          "volume": 169.4584015082173,
+          "effort": 1173.1735489030427,
+          "time": 65.17630827239127,
+          "bugs": 0.05648613383607243
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createCheckbox",
+        "line": 1082,
+        "sloc": 54,
+        "lloc": 18,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 53,
+          "operandsTotal": 26,
+          "operandsUnique": 57,
+          "vocabulary": 37,
+          "length": 110,
+          "difficulty": 12.057692307692308,
+          "volume": 573.0398702191845,
+          "effort": 6909.53843514286,
+          "time": 383.86324639682556,
+          "bugs": 0.1910132900730615
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.16666666666666666
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "self.checked",
+            "line": 1102,
+            "sloc": 13,
+            "lloc": 10,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 30,
+              "operandsTotal": 12,
+              "operandsUnique": 23,
+              "vocabulary": 24,
+              "length": 53,
+              "difficulty": 11.5,
+              "volume": 243.00301253822127,
+              "effort": 2794.5346441895445,
+              "time": 155.2519246771969,
+              "bugs": 0.08100100417940709
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.4
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "this.value",
+            "line": 1116,
+            "sloc": 4,
+            "lloc": 2,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 5,
+              "operandsTotal": 4,
+              "operandsUnique": 5,
+              "vocabulary": 9,
+              "length": 10,
+              "difficulty": 3.125,
+              "volume": 31.699250014423125,
+              "effort": 99.06015629507226,
+              "time": 5.503342016392903,
+              "bugs": 0.010566416671474375
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createSelect",
+        "line": 1309,
+        "sloc": 108,
+        "lloc": 21,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 17,
+          "operatorsUnique": 59,
+          "operandsTotal": 23,
+          "operandsUnique": 57,
+          "vocabulary": 40,
+          "length": 116,
+          "difficulty": 21.065217391304348,
+          "volume": 617.3436590069341,
+          "effort": 13004.478382124329,
+          "time": 722.4710212291294,
+          "bugs": 0.20578121966897803
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.19047619047619047
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "self.option",
+            "line": 1328,
+            "sloc": 32,
+            "lloc": 19,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 20,
+              "operatorsUnique": 64,
+              "operandsTotal": 21,
+              "operandsUnique": 55,
+              "vocabulary": 41,
+              "length": 119,
+              "difficulty": 26.19047619047619,
+              "volume": 637.548688549552,
+              "effort": 16697.703747726362,
+              "time": 927.6502082070201,
+              "bugs": 0.21251622951651733
+            },
+            "cyclomatic": {
+              "complexity": 7,
+              "density": 0.3684210526315789
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.selected",
+            "line": 1361,
+            "sloc": 21,
+            "lloc": 15,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 17,
+              "operatorsUnique": 54,
+              "operandsTotal": 16,
+              "operandsUnique": 40,
+              "vocabulary": 33,
+              "length": 94,
+              "difficulty": 21.25,
+              "volume": 474.17304721969464,
+              "effort": 10076.177253418511,
+              "time": 559.7876251899173,
+              "bugs": 0.15805768240656487
+            },
+            "cyclomatic": {
+              "complexity": 6,
+              "density": 0.4
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.disable",
+            "line": 1383,
+            "sloc": 13,
+            "lloc": 9,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 38,
+              "operandsTotal": 12,
+              "operandsUnique": 31,
+              "vocabulary": 27,
+              "length": 69,
+              "difficulty": 19.375,
+              "volume": 328.0872376492793,
+              "effort": 6356.690229454786,
+              "time": 353.1494571919326,
+              "bugs": 0.10936241254975977
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.4444444444444444
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.enable",
+            "line": 1397,
+            "sloc": 17,
+            "lloc": 13,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 54,
+              "operandsTotal": 11,
+              "operandsUnique": 48,
+              "vocabulary": 26,
+              "length": 102,
+              "difficulty": 32.72727272727273,
+              "volume": 479.44485125039137,
+              "effort": 15690.922404558263,
+              "time": 871.717911364348,
+              "bugs": 0.15981495041679714
+            },
+            "cyclomatic": {
+              "complexity": 5,
+              "density": 0.38461538461538464
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createRadio",
+        "line": 1578,
+        "sloc": 158,
+        "lloc": 31,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 19,
+          "operatorsUnique": 88,
+          "operandsTotal": 47,
+          "operandsUnique": 104,
+          "vocabulary": 66,
+          "length": 192,
+          "difficulty": 21.02127659574468,
+          "volume": 1160.523670916823,
+          "effort": 24395.689082251512,
+          "time": 1355.316060125084,
+          "bugs": 0.386841223638941
+        },
+        "cyclomatic": {
+          "complexity": 8,
+          "density": 0.25806451612903225
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "self._getOptionsArray",
+            "line": 1618,
+            "sloc": 9,
+            "lloc": 1,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 23,
+              "operandsTotal": 10,
+              "operandsUnique": 20,
+              "vocabulary": 19,
+              "length": 43,
+              "difficulty": 9,
+              "volume": 182.66088307807416,
+              "effort": 1643.9479477026675,
+              "time": 91.33044153903708,
+              "bugs": 0.06088696102602472
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 3
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.option",
+            "line": 1628,
+            "sloc": 45,
+            "lloc": 26,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 18,
+              "operatorsUnique": 76,
+              "operandsTotal": 31,
+              "operandsUnique": 71,
+              "vocabulary": 49,
+              "length": 147,
+              "difficulty": 20.612903225806452,
+              "volume": 825.3623470849357,
+              "effort": 17013.114186686256,
+              "time": 945.1730103714586,
+              "bugs": 0.2751207823616452
+            },
+            "cyclomatic": {
+              "complexity": 7,
+              "density": 0.2692307692307692
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.remove",
+            "line": 1674,
+            "sloc": 14,
+            "lloc": 8,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 11,
+              "operatorsUnique": 25,
+              "operandsTotal": 7,
+              "operandsUnique": 15,
+              "vocabulary": 18,
+              "length": 40,
+              "difficulty": 11.785714285714285,
+              "volume": 166.7970000576925,
+              "effort": 1965.8217863942327,
+              "time": 109.21232146634627,
+              "bugs": 0.05559900001923083
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.value",
+            "line": 1689,
+            "sloc": 10,
+            "lloc": 7,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 17,
+              "operandsTotal": 7,
+              "operandsUnique": 11,
+              "vocabulary": 19,
+              "length": 28,
+              "difficulty": 9.428571428571429,
+              "volume": 118.94197037642039,
+              "effort": 1121.4528635491065,
+              "time": 62.30293686383925,
+              "bugs": 0.039647323458806796
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.42857142857142855
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.selected",
+            "line": 1700,
+            "sloc": 27,
+            "lloc": 16,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 43,
+              "operandsTotal": 12,
+              "operandsUnique": 31,
+              "vocabulary": 27,
+              "length": 74,
+              "difficulty": 19.375,
+              "volume": 351.86167516009664,
+              "effort": 6817.319956226873,
+              "time": 378.7399975681596,
+              "bugs": 0.11728722505336554
+            },
+            "cyclomatic": {
+              "complexity": 6,
+              "density": 0.375
+            },
+            "functions": [
+              {
+                "file": "test/p5.js",
+                "function": "anonymous",
+                "line": 1712,
+                "sloc": 4,
+                "lloc": 2,
+                "params": 1,
+                "halstead": {
+                  "operatorsTotal": 5,
+                  "operatorsUnique": 6,
+                  "operandsTotal": 5,
+                  "operandsUnique": 7,
+                  "vocabulary": 10,
+                  "length": 13,
+                  "difficulty": 3.5,
+                  "volume": 43.18506523353571,
+                  "effort": 151.14772831737497,
+                  "time": 8.397096017631943,
+                  "bugs": 0.014395021744511903
+                },
+                "cyclomatic": {
+                  "complexity": 1,
+                  "density": 0.5
+                }
+              }
+            ]
+          },
+          {
+            "file": "test/p5.js",
+            "function": "self.disable",
+            "line": 1728,
+            "sloc": 5,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 12,
+              "operandsTotal": 7,
+              "operandsUnique": 9,
+              "vocabulary": 16,
+              "length": 21,
+              "difficulty": 5.7857142857142865,
+              "volume": 84,
+              "effort": 486.00000000000006,
+              "time": 27.000000000000004,
+              "bugs": 0.028
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.6666666666666666
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createColorPicker",
+        "line": 1801,
+        "sloc": 35,
+        "lloc": 16,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 66,
+          "operandsTotal": 30,
+          "operandsUnique": 62,
+          "vocabulary": 44,
+          "length": 128,
+          "difficulty": 14.466666666666669,
+          "volume": 698.807247185574,
+          "effort": 10109.411509284639,
+          "time": 561.6339727380355,
+          "bugs": 0.23293574906185802
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.1875
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "self.color",
+            "line": 1823,
+            "sloc": 11,
+            "lloc": 6,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 24,
+              "operandsTotal": 10,
+              "operandsUnique": 21,
+              "vocabulary": 17,
+              "length": 45,
+              "difficulty": 7.3500000000000005,
+              "volume": 183.93582785626526,
+              "effort": 1351.9283347435498,
+              "time": 75.10712970797499,
+              "bugs": 0.06131194261875509
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.6666666666666666
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createInput",
+        "line": 1912,
+        "sloc": 7,
+        "lloc": 5,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 21,
+          "operandsTotal": 17,
+          "operandsUnique": 23,
+          "vocabulary": 25,
+          "length": 44,
+          "difficulty": 5.411764705882353,
+          "volume": 204.32967235008786,
+          "effort": 1105.7841091887108,
+          "time": 61.43245051048393,
+          "bugs": 0.06810989078336262
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.2
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createFileInput",
+        "line": 2022,
+        "sloc": 23,
+        "lloc": 11,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 41,
+          "operandsTotal": 29,
+          "operandsUnique": 40,
+          "vocabulary": 40,
+          "length": 81,
+          "difficulty": 7.586206896551724,
+          "volume": 431.07617568587636,
+          "effort": 3270.233056927338,
+          "time": 181.679614273741,
+          "bugs": 0.1436920585619588
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.2727272727272727
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "handleFileSelect",
+            "line": 2025,
+            "sloc": 5,
+            "lloc": 3,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 8,
+              "operatorsUnique": 12,
+              "operandsTotal": 8,
+              "operandsUnique": 10,
+              "vocabulary": 16,
+              "length": 22,
+              "difficulty": 5,
+              "volume": 88,
+              "effort": 440,
+              "time": 24.444444444444443,
+              "bugs": 0.029333333333333333
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.6666666666666666
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "createMedia",
+        "line": 2049,
+        "sloc": 43,
+        "lloc": 16,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 52,
+          "operandsTotal": 26,
+          "operandsUnique": 48,
+          "vocabulary": 41,
+          "length": 100,
+          "difficulty": 13.846153846153847,
+          "volume": 535.7552004618084,
+          "effort": 7418.148929471194,
+          "time": 412.11938497062187,
+          "bugs": 0.1785850668206028
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 0.3125
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "callbackHandler",
+            "line": 2065,
+            "sloc": 4,
+            "lloc": 2,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 6,
+              "operandsTotal": 5,
+              "operandsUnique": 5,
+              "vocabulary": 10,
+              "length": 11,
+              "difficulty": 2.5,
+              "volume": 36.541209043760986,
+              "effort": 91.35302260940247,
+              "time": 5.075167922744582,
+              "bugs": 0.012180403014586996
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 2076,
+            "sloc": 13,
+            "lloc": 10,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 37,
+              "operandsTotal": 11,
+              "operandsUnique": 38,
+              "vocabulary": 18,
+              "length": 75,
+              "difficulty": 12.090909090909092,
+              "volume": 312.7443751081734,
+              "effort": 3781.363808126097,
+              "time": 210.0757671181165,
+              "bugs": 0.1042481250360578
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createVideo",
+        "line": 2184,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 11,
+          "operandsTotal": 9,
+          "operandsUnique": 11,
+          "vocabulary": 15,
+          "length": 22,
+          "difficulty": 3.666666666666667,
+          "volume": 85.95159310338741,
+          "effort": 315.1558413790872,
+          "time": 17.508657854393732,
+          "bugs": 0.02865053103446247
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createAudio",
+        "line": 2232,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 11,
+          "operandsTotal": 9,
+          "operandsUnique": 11,
+          "vocabulary": 15,
+          "length": 22,
+          "difficulty": 3.666666666666667,
+          "volume": 85.95159310338741,
+          "effort": 315.1558413790872,
+          "time": 17.508657854393732,
+          "bugs": 0.02865053103446247
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "navigator.mediaDevices.getUserMedia",
+        "line": 2253,
+        "sloc": 18,
+        "lloc": 4,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 18,
+          "operandsTotal": 9,
+          "operandsUnique": 12,
+          "vocabulary": 20,
+          "length": 30,
+          "difficulty": 7.333333333333333,
+          "volume": 129.65784284662087,
+          "effort": 950.8241808752197,
+          "time": 52.82356560417887,
+          "bugs": 0.043219280948873624
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.75
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 2267,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 8,
+              "operandsTotal": 6,
+              "operandsUnique": 8,
+              "vocabulary": 11,
+              "length": 16,
+              "difficulty": 3.333333333333333,
+              "volume": 55.35090589819676,
+              "effort": 184.50301966065584,
+              "time": 10.250167758925324,
+              "bugs": 0.018450301966065584
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createCapture",
+        "line": 2393,
+        "sloc": 77,
+        "lloc": 34,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 23,
+          "operatorsUnique": 109,
+          "operandsTotal": 42,
+          "operandsUnique": 91,
+          "vocabulary": 65,
+          "length": 200,
+          "difficulty": 24.916666666666664,
+          "volume": 1204.4735626056909,
+          "effort": 30011.46626825846,
+          "time": 1667.3036815699145,
+          "bugs": 0.4014911875352303
+        },
+        "cyclomatic": {
+          "complexity": 8,
+          "density": 0.23529411764705882
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 2428,
+            "sloc": 11,
+            "lloc": 6,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 10,
+              "operatorsUnique": 20,
+              "operandsTotal": 9,
+              "operandsUnique": 16,
+              "vocabulary": 19,
+              "length": 36,
+              "difficulty": 8.88888888888889,
+              "volume": 152.92539048396907,
+              "effort": 1359.3368043019473,
+              "time": 75.51871135010818,
+              "bugs": 0.050975130161323025
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 2439,
+            "sloc": 8,
+            "lloc": 5,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 18,
+              "operandsTotal": 11,
+              "operandsUnique": 18,
+              "vocabulary": 18,
+              "length": 36,
+              "difficulty": 5.7272727272727275,
+              "volume": 150.11730005192322,
+              "effort": 859.7627184791967,
+              "time": 47.764595471066485,
+              "bugs": 0.05003910001730774
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.6
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 2451,
+            "sloc": 16,
+            "lloc": 12,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 38,
+              "operandsTotal": 16,
+              "operandsUnique": 39,
+              "vocabulary": 23,
+              "length": 77,
+              "difficulty": 8.53125,
+              "volume": 348.31427061639,
+              "effort": 2971.556121196077,
+              "time": 165.08645117755984,
+              "bugs": 0.11610475687213
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.3333333333333333
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.prototype.createElement",
+        "line": 2520,
+        "sloc": 8,
+        "lloc": 5,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 20,
+          "operandsTotal": 13,
+          "operandsUnique": 18,
+          "vocabulary": 24,
+          "length": 38,
+          "difficulty": 7.615384615384615,
+          "volume": 174.22857502740393,
+          "effort": 1326.817609824076,
+          "time": 73.71208943467089,
+          "bugs": 0.05807619167580131
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.4
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.addClass",
+        "line": 2560,
+        "sloc": 10,
+        "lloc": 6,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 24,
+          "operandsTotal": 6,
+          "operandsUnique": 20,
+          "vocabulary": 16,
+          "length": 44,
+          "difficulty": 16.666666666666668,
+          "volume": 176,
+          "effort": 2933.3333333333335,
+          "time": 162.96296296296296,
+          "bugs": 0.058666666666666666
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.removeClass",
+        "line": 2608,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 5,
+          "operandsUnique": 7,
+          "vocabulary": 10,
+          "length": 14,
+          "difficulty": 3.5,
+          "volume": 46.50699332842307,
+          "effort": 162.77447664948076,
+          "time": 9.04302648052671,
+          "bugs": 0.015502331109474358
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.hasClass",
+        "line": 2651,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 5,
+          "operandsUnique": 6,
+          "vocabulary": 10,
+          "length": 13,
+          "difficulty": 3,
+          "volume": 43.18506523353571,
+          "effort": 129.55519570060713,
+          "time": 7.197510872255951,
+          "bugs": 0.014395021744511903
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.toggleClass",
+        "line": 2688,
+        "sloc": 11,
+        "lloc": 5,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 19,
+          "operandsTotal": 7,
+          "operandsUnique": 17,
+          "vocabulary": 14,
+          "length": 36,
+          "difficulty": 8.5,
+          "volume": 137.06477719407374,
+          "effort": 1165.050606149627,
+          "time": 64.72503367497927,
+          "bugs": 0.04568825906469125
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.4
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.child",
+        "line": 2786,
+        "sloc": 18,
+        "lloc": 12,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 40,
+          "operandsTotal": 16,
+          "operandsUnique": 32,
+          "vocabulary": 28,
+          "length": 72,
+          "difficulty": 12,
+          "volume": 346.1295543881475,
+          "effort": 4153.55465265777,
+          "time": 230.753036258765,
+          "bugs": 0.11537651812938249
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.center",
+        "line": 2839,
+        "sloc": 31,
+        "lloc": 26,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 127,
+          "operandsTotal": 31,
+          "operandsUnique": 111,
+          "vocabulary": 47,
+          "length": 238,
+          "difficulty": 28.64516129032258,
+          "volume": 1321.9921466992778,
+          "effort": 37868.6782667406,
+          "time": 2103.815459263367,
+          "bugs": 0.44066404889975924
+        },
+        "cyclomatic": {
+          "complexity": 9,
+          "density": 0.34615384615384615
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.html",
+        "line": 2946,
+        "sloc": 11,
+        "lloc": 9,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 28,
+          "operandsTotal": 9,
+          "operandsUnique": 22,
+          "vocabulary": 21,
+          "length": 50,
+          "difficulty": 14.666666666666668,
+          "volume": 219.61587113893805,
+          "effort": 3221.032776704425,
+          "time": 178.94626537246805,
+          "bugs": 0.07320529037964602
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.position",
+        "line": 3016,
+        "sloc": 23,
+        "lloc": 12,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 71,
+          "operandsTotal": 24,
+          "operandsUnique": 63,
+          "vocabulary": 39,
+          "length": 134,
+          "difficulty": 19.6875,
+          "volume": 708.2438973275413,
+          "effort": 13943.551728635968,
+          "time": 774.6417627019982,
+          "bugs": 0.23608129910918044
+        },
+        "cyclomatic": {
+          "complexity": 8,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype._translate",
+        "line": 3041,
+        "sloc": 23,
+        "lloc": 16,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 82,
+          "operandsTotal": 25,
+          "operandsUnique": 79,
+          "vocabulary": 41,
+          "length": 161,
+          "difficulty": 25.28,
+          "volume": 862.5658727435115,
+          "effort": 21805.665262955972,
+          "time": 1211.4258479419984,
+          "bugs": 0.2875219575811705
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 0.3125
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype._rotate",
+        "line": 3066,
+        "sloc": 21,
+        "lloc": 16,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 81,
+          "operandsTotal": 20,
+          "operandsUnique": 78,
+          "vocabulary": 35,
+          "length": 159,
+          "difficulty": 29.25,
+          "volume": 815.5559996942496,
+          "effort": 23855.012991056803,
+          "time": 1325.2784995031557,
+          "bugs": 0.27185199989808323
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 0.3125
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.style",
+        "line": 3195,
+        "sloc": 49,
+        "lloc": 23,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 23,
+          "operatorsUnique": 122,
+          "operandsTotal": 44,
+          "operandsUnique": 105,
+          "vocabulary": 67,
+          "length": 227,
+          "difficulty": 27.443181818181817,
+          "volume": 1377.0022462339145,
+          "effort": 37789.323007442086,
+          "time": 2099.4068337467825,
+          "bugs": 0.4590007487446382
+        },
+        "cyclomatic": {
+          "complexity": 10,
+          "density": 0.43478260869565216
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.attribute",
+        "line": 3306,
+        "sloc": 22,
+        "lloc": 13,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 19,
+          "operatorsUnique": 66,
+          "operandsTotal": 16,
+          "operandsUnique": 50,
+          "vocabulary": 35,
+          "length": 116,
+          "difficulty": 29.6875,
+          "volume": 594.9968299656161,
+          "effort": 17663.96838960423,
+          "time": 981.331577200235,
+          "bugs": 0.1983322766552054
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.46153846153846156
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.removeAttribute",
+        "line": 3366,
+        "sloc": 13,
+        "lloc": 6,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 39,
+          "operandsTotal": 13,
+          "operandsUnique": 34,
+          "vocabulary": 29,
+          "length": 73,
+          "difficulty": 20.923076923076923,
+          "volume": 354.63261264431276,
+          "effort": 7420.005433788698,
+          "time": 412.2225240993721,
+          "bugs": 0.11821087088143759
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.value",
+        "line": 3452,
+        "sloc": 10,
+        "lloc": 8,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 28,
+          "operandsTotal": 9,
+          "operandsUnique": 21,
+          "vocabulary": 21,
+          "length": 49,
+          "difficulty": 14,
+          "volume": 215.22355371615927,
+          "effort": 3013.1297520262297,
+          "time": 167.39609733479054,
+          "bugs": 0.07174118457205308
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.375
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.show",
+        "line": 3494,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 5,
+          "operandsUnique": 6,
+          "vocabulary": 10,
+          "length": 13,
+          "difficulty": 3,
+          "volume": 43.18506523353571,
+          "effort": 129.55519570060713,
+          "time": 7.197510872255951,
+          "bugs": 0.014395021744511903
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.hide",
+        "line": 3527,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 5,
+          "operandsUnique": 6,
+          "vocabulary": 10,
+          "length": 13,
+          "difficulty": 3,
+          "volume": 43.18506523353571,
+          "effort": 129.55519570060713,
+          "time": 7.197510872255951,
+          "bugs": 0.014395021744511903
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.size",
+        "line": 3652,
+        "sloc": 48,
+        "lloc": 37,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 23,
+          "operatorsUnique": 160,
+          "operandsTotal": 32,
+          "operandsUnique": 151,
+          "vocabulary": 55,
+          "length": 311,
+          "difficulty": 54.265625,
+          "volume": 1798.0028709061692,
+          "effort": 97569.74954151758,
+          "time": 5420.541641195421,
+          "bugs": 0.5993342903020564
+        },
+        "cyclomatic": {
+          "complexity": 11,
+          "density": 0.2972972972972973
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.remove",
+        "line": 3731,
+        "sloc": 28,
+        "lloc": 14,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 63,
+          "operandsTotal": 23,
+          "operandsUnique": 54,
+          "vocabulary": 39,
+          "length": 117,
+          "difficulty": 18.782608695652176,
+          "volume": 618.3920596068831,
+          "effort": 11615.0160760945,
+          "time": 645.2786708941389,
+          "bugs": 0.2061306865356277
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.42857142857142855
+        }
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.drop",
+        "line": 3870,
+        "sloc": 44,
+        "lloc": 10,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 38,
+          "operandsTotal": 22,
+          "operandsUnique": 35,
+          "vocabulary": 34,
+          "length": 73,
+          "difficulty": 9.545454545454545,
+          "volume": 371.3847874112748,
+          "effort": 3545.036607107623,
+          "time": 196.9464781726457,
+          "bugs": 0.12379492913709159
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.3
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "preventDefault",
+            "line": 3876,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 4,
+              "operandsTotal": 2,
+              "operandsUnique": 3,
+              "vocabulary": 6,
+              "length": 7,
+              "difficulty": 3,
+              "volume": 18.094737505048094,
+              "effort": 54.28421251514428,
+              "time": 3.0157895841746822,
+              "bugs": 0.006031579168349364
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "anonymous",
+            "line": 3892,
+            "sloc": 14,
+            "lloc": 7,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 24,
+              "operandsTotal": 13,
+              "operandsUnique": 20,
+              "vocabulary": 25,
+              "length": 44,
+              "difficulty": 9.230769230769232,
+              "volume": 204.32967235008786,
+              "effort": 1886.1200524623496,
+              "time": 104.78444735901942,
+              "bugs": 0.06810989078336262
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.42857142857142855
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/p5.js",
+        "function": "p5.Element.prototype.draggable",
+        "line": 3983,
+        "sloc": 67,
+        "lloc": 22,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 56,
+          "operandsTotal": 28,
+          "operandsUnique": 55,
+          "vocabulary": 44,
+          "length": 111,
+          "difficulty": 15.714285714285714,
+          "volume": 605.99690966874,
+          "effort": 9522.808580508772,
+          "time": 529.0449211393762,
+          "bugs": 0.20199896988958002
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.2727272727272727
+        },
+        "functions": [
+          {
+            "file": "test/p5.js",
+            "function": "dragMouseDown",
+            "line": 4006,
+            "sloc": 16,
+            "lloc": 11,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 35,
+              "operandsTotal": 20,
+              "operandsUnique": 39,
+              "vocabulary": 32,
+              "length": 74,
+              "difficulty": 11.7,
+              "volume": 370,
+              "effort": 4329,
+              "time": 240.5,
+              "bugs": 0.12333333333333334
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.2727272727272727
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "elementDrag",
+            "line": 4023,
+            "sloc": 19,
+            "lloc": 14,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 12,
+              "operatorsUnique": 56,
+              "operandsTotal": 22,
+              "operandsUnique": 64,
+              "vocabulary": 34,
+              "length": 120,
+              "difficulty": 17.454545454545453,
+              "volume": 610.4955409500407,
+              "effort": 10655.9221693098,
+              "time": 591.9956760727667,
+              "bugs": 0.20349851365001356
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 0.21428571428571427
+            }
+          },
+          {
+            "file": "test/p5.js",
+            "function": "closeDragElement",
+            "line": 4043,
+            "sloc": 4,
+            "lloc": 2,
+            "params": 0,
+            "halstead": {
+              "operatorsTotal": 5,
+              "operatorsUnique": 10,
+              "operandsTotal": 7,
+              "operandsUnique": 11,
+              "vocabulary": 12,
+              "length": 21,
+              "difficulty": 3.9285714285714284,
+              "volume": 75.28421251514428,
+              "effort": 295.7594063094954,
+              "time": 16.4310781283053,
+              "bugs": 0.025094737505048093
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "test/swagger.js",
+    "function": "program",
+    "line": 1,
+    "sloc": 897,
+    "lloc": 62,
+    "params": 13,
+    "halstead": {
+      "operatorsTotal": 12,
+      "operatorsUnique": 124,
+      "operandsTotal": 67,
+      "operandsUnique": 99,
+      "vocabulary": 79,
+      "length": 223,
+      "difficulty": 8.865671641791046,
+      "volume": 1405.743106843494,
+      "effort": 12462.856797985605,
+      "time": 692.3809332214225,
+      "bugs": 0.468581035614498
+    },
+    "cyclomatic": {
+      "complexity": 4,
+      "density": 0.06451612903225806
+    },
+    "functions": [
+      {
+        "file": "test/swagger.js",
+        "function": "objectify",
+        "line": 7,
+        "sloc": 5,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 9,
+          "operandsTotal": 4,
+          "operandsUnique": 6,
+          "vocabulary": 10,
+          "length": 15,
+          "difficulty": 4.5,
+          "volume": 49.82892142331043,
+          "effort": 224.23014640489694,
+          "time": 12.457230355827608,
+          "bugs": 0.01660964047443681
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "arrayify",
+        "line": 13,
+        "sloc": 7,
+        "lloc": 5,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 13,
+          "operandsTotal": 4,
+          "operandsUnique": 9,
+          "vocabulary": 12,
+          "length": 22,
+          "difficulty": 9,
+          "volume": 78.86917501586544,
+          "effort": 709.822575142789,
+          "time": 39.43458750793272,
+          "bugs": 0.026289725005288478
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.6
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "fromJSOrdered",
+        "line": 21,
+        "sloc": 20,
+        "lloc": 12,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 44,
+          "operandsTotal": 17,
+          "operandsUnique": 37,
+          "vocabulary": 27,
+          "length": 81,
+          "difficulty": 10.88235294117647,
+          "volume": 385.14588767524094,
+          "effort": 4191.293483524681,
+          "time": 232.84963797359336,
+          "bugs": 0.12838196255841364
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "createObjWithHashedKeys",
+        "line": 60,
+        "sloc": 33,
+        "lloc": 19,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 19,
+          "operatorsUnique": 82,
+          "operandsTotal": 19,
+          "operandsUnique": 88,
+          "vocabulary": 38,
+          "length": 170,
+          "difficulty": 44,
+          "volume": 892.1476772854095,
+          "effort": 39254.49780055802,
+          "time": 2180.8054333643345,
+          "bugs": 0.2973825590951365
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 0.2631578947368421
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "bindToState",
+        "line": 94,
+        "sloc": 7,
+        "lloc": 3,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 24,
+          "operandsTotal": 12,
+          "operandsUnique": 22,
+          "vocabulary": 23,
+          "length": 46,
+          "difficulty": 10.083333333333332,
+          "volume": 208.0838499786226,
+          "effort": 2098.1788206177775,
+          "time": 116.56549003432097,
+          "bugs": 0.06936128332620753
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "normalizeArray",
+        "line": 102,
+        "sloc": 4,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 8,
+          "operandsTotal": 4,
+          "operandsUnique": 7,
+          "vocabulary": 11,
+          "length": 15,
+          "difficulty": 6.125,
+          "volume": 51.89147427955946,
+          "effort": 317.8352799623017,
+          "time": 17.657515553461206,
+          "bugs": 0.017297158093186486
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "isFn",
+        "line": 107,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 6,
+          "operandsTotal": 3,
+          "operandsUnique": 4,
+          "vocabulary": 8,
+          "length": 10,
+          "difficulty": 3.333333333333333,
+          "volume": 30,
+          "effort": 99.99999999999999,
+          "time": 5.5555555555555545,
+          "bugs": 0.01
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "isObject",
+        "line": 111,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 9,
+          "operandsTotal": 3,
+          "operandsUnique": 5,
+          "vocabulary": 10,
+          "length": 14,
+          "difficulty": 5.833333333333334,
+          "volume": 46.50699332842307,
+          "effort": 271.29079441580126,
+          "time": 15.071710800877847,
+          "bugs": 0.015502331109474358
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "isFunc",
+        "line": 115,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 6,
+          "operandsTotal": 3,
+          "operandsUnique": 4,
+          "vocabulary": 8,
+          "length": 10,
+          "difficulty": 3.333333333333333,
+          "volume": 30,
+          "effort": 99.99999999999999,
+          "time": 5.5555555555555545,
+          "bugs": 0.01
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "isArray",
+        "line": 119,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 5,
+          "operandsTotal": 3,
+          "operandsUnique": 5,
+          "vocabulary": 8,
+          "length": 10,
+          "difficulty": 4.166666666666667,
+          "volume": 30,
+          "effort": 125.00000000000001,
+          "time": 6.9444444444444455,
+          "bugs": 0.01
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "objMap",
+        "line": 126,
+        "sloc": 6,
+        "lloc": 1,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 10,
+          "operandsTotal": 6,
+          "operandsUnique": 7,
+          "vocabulary": 12,
+          "length": 17,
+          "difficulty": 3.5,
+          "volume": 60.94436251225965,
+          "effort": 213.30526879290878,
+          "time": 11.850292710717154,
+          "bugs": 0.02031478750408655
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 127,
+            "sloc": 4,
+            "lloc": 2,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 9,
+              "operandsTotal": 4,
+              "operandsUnique": 9,
+              "vocabulary": 11,
+              "length": 18,
+              "difficulty": 7.875,
+              "volume": 62.26976913547135,
+              "effort": 490.37443194183686,
+              "time": 27.243023996768713,
+              "bugs": 0.020756589711823783
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "objReduce",
+        "line": 133,
+        "sloc": 7,
+        "lloc": 1,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 10,
+          "operandsTotal": 6,
+          "operandsUnique": 7,
+          "vocabulary": 12,
+          "length": 17,
+          "difficulty": 3.5,
+          "volume": 60.94436251225965,
+          "effort": 213.30526879290878,
+          "time": 11.850292710717154,
+          "bugs": 0.02031478750408655
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 134,
+            "sloc": 5,
+            "lloc": 4,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 13,
+              "operatorsUnique": 17,
+              "operandsTotal": 8,
+              "operandsUnique": 15,
+              "vocabulary": 21,
+              "length": 32,
+              "difficulty": 12.1875,
+              "volume": 140.55415752892034,
+              "effort": 1713.0037948837166,
+              "time": 95.16687749353981,
+              "bugs": 0.04685138584297345
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "systemThunkMiddleware",
+        "line": 142,
+        "sloc": 12,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 3,
+          "operatorsUnique": 3,
+          "operandsTotal": 2,
+          "operandsUnique": 2,
+          "vocabulary": 5,
+          "length": 5,
+          "difficulty": 1.5,
+          "volume": 11.60964047443681,
+          "effort": 17.414460711655217,
+          "time": 0.9674700395364009,
+          "bugs": 0.0038698801581456034
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 143,
+            "sloc": 10,
+            "lloc": 1,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 5,
+              "operandsTotal": 3,
+              "operandsUnique": 3,
+              "vocabulary": 7,
+              "length": 8,
+              "difficulty": 2,
+              "volume": 22.458839376460833,
+              "effort": 44.91767875292167,
+              "time": 2.495426597384537,
+              "bugs": 0.007486279792153611
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            },
+            "functions": [
+              {
+                "file": "test/swagger.js",
+                "function": "anonymous",
+                "line": 145,
+                "sloc": 7,
+                "lloc": 3,
+                "params": 1,
+                "halstead": {
+                  "operatorsTotal": 7,
+                  "operatorsUnique": 12,
+                  "operandsTotal": 4,
+                  "operandsUnique": 7,
+                  "vocabulary": 11,
+                  "length": 19,
+                  "difficulty": 6.125,
+                  "volume": 65.72920075410865,
+                  "effort": 402.59135461891543,
+                  "time": 22.366186367717525,
+                  "bugs": 0.02190973358470288
+                },
+                "cyclomatic": {
+                  "complexity": 2,
+                  "density": 0.6666666666666666
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "defaultStatusCode",
+        "line": 155,
+        "sloc": 9,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 22,
+          "operandsTotal": 13,
+          "operandsUnique": 18,
+          "vocabulary": 25,
+          "length": 40,
+          "difficulty": 8.307692307692307,
+          "volume": 185.75424759098897,
+          "effort": 1543.1891338328312,
+          "time": 85.73272965737951,
+          "bugs": 0.061918082530329654
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "getList",
+        "line": 171,
+        "sloc": 7,
+        "lloc": 4,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 13,
+          "operatorsUnique": 29,
+          "operandsTotal": 12,
+          "operandsUnique": 24,
+          "vocabulary": 25,
+          "length": 53,
+          "difficulty": 13,
+          "volume": 246.1243780580604,
+          "effort": 3199.616914754785,
+          "time": 177.75649526415472,
+          "bugs": 0.0820414593526868
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "mapToList",
+        "line": 186,
+        "sloc": 32,
+        "lloc": 17,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 75,
+          "operandsTotal": 28,
+          "operandsUnique": 61,
+          "vocabulary": 44,
+          "length": 136,
+          "difficulty": 17.428571428571427,
+          "volume": 742.4827001346724,
+          "effort": 12940.412773775719,
+          "time": 718.9118207653178,
+          "bugs": 0.24749423337822415
+        },
+        "cyclomatic": {
+          "complexity": 7,
+          "density": 0.4117647058823529
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "extractFileNameFromContentDispositionHeader",
+        "line": 219,
+        "sloc": 24,
+        "lloc": 8,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 29,
+          "operandsTotal": 16,
+          "operandsUnique": 23,
+          "vocabulary": 31,
+          "length": 52,
+          "difficulty": 10.78125,
+          "volume": 257.6182081401175,
+          "effort": 2777.4463065106415,
+          "time": 154.30257258392453,
+          "bugs": 0.08587273604670582
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.375
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 228,
+            "sloc": 4,
+            "lloc": 2,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 7,
+              "operatorsUnique": 8,
+              "operandsTotal": 5,
+              "operandsUnique": 7,
+              "vocabulary": 12,
+              "length": 15,
+              "difficulty": 4.8999999999999995,
+              "volume": 53.77443751081734,
+              "effort": 263.49474380300495,
+              "time": 14.63859687794472,
+              "bugs": 0.01792481250360578
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "pascalCase",
+        "line": 245,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 4,
+          "operatorsUnique": 5,
+          "operandsTotal": 4,
+          "operandsUnique": 5,
+          "vocabulary": 8,
+          "length": 10,
+          "difficulty": 2.5,
+          "volume": 30,
+          "effort": 75,
+          "time": 4.166666666666667,
+          "bugs": 0.01
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "pascalCaseFilename",
+        "line": 250,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 7,
+          "operandsTotal": 6,
+          "operandsUnique": 7,
+          "vocabulary": 12,
+          "length": 14,
+          "difficulty": 3.5,
+          "volume": 50.18947501009619,
+          "effort": 175.66316253533665,
+          "time": 9.75906458529648,
+          "bugs": 0.016729825003365395
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "propChecker",
+        "line": 259,
+        "sloc": 28,
+        "lloc": 3,
+        "params": 5,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 32,
+          "operandsTotal": 11,
+          "operandsUnique": 23,
+          "vocabulary": 23,
+          "length": 55,
+          "difficulty": 12.545454545454545,
+          "volume": 248.79590758313572,
+          "effort": 3121.2577496793388,
+          "time": 173.4032083155188,
+          "bugs": 0.08293196919437858
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 265,
+            "sloc": 17,
+            "lloc": 8,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 15,
+              "operatorsUnique": 34,
+              "operandsTotal": 12,
+              "operandsUnique": 24,
+              "vocabulary": 27,
+              "length": 58,
+              "difficulty": 15,
+              "volume": 275.7834751254812,
+              "effort": 4136.752126882217,
+              "time": 229.81956260456764,
+              "bugs": 0.09192782504182706
+            },
+            "cyclomatic": {
+              "complexity": 4,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateMaximum",
+        "line": 288,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 7,
+          "operandsTotal": 17,
+          "operandsUnique": 33,
+          "vocabulary": 23,
+          "length": 40,
+          "difficulty": 5.823529411764706,
+          "volume": 180.94247824228052,
+          "effort": 1053.723843881516,
+          "time": 58.54021354897311,
+          "bugs": 0.0603141594140935
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateMinimum",
+        "line": 294,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 7,
+          "operandsTotal": 19,
+          "operandsUnique": 36,
+          "vocabulary": 25,
+          "length": 43,
+          "difficulty": 5.684210526315789,
+          "volume": 199.68581616031315,
+          "effort": 1135.0562181744115,
+          "time": 63.0586787874673,
+          "bugs": 0.06656193872010438
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateNumber",
+        "line": 300,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 8,
+          "operandsTotal": 4,
+          "operandsUnique": 5,
+          "vocabulary": 11,
+          "length": 13,
+          "difficulty": 4.375,
+          "volume": 44.97261104228487,
+          "effort": 196.7551733099963,
+          "time": 10.930842961666462,
+          "bugs": 0.01499087034742829
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateInteger",
+        "line": 306,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 8,
+          "operandsTotal": 4,
+          "operandsUnique": 5,
+          "vocabulary": 11,
+          "length": 13,
+          "difficulty": 4.375,
+          "volume": 44.97261104228487,
+          "effort": 196.7551733099963,
+          "time": 10.930842961666462,
+          "bugs": 0.01499087034742829
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateFile",
+        "line": 312,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 10,
+          "operandsTotal": 4,
+          "operandsUnique": 6,
+          "vocabulary": 13,
+          "length": 16,
+          "difficulty": 6.75,
+          "volume": 59.207035490257475,
+          "effort": 399.64748955923795,
+          "time": 22.202638308846552,
+          "bugs": 0.019735678496752493
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateBoolean",
+        "line": 318,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 18,
+          "operandsTotal": 6,
+          "operandsUnique": 10,
+          "vocabulary": 14,
+          "length": 28,
+          "difficulty": 6.666666666666667,
+          "volume": 106.60593781761291,
+          "effort": 710.7062521174195,
+          "time": 39.48368067318997,
+          "bugs": 0.03553531260587097
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 2.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateString",
+        "line": 324,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 7,
+          "operatorsUnique": 9,
+          "operandsTotal": 3,
+          "operandsUnique": 5,
+          "vocabulary": 10,
+          "length": 14,
+          "difficulty": 5.833333333333334,
+          "volume": 46.50699332842307,
+          "effort": 271.29079441580126,
+          "time": 15.071710800877847,
+          "bugs": 0.015502331109474358
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateDateTime",
+        "line": 330,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 8,
+          "operandsTotal": 5,
+          "operandsUnique": 6,
+          "vocabulary": 11,
+          "length": 14,
+          "difficulty": 3.5999999999999996,
+          "volume": 48.432042660922164,
+          "effort": 174.35535357931977,
+          "time": 9.686408532184432,
+          "bugs": 0.01614401422030739
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateGuid",
+        "line": 336,
+        "sloc": 10,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 13,
+          "operandsTotal": 6,
+          "operandsUnique": 9,
+          "vocabulary": 14,
+          "length": 22,
+          "difficulty": 6,
+          "volume": 83.76180828526729,
+          "effort": 502.5708497116037,
+          "time": 27.920602761755763,
+          "bugs": 0.027920602761755765
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateMaxLength",
+        "line": 347,
+        "sloc": 7,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 12,
+          "operandsTotal": 25,
+          "operandsUnique": 55,
+          "vocabulary": 35,
+          "length": 67,
+          "difficulty": 11,
+          "volume": 343.66196213531276,
+          "effort": 3780.2815834884404,
+          "time": 210.01564352713558,
+          "bugs": 0.11455398737843758
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 1.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateUniqueItems",
+        "line": 355,
+        "sloc": 26,
+        "lloc": 11,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 16,
+          "operatorsUnique": 48,
+          "operandsTotal": 21,
+          "operandsUnique": 34,
+          "vocabulary": 37,
+          "length": 82,
+          "difficulty": 12.952380952380953,
+          "volume": 427.1751759815739,
+          "effort": 5532.935612713719,
+          "time": 307.3853118174288,
+          "bugs": 0.1423917253271913
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.5454545454545454
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 365,
+            "sloc": 8,
+            "lloc": 2,
+            "params": 3,
+            "halstead": {
+              "operatorsTotal": 11,
+              "operatorsUnique": 21,
+              "operandsTotal": 11,
+              "operandsUnique": 19,
+              "vocabulary": 22,
+              "length": 40,
+              "difficulty": 9.5,
+              "volume": 178.37726474549189,
+              "effort": 1694.584015082173,
+              "time": 94.14355639345405,
+              "bugs": 0.05945908824849729
+            },
+            "cyclomatic": {
+              "complexity": 3,
+              "density": 1.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateMinItems",
+        "line": 382,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 19,
+          "operandsTotal": 24,
+          "operandsUnique": 53,
+          "vocabulary": 39,
+          "length": 72,
+          "difficulty": 16.5625,
+          "volume": 380.5489597580819,
+          "effort": 6302.8421459932315,
+          "time": 350.157896999624,
+          "bugs": 0.12684965325269396
+        },
+        "cyclomatic": {
+          "complexity": 4,
+          "density": 2
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateMaxItems",
+        "line": 388,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 13,
+          "operandsTotal": 24,
+          "operandsUnique": 55,
+          "vocabulary": 35,
+          "length": 68,
+          "difficulty": 12.604166666666666,
+          "volume": 348.7912451522577,
+          "effort": 4396.222985773248,
+          "time": 244.234610320736,
+          "bugs": 0.1162637483840859
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 1.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateMinLength",
+        "line": 394,
+        "sloc": 5,
+        "lloc": 2,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 12,
+          "operandsTotal": 22,
+          "operandsUnique": 49,
+          "vocabulary": 32,
+          "length": 61,
+          "difficulty": 11.136363636363635,
+          "volume": 305,
+          "effort": 3396.5909090909086,
+          "time": 188.69949494949492,
+          "bugs": 0.10166666666666667
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 1.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validatePattern",
+        "line": 400,
+        "sloc": 6,
+        "lloc": 3,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 14,
+          "operandsTotal": 6,
+          "operandsUnique": 10,
+          "vocabulary": 18,
+          "length": 24,
+          "difficulty": 10,
+          "volume": 100.07820003461549,
+          "effort": 1000.782000346155,
+          "time": 55.59900001923083,
+          "bugs": 0.0333594000115385
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateValueBySchema",
+        "line": 407,
+        "sloc": 221,
+        "lloc": 132,
+        "params": 6,
+        "halstead": {
+          "operatorsTotal": 23,
+          "operatorsUnique": 477,
+          "operandsTotal": 108,
+          "operandsUnique": 378,
+          "vocabulary": 131,
+          "length": 855,
+          "difficulty": 40.25,
+          "volume": 6013.57666631452,
+          "effort": 242046.4608191594,
+          "time": 13447.025601064412,
+          "bugs": 2.0045255554381733
+        },
+        "cyclomatic": {
+          "complexity": 57,
+          "density": 0.4318181818181818
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 515,
+            "sloc": 5,
+            "lloc": 2,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 13,
+              "operandsTotal": 8,
+              "operandsUnique": 10,
+              "vocabulary": 17,
+              "length": 23,
+              "difficulty": 5.625,
+              "volume": 94.0116453487578,
+              "effort": 528.8155050867626,
+              "time": 29.378639171486814,
+              "bugs": 0.0313372151162526
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 1
+            }
+          },
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 522,
+            "sloc": 10,
+            "lloc": 2,
+            "params": 3,
+            "halstead": {
+              "operatorsTotal": 10,
+              "operatorsUnique": 20,
+              "operandsTotal": 13,
+              "operandsUnique": 18,
+              "vocabulary": 23,
+              "length": 38,
+              "difficulty": 6.923076923076923,
+              "volume": 171.8953543301665,
+              "effort": 1190.0447607473066,
+              "time": 66.11359781929481,
+              "bugs": 0.05729845144338883
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          },
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 609,
+            "sloc": 10,
+            "lloc": 2,
+            "params": 3,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 22,
+              "operandsTotal": 16,
+              "operandsUnique": 20,
+              "vocabulary": 25,
+              "length": 42,
+              "difficulty": 5.625,
+              "volume": 195.04195997053841,
+              "effort": 1097.1110248342786,
+              "time": 60.950612490793254,
+              "bugs": 0.06501398665684614
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "validateParam",
+        "line": 630,
+        "sloc": 20,
+        "lloc": 3,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 28,
+          "operandsTotal": 13,
+          "operandsUnique": 22,
+          "vocabulary": 22,
+          "length": 50,
+          "difficulty": 7.615384615384615,
+          "volume": 222.97158093186488,
+          "effort": 1698.0143470965093,
+          "time": 94.33413039425051,
+          "bugs": 0.07432386031062163
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "parseSearch",
+        "line": 651,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 11,
+          "operandsTotal": 7,
+          "operandsUnique": 8,
+          "vocabulary": 15,
+          "length": 19,
+          "difficulty": 4.571428571428571,
+          "volume": 74.23092131656186,
+          "effort": 339.3413545899971,
+          "time": 18.85229747722206,
+          "bugs": 0.024743640438853954
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "serializeSearch",
+        "line": 656,
+        "sloc": 4,
+        "lloc": 2,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 10,
+          "operandsTotal": 6,
+          "operandsUnique": 8,
+          "vocabulary": 14,
+          "length": 18,
+          "difficulty": 5.333333333333333,
+          "volume": 68.53238859703687,
+          "effort": 365.50607251752996,
+          "time": 20.305892917640552,
+          "bugs": 0.022844129532345624
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "btoa",
+        "line": 661,
+        "sloc": 11,
+        "lloc": 6,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 18,
+          "operandsTotal": 6,
+          "operandsUnique": 14,
+          "vocabulary": 17,
+          "length": 32,
+          "difficulty": 12.833333333333334,
+          "volume": 130.79881092001085,
+          "effort": 1678.5847401401393,
+          "time": 93.2547077855633,
+          "bugs": 0.04359960364000362
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.3333333333333333
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "buildFormData",
+        "line": 683,
+        "sloc": 13,
+        "lloc": 7,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 33,
+          "operandsTotal": 14,
+          "operandsUnique": 25,
+          "vocabulary": 28,
+          "length": 58,
+          "difficulty": 12.5,
+          "volume": 278.826585479341,
+          "effort": 3485.3323184917626,
+          "time": 193.62957324954237,
+          "bugs": 0.09294219515978033
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.42857142857142855
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "shallowEqualKeys",
+        "line": 698,
+        "sloc": 5,
+        "lloc": 1,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 9,
+          "operandsTotal": 4,
+          "operandsUnique": 5,
+          "vocabulary": 10,
+          "length": 14,
+          "difficulty": 3.75,
+          "volume": 46.50699332842307,
+          "effort": 174.40122498158652,
+          "time": 9.688956943421474,
+          "bugs": 0.015502331109474358
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 699,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 6,
+              "operatorsUnique": 7,
+              "operandsTotal": 4,
+              "operandsUnique": 6,
+              "vocabulary": 10,
+              "length": 13,
+              "difficulty": 4.5,
+              "volume": 43.18506523353571,
+              "effort": 194.3327935509107,
+              "time": 10.796266308383927,
+              "bugs": 0.014395021744511903
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "requiresValidationURL",
+        "line": 704,
+        "sloc": 11,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 10,
+          "operatorsUnique": 18,
+          "operandsTotal": 9,
+          "operandsUnique": 15,
+          "vocabulary": 19,
+          "length": 33,
+          "difficulty": 8.333333333333334,
+          "volume": 140.1816079436383,
+          "effort": 1168.180066196986,
+          "time": 64.89889256649923,
+          "bugs": 0.04672720264787944
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 1.6666666666666667
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "getAcceptControllingResponse",
+        "line": 716,
+        "sloc": 28,
+        "lloc": 9,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 12,
+          "operatorsUnique": 44,
+          "operandsTotal": 18,
+          "operandsUnique": 34,
+          "vocabulary": 30,
+          "length": 78,
+          "difficulty": 11.333333333333332,
+          "volume": 382.73746645746445,
+          "effort": 4337.69128651793,
+          "time": 240.9828492509961,
+          "bugs": 0.1275791554858215
+        },
+        "cyclomatic": {
+          "complexity": 7,
+          "density": 0.7777777777777778
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "suitable2xxResponse",
+            "line": 727,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 2,
+            "halstead": {
+              "operatorsTotal": 9,
+              "operatorsUnique": 15,
+              "operandsTotal": 10,
+              "operandsUnique": 12,
+              "vocabulary": 19,
+              "length": 27,
+              "difficulty": 5.3999999999999995,
+              "volume": 114.6940428629768,
+              "effort": 619.3478314600746,
+              "time": 34.40821285889304,
+              "bugs": 0.03823134762099227
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 2
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "getExtensions",
+        "line": 754,
+        "sloc": 7,
+        "lloc": 4,
+        "params": 4,
+        "halstead": {
+          "operatorsTotal": 9,
+          "operatorsUnique": 21,
+          "operandsTotal": 12,
+          "operandsUnique": 21,
+          "vocabulary": 21,
+          "length": 42,
+          "difficulty": 7.875,
+          "volume": 184.47733175670794,
+          "effort": 1452.758987584075,
+          "time": 80.70883264355972,
+          "bugs": 0.06149244391890265
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.5
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "deeplyStripKey",
+        "line": 770,
+        "sloc": 22,
+        "lloc": 5,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 14,
+          "operatorsUnique": 30,
+          "operandsTotal": 14,
+          "operandsUnique": 23,
+          "vocabulary": 28,
+          "length": 53,
+          "difficulty": 11.5,
+          "volume": 254.78981086905299,
+          "effort": 2930.082824994109,
+          "time": 162.7823791663394,
+          "bugs": 0.084929936956351
+        },
+        "cyclomatic": {
+          "complexity": 5,
+          "density": 1
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "anonymous",
+            "line": 782,
+            "sloc": 7,
+            "lloc": 4,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 11,
+              "operatorsUnique": 19,
+              "operandsTotal": 5,
+              "operandsUnique": 16,
+              "vocabulary": 16,
+              "length": 35,
+              "difficulty": 17.6,
+              "volume": 140,
+              "effort": 2464,
+              "time": 136.88888888888889,
+              "bugs": 0.04666666666666667
+            },
+            "cyclomatic": {
+              "complexity": 2,
+              "density": 0.5
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "stringify",
+        "line": 793,
+        "sloc": 23,
+        "lloc": 11,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 15,
+          "operatorsUnique": 45,
+          "operandsTotal": 13,
+          "operandsUnique": 30,
+          "vocabulary": 28,
+          "length": 75,
+          "difficulty": 17.307692307692307,
+          "volume": 360.5516191543203,
+          "effort": 6240.316485363235,
+          "time": 346.6842491868464,
+          "bugs": 0.1201838730514401
+        },
+        "cyclomatic": {
+          "complexity": 7,
+          "density": 0.6363636363636364
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "numberToString",
+        "line": 817,
+        "sloc": 7,
+        "lloc": 3,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 11,
+          "operandsTotal": 4,
+          "operandsUnique": 7,
+          "vocabulary": 12,
+          "length": 18,
+          "difficulty": 7,
+          "volume": 64.5293250129808,
+          "effort": 451.70527509086565,
+          "time": 25.09473750504809,
+          "bugs": 0.021509775004326936
+        },
+        "cyclomatic": {
+          "complexity": 2,
+          "density": 0.6666666666666666
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "paramToIdentifier",
+        "line": 825,
+        "sloc": 32,
+        "lloc": 11,
+        "params": 2,
+        "halstead": {
+          "operatorsTotal": 18,
+          "operatorsUnique": 52,
+          "operandsTotal": 29,
+          "operandsUnique": 69,
+          "vocabulary": 47,
+          "length": 121,
+          "difficulty": 21.413793103448278,
+          "volume": 672.1052510529942,
+          "effort": 14392.32278978998,
+          "time": 799.5734883216655,
+          "bugs": 0.2240350836843314
+        },
+        "cyclomatic": {
+          "complexity": 6,
+          "density": 0.5454545454545454
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "paramToValue",
+        "line": 858,
+        "sloc": 13,
+        "lloc": 3,
+        "params": 3,
+        "halstead": {
+          "operatorsTotal": 11,
+          "operatorsUnique": 19,
+          "operandsTotal": 13,
+          "operandsUnique": 17,
+          "vocabulary": 24,
+          "length": 36,
+          "difficulty": 7.1923076923076925,
+          "volume": 165.0586500259616,
+          "effort": 1187.152598263647,
+          "time": 65.95292212575816,
+          "bugs": 0.05501955000865387
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 0.3333333333333333
+        },
+        "functions": [
+          {
+            "file": "test/swagger.js",
+            "function": "values",
+            "line": 864,
+            "sloc": 3,
+            "lloc": 1,
+            "params": 1,
+            "halstead": {
+              "operatorsTotal": 4,
+              "operatorsUnique": 4,
+              "operandsTotal": 2,
+              "operandsUnique": 3,
+              "vocabulary": 6,
+              "length": 7,
+              "difficulty": 3,
+              "volume": 18.094737505048094,
+              "effort": 54.28421251514428,
+              "time": 3.0157895841746822,
+              "bugs": 0.006031579168349364
+            },
+            "cyclomatic": {
+              "complexity": 1,
+              "density": 1
+            }
+          }
+        ]
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "generateCodeVerifier",
+        "line": 873,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 0,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 7,
+          "operandsTotal": 6,
+          "operandsUnique": 6,
+          "vocabulary": 11,
+          "length": 13,
+          "difficulty": 2.5,
+          "volume": 44.97261104228487,
+          "effort": 112.43152760571218,
+          "time": 6.246195978095121,
+          "bugs": 0.01499087034742829
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "createCodeChallenge",
+        "line": 877,
+        "sloc": 5,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 5,
+          "operatorsUnique": 9,
+          "operandsTotal": 8,
+          "operandsUnique": 9,
+          "vocabulary": 13,
+          "length": 18,
+          "difficulty": 2.8125,
+          "volume": 66.60791492653966,
+          "effort": 187.3347607308928,
+          "time": 10.407486707271822,
+          "bugs": 0.022202638308846556
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "b64toB64UrlEncoded",
+        "line": 883,
+        "sloc": 3,
+        "lloc": 1,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 6,
+          "operatorsUnique": 12,
+          "operandsTotal": 9,
+          "operandsUnique": 12,
+          "vocabulary": 15,
+          "length": 24,
+          "difficulty": 4,
+          "volume": 93.76537429460444,
+          "effort": 375.06149717841777,
+          "time": 20.836749843245432,
+          "bugs": 0.03125512476486815
+        },
+        "cyclomatic": {
+          "complexity": 1,
+          "density": 1
+        }
+      },
+      {
+        "file": "test/swagger.js",
+        "function": "isEmptyValue",
+        "line": 887,
+        "sloc": 11,
+        "lloc": 5,
+        "params": 1,
+        "halstead": {
+          "operatorsTotal": 8,
+          "operatorsUnique": 14,
+          "operandsTotal": 5,
+          "operandsUnique": 9,
+          "vocabulary": 13,
+          "length": 23,
+          "difficulty": 7.2,
+          "volume": 85.11011351724513,
+          "effort": 612.792817324165,
+          "time": 34.04404540689805,
+          "bugs": 0.028370037839081708
+        },
+        "cyclomatic": {
+          "complexity": 3,
+          "density": 0.6
+        }
+      }
+    ]
+  }
+]

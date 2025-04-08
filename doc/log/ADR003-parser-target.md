@@ -1,6 +1,6 @@
 # ADR003 - Parser Target
 
-![image](https://badgen.net/badge/status/draft/grey) ![image](https://badgen.net/badge/date/11-03-25/grey)
+![image](https://badgen.net/badge/status/accepted/green) ![image](https://badgen.net/badge/date/11-03-25/grey)
 
 | Summary |
 | --- |

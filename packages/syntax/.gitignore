@@ -1,4 +1,6 @@
 **/parser/**
 !**/parser/generate.*
+!**/parser/parser.go
+!**/parser/lexer.go
 
 bin/*
