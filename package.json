@@ -1,6 +1,6 @@
 {
   "name": "grafig",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Adam Evans",
   "license": "MIT",
   "private": true,
@@ -8,6 +8,11 @@
     "packages/*"
   ],
   "scripts": {
-    "preinstall": "yarn workspace figsyntax preinstall"
+    "build": "scripts/build.sh",
+    "demo": "scripts/demo.sh"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "2.14.4",
+    "@parcel/transformer-typescript-types": "2.14.4"
   }
 }
