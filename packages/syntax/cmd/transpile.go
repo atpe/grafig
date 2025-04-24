@@ -1,39 +1,94 @@
-/*
-Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
-// import (
-// 	"fmt"
+import (
+	"bufio"
+	"figsyntax/internal/command"
+	"figsyntax/internal/file"
+	"figsyntax/internal/logger"
+	"figsyntax/internal/transpiler"
+	"fmt"
+	"log/slog"
+	"os"
+	"path/filepath"
+	"strings"
 
-// 	"github.com/spf13/cobra"
-// )
+	"github.com/spf13/cobra"
+)
 
-// // transpileCmd represents the transpile command
-// var transpileCmd = &cobra.Command{
-// 	Use:   "transpile",
-// 	Short: "A brief description of your command",
-// 	Long: `A longer description that spans multiple lines and likely contains examples
-// and usage of using your command. For example:
+const logFormat = "\n%v:\n\n%v\n"
+const fileFormat = "// Code generated from %v by @grafig/syntax. DO NOT EDIT.\n\n%v"
 
-// Cobra is a CLI library for Go that empowers applications.
-// This application is a tool to generate the needed files
-// to quickly create a Cobra application.`,
-// 	Run: func(cmd *cobra.Command, args []string) {
-// 		fmt.Println("transpile called")
-// 	},
-// }
+const transpileUse = "transpile <path> [flags]"
+const transpileShort = `Transpiles a given figscript file.`
+const transpileLong = `
+Given a file containing valid figscript, the transpile command will parse the
+code and generate the transpiled javascript:
+`
 
-// func init() {
-// 	root.AddCommand(transpileCmd)
+type transpileCommand struct {
+	*command.CommonCommand
+}
 
-// 	// Here you will define your flags and configuration settings.
+func newTranspileCommand(logger *slog.Logger, options ...command.CommonCommandOption) *transpileCommand {
+	c := &transpileCommand{command.New(logger.WithGroup(transpileUse), options...)}
 
-// 	// Cobra supports Persistent Flags which will work for this command
-// 	// and all subcommands, e.g.:
-// 	// transpileCmd.PersistentFlags().String("foo", "", "A help for foo")
+	c.CommonCommand.PreRun = c.PreRun
+	c.CommonCommand.Run = c.Run
 
-// 	// Cobra supports local flags which will only run when this command
-// 	// is called directly, e.g.:
-// 	// transpileCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-// }
+	return c
+}
+
+func (c *transpileCommand) PreRun(cmd *cobra.Command, args []string) {
+	logger.Trace()
+
+	c.ConfigureLoggerFlags()
+	c.LogWith(
+		slog.String(file.Path, args[0]),
+		c.UseConfigAttr(file.Output),
+		c.UseConfigAttr(logger.Level),
+	)
+}
+
+func (c *transpileCommand) Run(cmd *cobra.Command, args []string) {
+	logger.Trace()
+
+	errorListener := c.UseValidationErrorListener()
+
+	transpiler := transpiler.NewTranspiler(c.GetLogger(), errorListener)
+	transpiled, err := transpiler.TranspileGlob(args[0])
+
+	c.HandleError(err)
+	c.HandleError(errorListener.GetError())
+
+	for path, content := range transpiled {
+		if !c.GetConfigBool(logger.Silent) {
+			fmt.Printf(logFormat, path, content)
+		}
+		c.writeFile(path, content)
+	}
+}
+
+func (c transpileCommand) writeFile(path string, content string) {
+	logger.Trace()
+
+	dir := c.GetConfigString(file.Output)
+	if dir == command.Undefined {
+		return
+	}
+
+	old := filepath.Base(path)
+	new := strings.Replace(old, filepath.Ext(old), file.JS, 1)
+	out := filepath.Join(dir, new)
+	txt := fmt.Sprintf(fileFormat, path, content)
+
+	file, err := os.Create(out)
+	c.HandleError(err)
+
+	defer c.DeferErrorFunc(file.Close, err != nil)
+
+	writer := bufio.NewWriter(file)
+	_, err = writer.Write([]byte(txt))
+
+	c.HandleError(err)
+	c.DeferErrorFunc(writer.Flush, err != nil)
+}

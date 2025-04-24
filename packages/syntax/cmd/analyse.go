@@ -4,91 +4,94 @@ import (
 	"bufio"
 	"encoding/json"
 	"figsyntax/internal/analyser"
-	"figsyntax/internal/debugger"
+	"figsyntax/internal/command"
+	"figsyntax/internal/file"
+	"figsyntax/internal/logger"
+	"figsyntax/internal/parser"
 	"log/slog"
 	"os"
 
 	"github.com/spf13/cobra"
 )
 
-type AnalyseCommand struct {
-	*CommonCommand
+const analyseUse = "analyse <path> [flags]"
+const analyseShort = `Analyses the complexity of a given figscript or javascript file.`
+const analyseLong = `
+Given a file containing valid javascript or figscript, the analyse command will
+parse the code and evalutate the following metrics:
+
+	- Source Lines of Code (LOC/SLOC)
+	- Logical Lines of Code (LLOC)
+	- Parameters
+	- Cyclomatic Complexity
+	- Cyclomatic Density
+	- Halstead Vocabulary
+	- Halstead Length
+	- Halstead Volume
+	- Halstead Difficulty
+	- Halstead Effort
+	- Halstead Time
+	- Halstead Bugs
+
+The output is generated in a similar format to the npm package 'complexity-report'.
+	See: https://www.npmjs.com/package/complexity-report
+`
+
+type analyseCommand struct {
+	*command.CommonCommand
 }
 
-func NewAnalyseCommand(logger *slog.Logger, options ...CommonCommandOption) *AnalyseCommand {
-	debugger.Trace()
+func newAnalyseCommand(logger *slog.Logger, options ...command.CommonCommandOption) *analyseCommand {
+	c := &analyseCommand{command.New(logger.WithGroup(analyseUse), options...)}
 
-	c := &AnalyseCommand{
-		CommonCommand: NewCommonCommand(logger.WithGroup("analyse")),
-	}
-	for _, o := range options {
-		o(c.CommonCommand)
-	}
 	c.CommonCommand.PreRun = c.PreRun
 	c.CommonCommand.Run = c.Run
+
 	return c
 }
 
-func (c *AnalyseCommand) PreRun(cmd *cobra.Command, args []string) {
-	debugger.Trace()
+func (c *analyseCommand) PreRun(cmd *cobra.Command, args []string) {
+	logger.Trace()
 
 	c.ConfigureLoggerFlags()
 	c.ConfigureTargetFlags(args[0])
 
-	c.logger = c.logger.With(
-		slog.String("path", args[0]),
-		slog.String("output", c.config.GetString(OUTPUT)),
-		slog.String("target", c.config.GetString(TARGET)),
-		slog.String("log-level", c.config.GetString(LOG_LEVEL)),
+	c.LogWith(
+		slog.String(file.Path, args[0]),
+		c.UseConfigAttr(file.Output),
+		c.UseConfigAttr(parser.Target),
+		c.UseConfigAttr(logger.Level),
 	)
 }
 
-func (c *AnalyseCommand) Run(cmd *cobra.Command, args []string) {
-	debugger.Trace()
+func (c *analyseCommand) Run(cmd *cobra.Command, args []string) {
+	logger.Trace()
 
-	analyser := analyser.NewAnalyser(c.logger)
-	analysed, err := analyser.AnalyseGlob(args[0], c.config.GetString(TARGET))
-	if err != nil {
-		c.logger.Error(err.Error())
-		return
-	}
+	analyser := analyser.NewCommonAnalyser(c.GetLogger(), c.GetConfigString(parser.Target))
+	analysed, err := analyser.AnalyseGlob(args[0])
 
-	if !c.config.GetBool(SILENT) {
+	c.HandleError(err)
+
+	if !c.GetConfigBool(logger.Silent) {
 		for _, metrics := range analysed {
 			metrics.Print()
 		}
 	}
 
-	path := c.config.GetString(OUTPUT)
-	if path != DEFAULT {
+	path := c.GetConfigString(file.Output)
+
+	if path != command.Undefined {
 		file, err := os.Create(path)
-		if err != nil {
-			c.logger.Error(err.Error())
-			return
-		}
-		defer func() {
-			if err := file.Close(); err != nil {
-				c.logger.Error(err.Error())
-				return
-			}
-		}()
+		c.HandleError(err)
+		defer c.DeferErrorFunc(file.Close, err != nil)
 
 		bytes, err := json.MarshalIndent(analysed, "", "  ")
-		if err != nil {
-			c.logger.Error(err.Error())
-			return
-		}
+		c.HandleError(err)
 
 		writer := bufio.NewWriter(file)
-
 		_, err = writer.Write(bytes)
-		if err != nil {
-			c.logger.Error(err.Error())
-			return
-		}
 
-		if err = writer.Flush(); err != nil {
-			panic(err)
-		}
+		c.HandleError(err)
+		c.DeferErrorFunc(writer.Flush, err != nil)
 	}
 }

@@ -4,6 +4,10 @@ This project uses a monorepo architecture whereby the distinct compmonents of th
 
 ## Packages
 
+### `demo`
+
+An example application that uses the developed framework.
+
 ### `lib`
 
 The core framework functionality - e.g. vector mathematics, graphics rendering, etc.
@@ -15,9 +19,5 @@ Extended syntax grammar and parser generator program.
 ### `test`
 
 Program for measuring the complexity of code written using various graphics libraries.
-
-### `example`
-
-An example application that uses the developed framework.
 
 [^1]: [ADR001 - Project Structure](./log/ADR001-project-structure.md)

@@ -1,7 +1,7 @@
 package validation
 
 import (
-	"figsyntax/internal/debugger"
+	"figsyntax/internal/logger"
 	"fmt"
 	"log/slog"
 
@@ -15,36 +15,33 @@ type ValidationErrorListener struct {
 }
 
 func NewValidationErrorListener(logger *slog.Logger) *ValidationErrorListener {
-	debugger.Trace()
-
 	return &ValidationErrorListener{
 		antlr.NewDefaultErrorListener(),
-		logger,
+		logger.WithGroup("errors"),
 		make([]error, 0),
 	}
 }
 
 func (c *ValidationErrorListener) SyntaxError(_ antlr.Recognizer, _ interface{}, line, column int, msg string, _ antlr.RecognitionException) {
-	debugger.Trace()
-
+	logger.Trace()
 	c.logger.Error(msg, "line", line, "col", column)
 	c.errors = append(c.errors, fmt.Errorf(msg))
 }
 
 func (c *ValidationErrorListener) HasError() bool {
-	debugger.Trace()
-
+	logger.Trace()
 	return len(c.errors) > 0
 }
 
 func (c *ValidationErrorListener) GetError() error {
-	debugger.Trace()
-
-	return c.errors[0]
+	logger.Trace()
+	if len(c.errors) > 0 {
+		return c.errors[0]
+	}
+	return nil
 }
 
 func (c *ValidationErrorListener) Reset() {
-	debugger.Trace()
-
+	logger.Trace()
 	c.errors = make([]error, 0)
 }

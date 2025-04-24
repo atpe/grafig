@@ -1,17 +1,16 @@
 {
   "name": "@grafig/demo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
+    "prebuild": "../syntax/bin/figsyntax transpile src/*.fs -s -o src",
     "build": "parcel build"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "@grafig/lib": "0.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "parcel": "^2.14.4"
   }

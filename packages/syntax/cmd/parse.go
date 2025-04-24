@@ -1,67 +1,60 @@
 package cmd
 
 import (
-	"figsyntax/internal/debugger"
+	"figsyntax/internal/command"
+	"figsyntax/internal/file"
 	"figsyntax/internal/logger"
 	"figsyntax/internal/parser"
-	"figsyntax/internal/validation"
 	"log/slog"
 
 	"github.com/spf13/cobra"
 )
 
-type ParseCommand struct {
-	*CommonCommand
+const parseUse = "parse <path> [flags]"
+const parseShort = `Parses a given figscript or javascript file.`
+const parseLong = `
+Given a file containing valid javascript or figscript, the parse command will
+output its resultant parse tree.
+`
+
+type parseCommand struct {
+	*command.CommonCommand
 }
 
-func NewParseCommand(logger *slog.Logger, options ...CommonCommandOption) *ParseCommand {
-	debugger.Trace()
+func newParseCommand(logger *slog.Logger, options ...command.CommonCommandOption) *parseCommand {
+	c := &parseCommand{command.New(logger.WithGroup(parseUse), options...)}
 
-	c := &ParseCommand{
-		NewCommonCommand(logger.WithGroup("parse")),
-	}
-	for _, o := range options {
-		o(c.CommonCommand)
-	}
 	c.CommonCommand.PreRun = c.PreRun
 	c.CommonCommand.Run = c.Run
+
 	return c
 }
 
-func (c *ParseCommand) PreRun(cmd *cobra.Command, args []string) {
-	debugger.Trace()
+func (c *parseCommand) PreRun(cmd *cobra.Command, args []string) {
+	logger.Trace()
 
 	c.ConfigureLoggerFlags()
 	c.ConfigureTargetFlags(args[0])
 
-	c.logger = c.logger.With(
-		slog.String("path", args[0]),
-		slog.String("target", c.config.GetString("target")),
-		slog.String("log-level", c.config.GetString("log-level")),
+	c.LogWith(
+		slog.String(file.Path, args[0]),
+		c.UseConfigAttr(file.Output),
+		c.UseConfigAttr(logger.Level),
 	)
 }
 
-func (c *ParseCommand) Run(cmd *cobra.Command, args []string) {
-	debugger.Trace()
+func (c *parseCommand) Run(cmd *cobra.Command, args []string) {
+	logger.Trace()
 
-	errorListener := validation.NewValidationErrorListener(c.logger.WithGroup("errors"))
-	debugListener := logger.NewDebugListener(c.logger.WithGroup("debug"))
+	errorListener := c.UseValidationErrorListener()
 
-	parser, err := parser.NewCommonParser(
-		c.logger.WithGroup("parser"),
-		c.config.GetString("target"),
+	_, err := parser.New(
+		c.GetLogger(),
+		c.GetConfigString(parser.Target),
 		parser.WithFileLexer(args[0]),
 		parser.WithErrorListener(errorListener),
 	)
-	if err != nil {
-		c.logger.Error(err.Error())
-		return
-	}
 
-	if errorListener.HasError() {
-		c.logger.Error(errorListener.GetError().Error())
-		return
-	}
-
-	parser.Walk(debugListener)
+	c.HandleError(err)
+	c.HandleError(errorListener.GetError())
 }

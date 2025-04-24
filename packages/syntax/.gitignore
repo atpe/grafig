@@ -1,6 +1,11 @@
-**/parser/**
-!**/parser/generate.*
-!**/parser/parser.go
-!**/parser/lexer.go
+internal/parser/*.g4*
+internal/parser/javascript_*.go
+internal/parser/javascriptparser_*.go
+
+internal/parser/figscript/figscript*.go
+!internal/parser/figscript/figscript*base.go
+
+internal/parser/**/*.interp
+internal/parser/**/*.tokens
 
 bin/*

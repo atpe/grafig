@@ -1,26 +1,16 @@
-# figsyntax
+# @grafig/syntax
 
-![image](https://badgen.net/badge/version/v0.0.2/grey)
+![Golang](https://img.shields.io/badge/golang-grey?logo=go) ![Version](https://img.shields.io/github/package-json/v/atpe/grafig?filename=packages/syntax/package.json)
 
-A tool for parsing _FigScript_ and transpiling into native JavaScript.
+A tool to transpile _FigScript_ into vanilla JavaScript.
 
 ## Installation
 
-This project requires the [Golang distributable](https://go.dev/doc/install) and [ANTLR4](https://www.antlr.org/download.html) to be installed, with their binaries included in the `PATH` environment variable. Additionally, to use the provided [transformGrammar.py](https://github.com/antlr/grammars-v4/blob/master/javascript/javascript/Go/transformGrammar.py) script, `python` must also be installed and included in `PATH`.
+>This project requires the [Golang distributable](https://go.dev/doc/install) and [ANTLR4](https://www.antlr.org/download.html) to be installed, with their binaries included in the `PATH` environment variable. Additionally, to use the provided [transformGrammar.py](https://github.com/antlr/grammars-v4/blob/master/javascript/javascript/Go/transformGrammar.py) script, `python` must also be installed and included in `PATH`.
 
-If `yarn install` was run in the root package, the installation process should already be completed, otherwise run `yarn install` in this directory.
+If `yarn install` was run in the workspace root, the installation process should already be completed. If not, run `yarn install` from within this package. This will additionally run the `prepare` script to download and transform the required grammar and parser files into the `internal/parser` directory.
 
-The `preinstall` script, which runs before `install`, is equivalent to running:
-
-```bash
-yarn clean      # delete untracked files
-yarn download   # download ANTLR files
-yarn transform  # transform grammars
-yarn generate   # generate parsers
-yarn build      # build package binary
-```
-
-Once the installation has been completed successfully, build the binary:
+Once the installation has been completed successfully, the binary can be built by running:
 
 ```bash
 yarn build
@@ -31,7 +21,19 @@ yarn build
 Once the binary has been sucessfully built, all operations are aliased through `yarn` - e.g.:
 
 ```bash
-yarn parse example/simple.js
-# OR
-bin/figsyntax parse example/simple.js
+yarn syntax transpile example/file.fs
+# is the same as running
+bin/figsyntax transpile example/file.fs
+```
+
+The available commands are:
+
+- `parse`
+- `analyse`
+- `transpile`
+
+To see the usage of any command run:
+
+```bash
+yarn syntax [command] --help
 ```

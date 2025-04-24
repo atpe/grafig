@@ -1,7 +1,8 @@
 package parser
 
 import (
-	"figsyntax/internal/debugger"
+	"figsyntax/internal/logger"
+	"figsyntax/internal/parser/figscript"
 	"fmt"
 	"log/slog"
 
@@ -25,17 +26,18 @@ type CommonParser struct {
 	logger         *slog.Logger
 	target         string
 	lexer          Lexer
+	tokens         *antlr.CommonTokenStream
 	tree           antlr.ParseTree
+	hidden         map[int]antlr.Token
 	errorListeners []ErrorListener
 }
 
-func NewCommonParser(logger *slog.Logger, target string, options ...CommonParserOption) (*CommonParser, error) {
-	debugger.Trace()
-
+func New(logger *slog.Logger, target string, options ...CommonParserOption) (*CommonParser, error) {
 	p := &CommonParser{
 		logger:         logger,
 		target:         target,
 		errorListeners: make([]ErrorListener, 0),
+		hidden:         make(map[int]antlr.Token),
 	}
 
 	err := p.apply(options)
@@ -71,34 +73,62 @@ func WithErrorListener(listener ErrorListener) CommonParserOption {
 	}
 }
 
-func (p *CommonParser) Walk(listener antlr.ParseTreeListener) {
-	debugger.Trace()
+func (p *CommonParser) GetTree() antlr.Tree {
+	logger.Trace()
+	return p.tree
+}
 
+func (p *CommonParser) GetHidden() map[int]antlr.Token {
+	logger.Trace()
+	return p.hidden
+}
+
+func (p *CommonParser) Walk(listener antlr.ParseTreeListener) {
+	logger.Trace()
 	antlr.ParseTreeWalkerDefault.Walk(listener, p.tree)
 }
 
 func (p *CommonParser) parse() error {
-	debugger.Trace()
+	logger.Trace()
+
+	p.tokens = p.lexer.GetTokens()
 
 	switch p.target {
 	case "javascript":
 		p.parseJavaScript()
+	case "figscript":
+		p.parseFigScript()
 	default:
 		return fmt.Errorf("cannot parse for invalid target '%v'", p.target)
 	}
+
+	for _, token := range p.tokens.GetAllTokens() {
+		if token.GetChannel() == antlr.TokenHiddenChannel {
+			p.hidden[token.GetTokenIndex()] = token
+		}
+	}
+
 	return nil
 }
 
 func (p *CommonParser) parseJavaScript() {
-	debugger.Trace()
+	logger.Trace()
 
-	parser := NewJavaScriptParser(p.lexer.GetTokens())
+	parser := NewJavaScriptParser(p.tokens)
+	p.bind(parser)
+	p.tree = parser.Program()
+}
+
+func (p *CommonParser) parseFigScript() {
+	logger.Trace()
+
+	parser := figscript.NewFigScriptParser(p.tokens)
 	p.bind(parser)
 	p.tree = parser.Program()
 }
 
 func (p *CommonParser) apply(options []CommonParserOption) error {
-	debugger.Trace()
+	logger.Trace()
 
 	for _, o := range options {
 		err := o(p)
@@ -115,8 +145,7 @@ func (p *CommonParser) apply(options []CommonParserOption) error {
 }
 
 func (p *CommonParser) bind(parser antlr.Parser) {
-	debugger.Trace()
-
+	logger.Trace()
 	for _, listener := range p.errorListeners {
 		parser.AddErrorListener(listener)
 	}

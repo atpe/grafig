@@ -1,7 +1,8 @@
 package parser
 
 import (
-	"figsyntax/internal/debugger"
+	"figsyntax/internal/logger"
+	"figsyntax/internal/parser/figscript"
 	"fmt"
 	"log/slog"
 
@@ -24,8 +25,6 @@ type FileLexer struct {
 }
 
 func NewFileLexer(logger *slog.Logger, path string, target string) (*FileLexer, error) {
-	debugger.Trace()
-
 	lexer := &FileLexer{logger: logger, target: target}
 	err := lexer.readFileStream(path)
 	if err != nil {
@@ -41,17 +40,20 @@ func NewFileLexer(logger *slog.Logger, path string, target string) (*FileLexer, 
 }
 
 func (l *FileLexer) GetTokens() *antlr.CommonTokenStream {
-	debugger.Trace()
+	logger.Trace()
 
 	return l.tokens
 }
 
 func (l *FileLexer) tokeniseInput(target string) error {
-	debugger.Trace()
+	logger.Trace()
 
 	switch target {
 	case "javascript":
 		lexer := NewJavaScriptLexer(l.input)
+		l.tokens = antlr.NewCommonTokenStream(lexer, 0)
+	case "figscript":
+		lexer := figscript.NewFigScriptLexer(l.input)
 		l.tokens = antlr.NewCommonTokenStream(lexer, 0)
 	default:
 		return fmt.Errorf("could not tokenise file - target '%v' is not a valid option", target)
@@ -61,7 +63,7 @@ func (l *FileLexer) tokeniseInput(target string) error {
 }
 
 func (l *FileLexer) readFileStream(path string) error {
-	debugger.Trace()
+	logger.Trace()
 
 	input, err := antlr.NewFileStream(path)
 	if err != nil {

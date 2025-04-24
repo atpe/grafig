@@ -1,4 +1,5 @@
 dist/
+docs/
 coverage/lcov-report/
 !.babelrc.json
 !.parcelrc

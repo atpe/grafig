@@ -1,5 +1,12 @@
 import { Vec, Vec2, Vec3 } from './core'
 
+/**
+ * Adds a number or vector to a given vector
+ *
+ * @param augend the vector being added to
+ * @param addend the number or vector being added
+ * @returns the vector sum
+ */
 export function add(augend: Vec2, addend: number | Vec): Vec2
 export function add(augend: Vec3, addend: number | Vec): Vec3
 export function add(augend: Vec, addend: number | Vec): Vec

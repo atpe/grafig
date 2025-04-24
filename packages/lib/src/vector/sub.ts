@@ -1,5 +1,12 @@
 import { Vec2, Vec, Vec3 } from './core'
 
+/**
+ * Subtracts a number or vector from a given vector
+ *
+ * @param augend the vector being subtracted from
+ * @param addend the number or vector being subtracted
+ * @returns the vector difference
+ */
 export function sub(minuend: Vec2, subtrahend: number | Vec): Vec2
 export function sub(minuend: Vec3, subtrahend: number | Vec): Vec3
 export function sub(minuend: Vec, subtrahend: number | Vec): Vec

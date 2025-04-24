@@ -1,6 +1,6 @@
 {
   "name": "@grafig/syntax",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bin": "bin/figsyntax",
   "scripts": {
     "prepare:download": "scripts/prepare:download.sh",
@@ -10,7 +10,8 @@
     "build": "scripts/build.sh",
     "test": "scripts/test.sh",
     "test:compare": "node scripts/test:compare.js",
-    "syntax": "bin/figsyntax --",
+    "demo": "bin/figsyntax transpile example/demo.fs -s -o example",
+    "syntax": "bin/figsyntax",
     "syntax:parse": "bin/figsyntax parse",
     "syntax:analyse": "bin/figsyntax analyse",
     "syntax:transpile": "bin/figsyntax transpile"

@@ -1,6 +1,6 @@
-# figlib
+# @grafig/lib
 
-[![jest tested](https://img.shields.io/badge/Jest-tested-eee.svg?logo=jest&labelColor=99424f)](https://github.com/jestjs/jest)
+![Version](https://img.shields.io/github/package-json/v/atpe/grafig?label=@grafig/lib&filename=packages/lib/package.json) ![JavaScript](https://img.shields.io/badge/javascript-grey?logo=javascript) ![Jest](https://img.shields.io/badge/jest-grey?logo=jest)
 
 ## Testing
 

@@ -2,12 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { afterEach, describe, expect, jest, test } from '@jest/globals'
+import { describe, expect, jest, test } from '@jest/globals'
 import { createCanvas, useElementById } from './canvas'
-
-afterEach(() => {
-  jest.restoreAllMocks()
-})
 
 describe('createCanvas()', () => {
   const dimensions = { x: 500, y: 250 }
@@ -19,10 +15,10 @@ describe('createCanvas()', () => {
 
     jest
       .spyOn(document.body, 'clientWidth', 'get')
-      .mockReturnValue(dimensions.x)
+      .mockReturnValueOnce(dimensions.x)
     jest
       .spyOn(document.body, 'clientHeight', 'get')
-      .mockReturnValue(dimensions.y)
+      .mockReturnValueOnce(dimensions.y)
 
     createElementSpy.mockReturnValueOnce(canvasElement)
 
@@ -67,8 +63,12 @@ describe('createCanvas()', () => {
     const canvasElement = document.createElement('canvas')
     const rootElement = document.createElement('div')
 
-    jest.spyOn(rootElement, 'clientWidth', 'get').mockReturnValue(dimensions.x)
-    jest.spyOn(rootElement, 'clientHeight', 'get').mockReturnValue(dimensions.y)
+    jest
+      .spyOn(rootElement, 'clientWidth', 'get')
+      .mockReturnValueOnce(dimensions.x)
+    jest
+      .spyOn(rootElement, 'clientHeight', 'get')
+      .mockReturnValueOnce(dimensions.y)
 
     createElementSpy.mockReturnValueOnce(canvasElement)
 
@@ -94,8 +94,12 @@ describe('createCanvas()', () => {
     rootElement.id = 'test-container'
     document.body.appendChild(rootElement)
 
-    jest.spyOn(rootElement, 'clientWidth', 'get').mockReturnValue(dimensions.x)
-    jest.spyOn(rootElement, 'clientHeight', 'get').mockReturnValue(dimensions.y)
+    jest
+      .spyOn(rootElement, 'clientWidth', 'get')
+      .mockReturnValueOnce(dimensions.x)
+    jest
+      .spyOn(rootElement, 'clientHeight', 'get')
+      .mockReturnValueOnce(dimensions.y)
 
     createElementSpy.mockReturnValueOnce(canvasElement)
 
@@ -109,5 +113,17 @@ describe('createCanvas()', () => {
       expect(sut.dimensions).toEqual(dimensions))
     test('returns a canvas object with expected parent', () =>
       expect(canvasElement.parentElement).toBe(rootElement))
+  })
+  describe('given getContext() returns null context', () => {
+    // arrange
+    const canvasElement = document.createElement('canvas')
+    createElementSpy.mockReturnValueOnce(canvasElement)
+    jest.spyOn(canvasElement, 'getContext').mockReturnValueOnce(null)
+
+    // act
+    const sut = createCanvas
+
+    // assert
+    test('throws error', expect(sut).toThrow)
   })
 })

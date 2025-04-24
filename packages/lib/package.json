@@ -1,15 +1,19 @@
 {
   "name": "@grafig/lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
   "scripts": {
     "watch": "parcel watch --port 3000",
     "build": "parcel build",
+    "docs:generate": "typedoc src/index.ts",
+    "docs:serve": "yarn parcel docs/index.html",
+    "docs": "yarn docs:generate && yarn docs:serve",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:badges": "jest --coverage  && jest-coverage-badges"
+    "coverage:generate": "jest --coverage",
+    "coverage:badges": "jest-coverage-badges",
+    "coverage": "yarn coverage:generate && yarn coverage:badges"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +31,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^26.1.0",
     "parcel": "^2.14.4",
+    "typedoc": "^0.28.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.29.1"
   }

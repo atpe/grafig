@@ -1,6 +1,6 @@
-# GrafigJS
+# grafig
 
-![image](https://badgen.net/badge/version/v0.0.0/grey)
+![Version](https://img.shields.io/badge/github-blue?logo=github) ![Version](https://img.shields.io/github/package-json/v/atpe/grafig)
 
 A framework for graphics rendering in client-side web applications.
 
