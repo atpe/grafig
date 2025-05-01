@@ -84,11 +84,11 @@ func (c transpileCommand) writeFile(path string, content string) {
 	file, err := os.Create(out)
 	c.HandleError(err)
 
-	defer c.DeferErrorFunc(file.Close, err != nil)
+	defer c.DeferErrorFunc(file.Close, err == nil)
 
 	writer := bufio.NewWriter(file)
 	_, err = writer.Write([]byte(txt))
 
 	c.HandleError(err)
-	c.DeferErrorFunc(writer.Flush, err != nil)
+	c.DeferErrorFunc(writer.Flush, err == nil)
 }

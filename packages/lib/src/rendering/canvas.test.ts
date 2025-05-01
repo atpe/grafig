@@ -3,127 +3,109 @@
  */
 
 import { describe, expect, jest, test } from '@jest/globals'
-import { createCanvas, useElementById } from './canvas'
+import { Canvas } from './canvas'
 
-describe('createCanvas()', () => {
+describe('Canvas()', () => {
   const dimensions = { x: 500, y: 250 }
   const createElementSpy = jest.spyOn(document, 'createElement')
 
-  describe('given no root', () => {
+  describe('given no parent element', () => {
     // arrange
-    const canvasElement = document.createElement('canvas')
+    const canvas = document.createElement('canvas')
 
-    jest
-      .spyOn(document.body, 'clientWidth', 'get')
-      .mockReturnValueOnce(dimensions.x)
-    jest
-      .spyOn(document.body, 'clientHeight', 'get')
-      .mockReturnValueOnce(dimensions.y)
-
-    createElementSpy.mockReturnValueOnce(canvasElement)
+    createElementSpy.mockReturnValueOnce(canvas)
 
     // act
-    const sut = createCanvas()
+    const sut = Canvas()
 
     // assert
     test('creates canvas element', expect(createElementSpy).toBeCalled)
-    test('returns a non-null canvas object', expect(sut).toBeDefined)
-    test('returns a canvas object with expected size', () =>
-      expect(sut.dimensions).toEqual(dimensions))
-    test('returns a canvas object with expected parent', () =>
-      expect(canvasElement.parentElement).toBe(document.body))
-  })
-
-  describe('given null root', () => {
-    // arrange
-    const canvasElement = document.createElement('canvas')
-    canvasElement.width = dimensions.x
-    canvasElement.height = dimensions.y
-
-    createElementSpy.mockReturnValueOnce(canvasElement)
-
-    // act
-    const sut = createCanvas(null)
-
-    // assert
-    test('creates canvas element', expect(createElementSpy).toBeCalled)
-    test('returns a non-null canvas object', expect(sut).toBeDefined)
-    test('returns a canvas object with expected size', () =>
-      expect(sut.dimensions).toEqual(dimensions))
+    test('returns a non-null render function', () => {
+      expect(sut).toBeDefined()
+      expect(sut).toBeInstanceOf(Function)
+    })
     test(
-      'returns a canvas object with null parent',
-      expect(canvasElement.parentElement).toBeNull
+      'returns an unparented render function',
+      expect(canvas.parentElement).toBeNull
     )
   })
 
-  describe('given a root value', () => {
+  describe('given null parent', () => {
     // arrange
-    const dimensions = { x: 500, y: 250 }
+    const canvas = document.createElement('canvas')
+    canvas.width = dimensions.x
+    canvas.height = dimensions.y
 
-    const canvasElement = document.createElement('canvas')
-    const rootElement = document.createElement('div')
-
-    jest
-      .spyOn(rootElement, 'clientWidth', 'get')
-      .mockReturnValueOnce(dimensions.x)
-    jest
-      .spyOn(rootElement, 'clientHeight', 'get')
-      .mockReturnValueOnce(dimensions.y)
-
-    createElementSpy.mockReturnValueOnce(canvasElement)
+    createElementSpy.mockReturnValueOnce(canvas)
 
     // act
-    const sut = createCanvas(rootElement)
+    const sut = Canvas({ parent: null })
 
     // assert
     test('creates canvas element', expect(createElementSpy).toBeCalled)
-    test('returns a non-null canvas object', expect(sut).toBeDefined)
-    test('returns a canvas object with expected size', () =>
-      expect(sut.dimensions).toEqual(dimensions))
-    test('returns a canvas object with expected parent', () =>
-      expect(canvasElement.parentElement).toBe(rootElement))
+    test('returns a non-null render function', () => {
+      expect(sut).toBeDefined()
+      expect(sut).toBeInstanceOf(Function)
+    })
+    test('returns a canvas object with expected size', () => {
+      expect(canvas.width).toEqual(dimensions.x)
+      expect(canvas.height).toEqual(dimensions.y)
+    })
+    test(
+      'returns an unparented render function',
+      expect(canvas.parentElement).toBeNull
+    )
   })
 
-  describe('given a root selector', () => {
+  describe('given a parent element', () => {
     // arrange
     const dimensions = { x: 500, y: 250 }
 
-    const canvasElement = document.createElement('canvas')
-    const rootElement = document.createElement('div')
+    const canvas = document.createElement('canvas')
+    const parent = document.createElement('div')
 
-    rootElement.id = 'test-container'
-    document.body.appendChild(rootElement)
+    jest.spyOn(parent, 'clientWidth', 'get').mockReturnValueOnce(dimensions.x)
+    jest.spyOn(parent, 'clientHeight', 'get').mockReturnValueOnce(dimensions.y)
 
-    jest
-      .spyOn(rootElement, 'clientWidth', 'get')
-      .mockReturnValueOnce(dimensions.x)
-    jest
-      .spyOn(rootElement, 'clientHeight', 'get')
-      .mockReturnValueOnce(dimensions.y)
-
-    createElementSpy.mockReturnValueOnce(canvasElement)
+    createElementSpy.mockReturnValueOnce(canvas)
 
     // act
-    const sut = createCanvas(useElementById('test-container'))
+    const sut = Canvas({ parent })
 
     // assert
     test('creates canvas element', expect(createElementSpy).toBeCalled)
-    test('returns a non-null canvas object', expect(sut).toBeDefined)
-    test('returns a canvas object with expected size', () =>
-      expect(sut.dimensions).toEqual(dimensions))
-    test('returns a canvas object with expected parent', () =>
-      expect(canvasElement.parentElement).toBe(rootElement))
+    test('returns a non-null render function', () => {
+      expect(sut).toBeDefined()
+      expect(sut).toBeInstanceOf(Function)
+    })
+    test('returns a canvas object with expected size', () => {
+      expect(canvas.width).toEqual(dimensions.x)
+      expect(canvas.height).toEqual(dimensions.y)
+    })
+    test('returns a parented render function', () =>
+      expect(canvas.parentElement).toBe(parent))
   })
-  describe('given getContext() returns null context', () => {
+
+  describe('given dimensions', () => {
     // arrange
-    const canvasElement = document.createElement('canvas')
-    createElementSpy.mockReturnValueOnce(canvasElement)
-    jest.spyOn(canvasElement, 'getContext').mockReturnValueOnce(null)
+    const dimensions = { x: 500, y: 250 }
+
+    const canvas = document.createElement('canvas')
+
+    createElementSpy.mockReturnValueOnce(canvas)
 
     // act
-    const sut = createCanvas
+    const sut = Canvas({ dimensions })
 
     // assert
-    test('throws error', expect(sut).toThrow)
+    test('creates canvas element', expect(createElementSpy).toBeCalled)
+    test('returns a non-null render function', () => {
+      expect(sut).toBeDefined()
+      expect(sut).toBeInstanceOf(Function)
+    })
+    test('returns a canvas object with expected size', () => {
+      expect(canvas.width).toEqual(dimensions.x)
+      expect(canvas.height).toEqual(dimensions.y)
+    })
   })
 })

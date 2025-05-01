@@ -1,6 +1,6 @@
 {
   "name": "@grafig/syntax",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "bin": "bin/figsyntax",
   "scripts": {
     "prepare:download": "scripts/prepare:download.sh",

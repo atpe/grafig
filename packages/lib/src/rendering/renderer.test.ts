@@ -1,41 +1,16 @@
-/**
- * @jest-environment jsdom
- */
-
 import { describe, expect, jest, test } from '@jest/globals'
-import { createRenderer, RenderFunction } from './renderer'
-import { createCanvas } from './canvas'
+import { Renderer } from './Renderer'
+import { ContextRenderFunction } from './context'
 
-describe('createRenderer()', () => {
-  describe('given a canvas', () => {
+describe('Renderer()', () => {
+  describe('when given context render function', () => {
     // arrange
-    const canvas = createCanvas()
+    const fn = jest.fn<ContextRenderFunction>()
 
     // act
-    const sut = createRenderer(canvas)
+    const sut = Renderer(fn)
 
-    // assert
-    test('returns a non-null renderer object', expect(sut).not.toBeNull)
-  })
-})
-
-describe('Renderer.apply()', () => {
-  describe('given a list of functions', () => {
-    // arrange
-    const canvas = createCanvas()
-    const renderer = createRenderer(canvas)
-
-    const rectMock = jest.fn<RenderFunction>()
-    const fillMock = jest.fn<RenderFunction>()
-
-    // act
-    renderer.apply(rectMock, rectMock, fillMock)
-
-    // assert
-    test('calls each function', () => {
-      expect(rectMock).nthCalledWith(1, canvas)
-      expect(rectMock).nthCalledWith(2, canvas)
-      expect(fillMock).nthCalledWith(1, canvas)
-    })
+    //assert
+    test('returns context render function', () => expect(sut).toBe(fn))
   })
 })

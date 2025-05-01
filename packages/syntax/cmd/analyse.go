@@ -83,7 +83,7 @@ func (c *analyseCommand) Run(cmd *cobra.Command, args []string) {
 	if path != command.Undefined {
 		file, err := os.Create(path)
 		c.HandleError(err)
-		defer c.DeferErrorFunc(file.Close, err != nil)
+		defer c.DeferErrorFunc(file.Close, err == nil)
 
 		bytes, err := json.MarshalIndent(analysed, "", "  ")
 		c.HandleError(err)
@@ -92,6 +92,6 @@ func (c *analyseCommand) Run(cmd *cobra.Command, args []string) {
 		_, err = writer.Write(bytes)
 
 		c.HandleError(err)
-		c.DeferErrorFunc(writer.Flush, err != nil)
+		c.DeferErrorFunc(writer.Flush, err == nil)
 	}
 }

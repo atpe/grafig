@@ -1,6 +1,6 @@
 {
   "name": "@grafig/lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
