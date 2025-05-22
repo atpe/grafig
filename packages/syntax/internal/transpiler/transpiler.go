@@ -21,6 +21,32 @@ func NewTranspiler(logger *slog.Logger, errorListener *validation.ValidationErro
 	}
 }
 
+func (t *Transpiler) TranspileInput(data string) (string, error) {
+	logger.Trace()
+
+	t.errorListener.Reset()
+
+	parser, err := parser.New(
+		t.logger.WithGroup("parser"),
+		"figscript",
+		parser.WithInputLexer(data),
+		parser.WithErrorListener(t.errorListener),
+	)
+	if err != nil {
+		return "", err
+	}
+
+	t.transpilationListener = NewTranspilationListener(t.logger.WithGroup("listener"), parser.GetHidden())
+
+	if t.errorListener.HasError() {
+		return "", t.errorListener.GetError()
+	}
+
+	parser.Walk(t.transpilationListener)
+
+	return t.transpilationListener.GetText(), nil
+}
+
 func (t *Transpiler) TranspileFile(path string) (string, error) {
 	logger.Trace()
 

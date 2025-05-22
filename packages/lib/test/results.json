@@ -1,0 +1,3248 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 11,
+  "numPassedTests": 194,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 11,
+  "numTotalTests": 194,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1747159779577,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1 } and 1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0 } and -1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1 } and 0.01 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1 } and 0"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1 } and 0 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1 } and 0"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1 } and 0 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1, z: 1 } and 1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1, z: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0, z: 1 } and -1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0, z: 1 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1, z: 10 } and 0.01 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1, z: 10 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1, z: 10 } and 0"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1, z: 10 } and 0 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1, z: 10 } and 0"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1, z: 10 } and 0 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1 } and { x: 1, y: 1 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1 } and { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0 } and { x: -1, y: -2 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0 } and { x: -1, y: -2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1 } and { x: 0, y: 2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1 } and { x: 0, y: 2 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1 } and { x: 0, y: 2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1 } and { x: 0, y: 2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1, z: 10 } and { x: 0, y: 2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1, z: 10 } and { x: 0, y: 2 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1, z: 10 } and { x: 0, y: 2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1, z: 10 } and { x: 0, y: 2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1 } and { x: 0, y: 2, z: 0 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1 } and { x: 0, y: 2, z: 0 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1 } and { x: 0, y: 2, z: 0 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1 } and { x: 0, y: 2, z: 0 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1, z: 10 } and { x: 0, y: 2, z: 0 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1, z: 10 } and { x: 0, y: 2, z: 0 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "div()",
+            "given { x: -1, y: 1, z: 10 } and { x: 0, y: 2, z: 0 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "div() given { x: -1, y: 1, z: 10 } and { x: 0, y: 2, z: 0 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        }
+      ],
+      "endTime": 1747159779901,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/vector/div.test.ts",
+      "startTime": 1747159779596,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given no parent element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given no parent element creates canvas element",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "creates canvas element"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given no parent element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given no parent element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given no parent element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given no parent element returns an unparented render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns an unparented render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given null parent"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given null parent creates canvas element",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "creates canvas element"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given null parent"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given null parent returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given null parent"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given null parent returns a canvas object with expected size",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a canvas object with expected size"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given null parent"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given null parent returns an unparented render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns an unparented render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given a parent element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given a parent element creates canvas element",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "creates canvas element"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given a parent element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given a parent element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given a parent element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given a parent element returns a canvas object with expected size",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a canvas object with expected size"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given a parent element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given a parent element returns a parented render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a parented render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given dimensions"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given dimensions creates canvas element",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "creates canvas element"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given dimensions"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given dimensions returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "Canvas()",
+            "given dimensions"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Canvas() given dimensions returns a canvas object with expected size",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a canvas object with expected size"
+        }
+      ],
+      "endTime": 1747159780248,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/rendering/canvas.test.ts",
+      "startTime": 1747159780162,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1 } and 1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0 } and -1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1 } and 0.01 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1, z: 1 } and 1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1, z: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0, z: 1 } and -1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0, z: 1 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1, z: 10 } and 0.01 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1, z: 10 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1 } and { x: 1, y: 1 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1 } and { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0 } and { x: -1, y: -2 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0 } and { x: -1, y: -2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "sub()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "sub() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        }
+      ],
+      "endTime": 1747159780288,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/vector/sub.test.ts",
+      "startTime": 1747159780255,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1 } and 1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0 } and -1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1 } and 0.01 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1, z: 1 } and 1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1, z: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0, z: 1 } and -1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0, z: 1 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1, z: 10 } and 0.01 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1, z: 10 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1 } and { x: 1, y: 1 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1 } and { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0 } and { x: -1, y: -2 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0 } and { x: -1, y: -2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1 } and { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0 } and { x: -1, y: -2, z: -3 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 } returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1 } and { x: 0.01, y: 0.01, z: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 1, y: 1, z: 1 } and { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: -1, y: 0, z: 1 } and { x: -1, y: -2, z: -3 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 } returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "add()",
+            "given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 }"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "add() given { x: 0.1, y: 1, z: 10 } and { x: 0.01, y: 0.01, z: 0.01 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        }
+      ],
+      "endTime": 1747159780319,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/vector/add.test.ts",
+      "startTime": 1747159780290,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "circle()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "circle() given valid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "circle()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "circle() given valid canvas element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "circle()",
+            "given invalid canvas element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "circle() given invalid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "circle()",
+            "given invalid canvas element"
+          ],
+          "duration": 3,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "circle() given invalid canvas element throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "throws error"
+        },
+        {
+          "ancestorTitles": [
+            "ellipse()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ellipse() given valid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "ellipse()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ellipse() given valid canvas element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "ellipse()",
+            "given invalid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ellipse() given invalid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "ellipse()",
+            "given invalid canvas element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ellipse() given invalid canvas element throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "throws error"
+        },
+        {
+          "ancestorTitles": [
+            "rect()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "rect() given valid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "rect()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "rect() given valid canvas element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "rect()",
+            "given invalid canvas element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "rect() given invalid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "rect()",
+            "given invalid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "rect() given invalid canvas element throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "throws error"
+        },
+        {
+          "ancestorTitles": [
+            "square()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "square() given valid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "square()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "square() given valid canvas element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "square()",
+            "given invalid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "square() given invalid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "square()",
+            "given invalid canvas element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "square() given invalid canvas element throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "throws error"
+        },
+        {
+          "ancestorTitles": [
+            "text()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "text() given valid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "text()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "text() given valid canvas element returns a non-null render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null render function"
+        },
+        {
+          "ancestorTitles": [
+            "text()",
+            "given invalid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "text() given invalid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "text()",
+            "given invalid canvas element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "text() given invalid canvas element throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "throws error"
+        }
+      ],
+      "endTime": 1747159780350,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/shape/index.test.ts",
+      "startTime": 1747159780326,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 1, y: 1 } and 1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 1, y: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 1, y: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: -1, y: 0 } and -1 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: -1, y: 0 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: -1, y: 0 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 0.1, y: 1 } and 0.01 returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 0.1, y: 1 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 0.1, y: 1 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 1, y: 1, z: 1 } and 1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 1, y: 1, z: 1 } and 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 1, y: 1, z: 1 } and 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: -1, y: 0, z: 1 } and -1 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: -1, y: 0, z: 1 } and -1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: -1, y: 0, z: 1 } and -1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 0.1, y: 1, z: 10 } and 0.01 returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "mult()",
+            "given { x: 0.1, y: 1, z: 10 } and 0.01"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "mult() given { x: 0.1, y: 1, z: 10 } and 0.01 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        }
+      ],
+      "endTime": 1747159780372,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/vector/mult.test.ts",
+      "startTime": 1747159780352,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { x: 1, y: 1 } and keys x, y"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { x: 1, y: 1 } and keys x, y returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { x: 1, y: 1 } and keys x, y"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { x: 1, y: 1 } and keys x, y returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { width: -1, height: 0 } and keys width, height"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { width: -1, height: 0 } and keys width, height returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { width: -1, height: 0 } and keys width, height"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { width: -1, height: 0 } and keys width, height returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { u: 0.1, v: 1, w: 0 } and keys u, v"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { u: 0.1, v: 1, w: 0 } and keys u, v returns 2D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 2D vector"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { u: 0.1, v: 1, w: 0 } and keys u, v"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { u: 0.1, v: 1, w: 0 } and keys u, v returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { x: 1, y: 1, z: 1 } and keys x, y, z"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { x: 1, y: 1, z: 1 } and keys x, y, z returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { x: 1, y: 1, z: 1 } and keys x, y, z"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { x: 1, y: 1, z: 1 } and keys x, y, z returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { width: -1, height: 0, depth: 1 } and keys width, height, depth"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { width: -1, height: 0, depth: 1 } and keys width, height, depth returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { width: -1, height: 0, depth: 1 } and keys width, height, depth"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { width: -1, height: 0, depth: 1 } and keys width, height, depth returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { u: 0.1, v: 1, w: 10 } and keys u, v, v"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { u: 0.1, v: 1, w: 10 } and keys u, v, v returns 3D vector",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns 3D vector"
+        },
+        {
+          "ancestorTitles": [
+            "from()",
+            "given object { u: 0.1, v: 1, w: 10 } and keys u, v, v"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "from() given object { u: 0.1, v: 1, w: 10 } and keys u, v, v returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        }
+      ],
+      "endTime": 1747159780394,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/vector/from.test.ts",
+      "startTime": 1747159780375,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "createContext()",
+            "given valid canvas element"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "createContext() given valid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "createContext()",
+            "given valid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "createContext() given valid canvas element returns a non-null context object",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns a non-null context object"
+        },
+        {
+          "ancestorTitles": [
+            "createContext()",
+            "given invalid canvas element"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "createContext() given invalid canvas element gets 2D canvas context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "gets 2D canvas context"
+        },
+        {
+          "ancestorTitles": [
+            "createContext()",
+            "given invalid canvas element"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "createContext() given invalid canvas element throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "throws error"
+        },
+        {
+          "ancestorTitles": [
+            "Context.dimensions",
+            "get"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Context.dimensions get returns canvas element dimensions",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns canvas element dimensions"
+        },
+        {
+          "ancestorTitles": [
+            "Context.dimensions",
+            "set"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Context.dimensions set updates canvas element dimensions",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "updates canvas element dimensions"
+        },
+        {
+          "ancestorTitles": [
+            "Context.apply()",
+            "when given context render function"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Context.apply() when given context render function applies function to context",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "applies function to context"
+        }
+      ],
+      "endTime": 1747159780417,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/rendering/context.test.ts",
+      "startTime": 1747159780399,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "styled()",
+            "given a context and function"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "styled() given a context and function returns shape render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns shape render function"
+        },
+        {
+          "ancestorTitles": [
+            "styled()",
+            "given a context and function and called"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "styled() given a context and function and called calls given function with given props",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "calls given function with given props"
+        }
+      ],
+      "endTime": 1747159780437,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/style/styled.test.ts",
+      "startTime": 1747159780422,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Renderer()",
+            "when given context render function"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Renderer() when given context render function returns context render function",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns context render function"
+        }
+      ],
+      "endTime": 1747159780451,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/rendering/renderer.test.ts",
+      "startTime": 1747159780439,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "is()",
+            "given object { x: 1, y: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "is() given object { x: 1, y: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "is()",
+            "given object { x: 1, y: 1, z: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "is() given object { x: 1, y: 1, z: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "is()",
+            "given object { x: 1, y: 1, a: 1 }"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "is() given object { x: 1, y: 1, a: 1 } returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "is()",
+            "given object {}"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "is() given object {} returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "is()",
+            "given object [ [length]: 0 ]"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "is() given object [ [length]: 0 ] returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        },
+        {
+          "ancestorTitles": [
+            "is()",
+            "given object 1"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "is() given object 1 returns expected component values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns expected component values"
+        }
+      ],
+      "endTime": 1747159780468,
+      "message": "",
+      "name": "/Users/adam/Repositories/grafig/packages/lib/src/vector/is.test.ts",
+      "startTime": 1747159780454,
+      "status": "passed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

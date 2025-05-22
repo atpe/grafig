@@ -3,8 +3,8 @@ import { Vec2, Vec, Vec3 } from './core'
 /**
  * Subtracts a number or vector from a given vector
  *
- * @param augend the vector being subtracted from
- * @param addend the number or vector being subtracted
+ * @param minuend the vector being subtracted from
+ * @param subtrahend the number or vector being subtracted
  * @returns the vector difference
  */
 export function sub(minuend: Vec2, subtrahend: number | Vec): Vec2
@@ -22,6 +22,6 @@ export function sub<V extends Vec>(minuend: V, subtrahend: number | Vec): V {
         ...minuend,
         x: minuend.x - subtrahend.x,
         y: minuend.y - subtrahend.y,
-        z: minuend.z ? minuend.z - (subtrahend.z || 0) : undefined,
+        z: minuend.z ? minuend.z - (subtrahend.z ?? 0) : undefined,
       }
 }

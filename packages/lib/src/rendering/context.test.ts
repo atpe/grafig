@@ -3,7 +3,7 @@
  */
 
 import { describe, expect, jest, test } from '@jest/globals'
-import { Context, ContextRenderFunction, createContext } from './context'
+import { Context, ContextRenderer, createContext } from './context'
 
 describe('createContext()', () => {
   const canvas = document.createElement('canvas')
@@ -74,7 +74,7 @@ describe('Context.apply()', () => {
     const canvas = document.createElement('canvas')
     const context = createContext(canvas)
 
-    const fn = jest.fn<ContextRenderFunction>()
+    const fn = jest.fn<ContextRenderer>()
 
     // act
     context.apply(fn)

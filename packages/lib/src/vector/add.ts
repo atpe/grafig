@@ -22,6 +22,6 @@ export function add<V extends Vec>(augend: V, addend: number | Vec): V {
         ...augend,
         x: augend.x + addend.x,
         y: augend.y + addend.y,
-        z: augend.z ? augend.z + (addend.z || 0) : undefined,
+        z: augend.z ? augend.z + (addend.z ?? 0) : undefined,
       }
 }

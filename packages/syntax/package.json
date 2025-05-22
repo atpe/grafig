@@ -1,23 +1,30 @@
 {
   "name": "@grafig/syntax",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "bin": "bin/figsyntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atpe/grafig.git",
+    "directory": "packages/syntax"
+  },
   "scripts": {
     "prepare:download": "scripts/prepare:download.sh",
     "prepare:transform": "scripts/prepare:transform.sh",
     "prepare:generate": "scripts/prepare:generate.sh",
     "prepare": "scripts/prepare.sh",
     "build": "scripts/build.sh",
-    "test": "scripts/test.sh",
+    "test:run": "scripts/test:run.sh",
     "test:compare": "node scripts/test:compare.js",
+    "test": "yarn test:run && yarn test:compare",
     "demo": "bin/figsyntax transpile example/demo.fs -s -o example",
     "syntax": "bin/figsyntax",
-    "syntax:parse": "bin/figsyntax parse",
-    "syntax:analyse": "bin/figsyntax analyse",
-    "syntax:transpile": "bin/figsyntax transpile"
+    "help": "bin/figsyntax help",
+    "parse": "bin/figsyntax parse",
+    "analyse": "bin/figsyntax analyse",
+    "transpile": "bin/figsyntax transpile"
   },
-  "author": "",
-  "license": "ISC",
-  "private": true,
-  "description": ""
+  "author": "Adam Evans",
+  "license": "UNLICENSED",
+  "description": "A transpiler and complexity analyser for the grafig framework.",
+  "private": true
 }

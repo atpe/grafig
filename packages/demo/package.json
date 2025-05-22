@@ -1,15 +1,19 @@
 {
   "name": "@grafig/demo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "source": "src/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atpe/grafig.git",
+    "directory": "packages/demo"
+  },
   "scripts": {
     "start": "parcel",
-    "prebuild": "../syntax/bin/figsyntax transpile \"src/*.fs\" -s -o src",
     "build": "parcel build"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Adam Evans",
+  "license": "UNLICENSED",
+  "description": "An example application using the grafig framework.",
   "dependencies": {},
   "devDependencies": {
     "parcel": "^2.14.4"

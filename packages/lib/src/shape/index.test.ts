@@ -6,7 +6,9 @@ import * as functions from './index'
 
 import { describe, expect, jest, test } from '@jest/globals'
 
-describe.each(['background', 'text', 'rect'] as const)('%s()', (key) => {
+const fns = ['circle', 'ellipse', 'rect', 'square', 'text'] as const
+
+describe.each(fns)('%s()', (key) => {
   const canvas = document.createElement('canvas')
   const getContextSpy = jest.spyOn(canvas, 'getContext')
 

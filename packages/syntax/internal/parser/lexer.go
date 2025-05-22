@@ -21,20 +21,36 @@ type FileLexer struct {
 	logger *slog.Logger
 	target string
 	tokens *antlr.CommonTokenStream
-	input  antlr.CharStream
+}
+
+func NewInputLexer(logger *slog.Logger, data string, target string) (*FileLexer, error) {
+	lexer := &FileLexer{logger: logger, target: target}
+
+	input := antlr.NewInputStream(data)
+	tokens, err := tokeniseInput(target, input)
+	if err != nil {
+		return nil, err
+	}
+
+	lexer.tokens = tokens
+
+	return lexer, nil
 }
 
 func NewFileLexer(logger *slog.Logger, path string, target string) (*FileLexer, error) {
 	lexer := &FileLexer{logger: logger, target: target}
-	err := lexer.readFileStream(path)
+
+	input, err := antlr.NewFileStream(path)
 	if err != nil {
 		return nil, err
 	}
 
-	err = lexer.tokeniseInput(target)
+	tokens, err := tokeniseInput(target, input)
 	if err != nil {
 		return nil, err
 	}
+
+	lexer.tokens = tokens
 
 	return lexer, nil
 }
@@ -45,32 +61,17 @@ func (l *FileLexer) GetTokens() *antlr.CommonTokenStream {
 	return l.tokens
 }
 
-func (l *FileLexer) tokeniseInput(target string) error {
+func tokeniseInput(target string, input antlr.CharStream) (*antlr.CommonTokenStream, error) {
 	logger.Trace()
 
 	switch target {
 	case "javascript":
-		lexer := NewJavaScriptLexer(l.input)
-		l.tokens = antlr.NewCommonTokenStream(lexer, 0)
+		lexer := NewJavaScriptLexer(input)
+		return antlr.NewCommonTokenStream(lexer, 0), nil
 	case "figscript":
-		lexer := figscript.NewFigScriptLexer(l.input)
-		l.tokens = antlr.NewCommonTokenStream(lexer, 0)
+		lexer := figscript.NewFigScriptLexer(input)
+		return antlr.NewCommonTokenStream(lexer, 0), nil
 	default:
-		return fmt.Errorf("could not tokenise file - target '%v' is not a valid option", target)
+		return nil, fmt.Errorf("could not tokenise file - target '%v' is not a valid option", target)
 	}
-
-	return nil
-}
-
-func (l *FileLexer) readFileStream(path string) error {
-	logger.Trace()
-
-	input, err := antlr.NewFileStream(path)
-	if err != nil {
-		return err
-	}
-
-	l.input = input
-
-	return nil
 }

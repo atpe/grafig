@@ -1,8 +1,10 @@
 import FigScript from './FigScript'
-import * as vector from './vector'
+import * as rendering from './rendering'
 import * as shape from './shape'
+import * as style from './style'
+import * as vector from './vector'
 
-export { vector, shape }
+export { rendering, vector, shape, style }
 
 export * from './rendering'
 export default FigScript

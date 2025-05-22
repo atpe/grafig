@@ -1,11 +1,17 @@
 {
   "name": "@grafig/test",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atpe/grafig.git",
+    "directory": "packages/test"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "scripts": {
+    "test": "../syntax/bin/figsyntax analyse \"src/*\" -s -o out/data.csv"
+  },
+  "author": "Adam Evans",
+  "license": "UNLICENSED",
+  "description": "A test package for the grafig framework.",
+  "private": true
 }

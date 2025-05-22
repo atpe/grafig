@@ -1,5 +1,13 @@
 import { StyleProps, TypographyProps } from './props'
 
+/**
+ * Returns a props function that applies the styles of a given props object
+ * before applying the given props function.
+ *
+ * @param context the target canvas context
+ * @param fn the props function to apply after styling
+ * @returns the resultant props function
+ */
 export function styled<P extends StyleProps & TypographyProps>(
   context: CanvasRenderingContext2D,
   fn: (props: P) => void

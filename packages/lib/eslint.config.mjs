@@ -8,10 +8,12 @@ export default tseslint.config(
   tseslint.configs.recommended,
   tseslint.configs.strict,
   tseslint.configs.stylistic,
-  {
-    ignores: ['./dist/**', './*.mjs'],
-    rules: {
-      '@typescript-eslint/explicit-function-return-type': 'error',
+  [
+    { ignores: ['./**', '!src/**'] },
+    {
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'error',
+      },
     },
-  }
+  ]
 )

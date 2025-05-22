@@ -1,8 +1,23 @@
 # @grafig/syntax
 
-![Golang](https://img.shields.io/badge/golang-grey?logo=go) ![Version](https://img.shields.io/github/package-json/v/atpe/grafig?filename=packages/syntax/package.json)
+![Version](https://img.shields.io/github/package-json/v/atpe/grafig?filename=packages/syntax/package.json) ![Golang](https://img.shields.io/badge/golang-grey?logo=go) ![ANTLR4](https://img.shields.io/badge/ANTLR4-grey) ![Cobra](https://img.shields.io/badge/Cobra-grey) ![Viper](https://img.shields.io/badge/Viper-grey)
 
 A tool to transpile _FigScript_ into vanilla JavaScript.
+
+## Quick Start
+
+Clone the repository and build the library:
+
+```sh
+git clone https://github.com/atpe/grafig /path/to/repo
+cd /path/to/repo/packages/syntax && yarn transpile "(1, 1)"
+```
+
+For further help on the available commands, run:
+
+```sh
+yarn run help
+```
 
 ## Installation
 
@@ -21,7 +36,7 @@ yarn build
 Once the binary has been sucessfully built, all operations are aliased through `yarn` - e.g.:
 
 ```bash
-yarn syntax transpile example/file.fs
+yarn transpile example/file.fs
 # is the same as running
 bin/figsyntax transpile example/file.fs
 ```
@@ -35,5 +50,5 @@ The available commands are:
 To see the usage of any command run:
 
 ```bash
-yarn syntax [command] --help
+yarn [command] --help
 ```

@@ -38,68 +38,69 @@ function importReports(path, reducer) {
 }
 
 function controlReducer(acc, report) {
-  const reportMapper =
-    (path) =>
-    ({ name, line, sloc, params, cyclomatic, cyclomaticDensity, halstead }) =>
-      [
+  const mapper =
+    ({ path } = report) =>
+    (report) => {
+      const r = report.aggregate ?? report
+      return [
         path.replace(process.cwd() + '/', ''),
         'control',
-        name,
-        line,
-        sloc.physical,
-        sloc.logical,
-        params,
-        cyclomatic,
-        cyclomaticDensity,
-        halstead.operators.distinct,
-        halstead.operators.total,
-        halstead.operands.distinct,
-        halstead.operands.total,
-        halstead.vocabulary,
-        halstead.length,
-        halstead.volume,
-        halstead.difficulty,
-        halstead.effort,
-        halstead.time,
-        halstead.bugs,
+        report.name ?? 'program',
+        r.line,
+        r.sloc.physical,
+        r.sloc.logical,
+        r.params,
+        r.cyclomatic,
+        r.cyclomaticDensity / 100,
+        r.halstead.operators.distinct,
+        r.halstead.operators.total,
+        r.halstead.operands.distinct,
+        r.halstead.operands.total,
+        r.halstead.vocabulary,
+        r.halstead.length,
+        r.halstead.volume,
+        r.halstead.difficulty,
+        r.halstead.effort,
+        r.halstead.time,
+        r.halstead.bugs,
       ]
-  return [...acc, ...report.functions.map(reportMapper(report.path))]
+    }
+
+  return report.functions
+    ? [...acc, mapper()(report), ...report.functions.map(mapper(report))]
+    : [...acc, mapper()(report())]
 }
 
 function testReducer(acc, report) {
-  if (!report.functions) return acc
-  const reportMapper = ({
-    file,
-    function: name,
-    line,
-    sloc,
-    lloc,
-    params,
-    cyclomatic,
-    halstead,
-  }) => [
-    file,
-    'test',
-    name,
-    line,
-    sloc,
-    lloc,
-    params,
-    cyclomatic.complexity,
-    cyclomatic.density,
-    halstead.operatorsUnique,
-    halstead.operatorsTotal,
-    halstead.operandsUnique,
-    halstead.operandsTotal,
-    halstead.vocabulary,
-    halstead.length,
-    halstead.volume,
-    halstead.difficulty,
-    halstead.effort,
-    halstead.time,
-    halstead.bugs,
-  ]
-  return [...acc, ...report.functions.map(reportMapper)]
+  console.log(report)
+
+  const mapper = (report) => {
+    return [
+      report.file,
+      'test',
+      report.function,
+      report.line,
+      report.sloc,
+      report.lloc,
+      report.params,
+      report.cyclomatic.complexity,
+      report.cyclomatic.density,
+      report.halstead.operatorsUnique,
+      report.halstead.operatorsTotal,
+      report.halstead.operandsUnique,
+      report.halstead.operandsTotal,
+      report.halstead.vocabulary,
+      report.halstead.length,
+      report.halstead.volume,
+      report.halstead.difficulty,
+      report.halstead.effort,
+      report.halstead.time,
+      report.halstead.bugs,
+    ]
+  }
+  return report.functions
+    ? report.functions.reduce(testReducer, [...acc, mapper(report)])
+    : [...acc, mapper(report)]
 }
 
 function matrixReducer(acc, row) {

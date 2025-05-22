@@ -1,6 +1,20 @@
 import { styled, StyleProps } from '../style'
 import { Vec2 } from '../vector'
 
+/** The circle props object */
+export interface CircleProps extends StyleProps {
+  /** The center position of the circle */
+  position: Vec2
+  /** The circle radius */
+  radius: number
+}
+
+/**
+ * Creates a function bound to the given canvas that draws a circle.
+ *
+ * @param canvas the target canvas element
+ * @returns the circle function
+ */
 export function circle(
   canvas: HTMLCanvasElement
 ): (props: CircleProps) => void {
@@ -22,8 +36,4 @@ export function circle(
     context.fill()
     context.stroke()
   })
-}
-export interface CircleProps extends StyleProps {
-  position: Vec2
-  radius: number
 }

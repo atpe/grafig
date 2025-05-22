@@ -7,5 +7,5 @@ import (
 type ComplexityListener interface {
 	antlr.ParseTreeListener
 	WithFile(path string) ComplexityListener
-	GetMetrics() Metrics
+	GetMetrics() Report
 }

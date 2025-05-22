@@ -1,13 +1,12 @@
 package command
 
 import (
-	"figsyntax/internal/file"
+	"figsyntax/internal/analyser"
 	"figsyntax/internal/logger"
 	"figsyntax/internal/parser"
 	"figsyntax/internal/validation"
 	"log/slog"
 	"os"
-	"strings"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -75,21 +74,27 @@ func (c *CommonCommand) ConfigureLoggerFlags() {
 
 func (c *CommonCommand) ConfigureTargetFlags(path string) {
 	logger.Trace()
-	target := c.GetConfigString(parser.Target)
-	if target == Undefined {
-		switch {
-		case c.GetConfigBool(parser.JavaScript):
-			c.SetConfigValue(parser.Target, parser.JavaScript)
-		case c.GetConfigBool(parser.FigScript):
-			c.SetConfigValue(parser.Target, parser.FigScript)
-		case strings.HasSuffix(path, file.JS):
-			c.SetConfigValue(parser.Target, parser.JavaScript)
-		case strings.HasSuffix(path, file.FS):
-			c.SetConfigValue(parser.Target, parser.FigScript)
-		default:
-			defer c.logger.Warn("could not infer target language from file name, defaulting to javascript")
-			c.SetConfigValue(parser.Target, parser.JavaScript)
-		}
+	if c.GetConfigString(parser.Target) != Undefined {
+		return
+	}
+	switch {
+	case c.GetConfigBool(parser.JavaScript):
+		c.SetConfigValue(parser.Target, parser.JavaScript)
+	case c.GetConfigBool(parser.FigScript):
+		c.SetConfigValue(parser.Target, parser.FigScript)
+	}
+}
+
+func (c *CommonCommand) ConfigureFormatFlags(path string) {
+	logger.Trace()
+	if c.GetConfigString(analyser.Format) != Undefined {
+		return
+	}
+	switch {
+	case c.GetConfigBool(analyser.JSON):
+		c.SetConfigValue(analyser.Format, analyser.JSON)
+	case c.GetConfigBool(analyser.CSV):
+		c.SetConfigValue(analyser.Format, analyser.CSV)
 	}
 }
 

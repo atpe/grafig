@@ -55,17 +55,31 @@ func (c *transpileCommand) Run(cmd *cobra.Command, args []string) {
 	errorListener := c.UseValidationErrorListener()
 
 	transpiler := transpiler.NewTranspiler(c.GetLogger(), errorListener)
-	transpiled, err := transpiler.TranspileGlob(args[0])
 
-	c.HandleError(err)
-	c.HandleError(errorListener.GetError())
+	transpiled := make(map[string]string, 0)
+
+	if _, err := file.IsGlob(args[0]); err == nil {
+		transpiled, err = transpiler.TranspileGlob(args[0])
+		c.HandleError(err)
+		c.HandleError(errorListener.GetError())
+	} else {
+		output, err := transpiler.TranspileInput(args[0])
+		c.HandleError(err)
+		c.HandleError(errorListener.GetError())
+		transpiled["out"] = output
+	}
 
 	for path, content := range transpiled {
 		if !c.GetConfigBool(logger.Silent) {
 			fmt.Printf(logFormat, path, content)
 		}
-		c.writeFile(path, content)
+		if c.GetConfigString(file.Output) != command.Undefined {
+			c.writeFile(path, content)
+		}
 	}
+
+	_, err := os.Stdout.WriteString(transpiled["out"])
+	c.HandleError(err)
 }
 
 func (c transpileCommand) writeFile(path string, content string) {

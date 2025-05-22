@@ -1,4 +1,3 @@
-export * from './background'
 export * from './circle'
 export * from './ellipse'
 export * from './rect'

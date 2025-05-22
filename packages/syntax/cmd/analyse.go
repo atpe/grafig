@@ -2,14 +2,17 @@ package cmd
 
 import (
 	"bufio"
+	"encoding/csv"
 	"encoding/json"
 	"figsyntax/internal/analyser"
 	"figsyntax/internal/command"
 	"figsyntax/internal/file"
 	"figsyntax/internal/logger"
 	"figsyntax/internal/parser"
+	"fmt"
 	"log/slog"
 	"os"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -67,8 +70,16 @@ func (c *analyseCommand) PreRun(cmd *cobra.Command, args []string) {
 func (c *analyseCommand) Run(cmd *cobra.Command, args []string) {
 	logger.Trace()
 
-	analyser := analyser.NewCommonAnalyser(c.GetLogger(), c.GetConfigString(parser.Target))
-	analysed, err := analyser.AnalyseGlob(args[0])
+	target := c.GetConfigString(parser.Target)
+	switch target {
+	case parser.JavaScript:
+		break
+	case parser.FigScript:
+		break
+	}
+
+	a := analyser.New(c.GetLogger(), c.GetConfigString(parser.Target))
+	analysed, err := a.AnalyseGlob(args[0])
 
 	c.HandleError(err)
 
@@ -79,19 +90,68 @@ func (c *analyseCommand) Run(cmd *cobra.Command, args []string) {
 	}
 
 	path := c.GetConfigString(file.Output)
+	if path == command.Undefined {
+		return
+	}
 
-	if path != command.Undefined {
-		file, err := os.Create(path)
-		c.HandleError(err)
-		defer c.DeferErrorFunc(file.Close, err == nil)
+	file, err := os.Create(path)
+	c.HandleError(err)
+	defer c.DeferErrorFunc(file.Close, err == nil)
 
-		bytes, err := json.MarshalIndent(analysed, "", "  ")
+	format, err := c.useFormat(path)
+	c.HandleError(err)
+
+	switch format {
+	case analyser.JSON:
+		data := analysed
+
+		if c.GetConfigBool(analyser.Flat) {
+			data = []analyser.Report{}
+			for _, report := range analysed {
+				data = append(data, report.Flat()...)
+			}
+		}
+
+		bytes, err := json.MarshalIndent(data, "", "  ")
 		c.HandleError(err)
 
 		writer := bufio.NewWriter(file)
 		_, err = writer.Write(bytes)
-
 		c.HandleError(err)
 		c.DeferErrorFunc(writer.Flush, err == nil)
+	case analyser.CSV:
+		data := [][]string{analyser.Headers}
+
+		for _, report := range analysed {
+			data = append(data, report.ToCsv()...)
+		}
+
+		writer := csv.NewWriter(file)
+		err = writer.WriteAll(data)
+		c.HandleError(err)
 	}
+}
+
+func (c *analyseCommand) useFormat(path string) (string, error) {
+	switch c.GetConfigString(analyser.Format) {
+	case analyser.JSON:
+		return analyser.JSON, nil
+	case analyser.CSV:
+		return analyser.CSV, nil
+	default:
+		break
+	}
+
+	switch {
+	case strings.HasSuffix(path, file.JSON):
+		return analyser.JSON, nil
+	case strings.HasSuffix(path, file.CSV):
+		return analyser.CSV, nil
+	case strings.Contains(path, analyser.JSON):
+		return analyser.JSON, nil
+	case strings.Contains(path, analyser.CSV):
+		return analyser.CSV, nil
+	}
+
+	return "", fmt.Errorf("cannot infer format from config or path")
 }

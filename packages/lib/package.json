@@ -1,23 +1,27 @@
 {
   "name": "@grafig/lib",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
-  "scripts": {
-    "watch": "parcel watch --port 3000",
-    "build": "parcel build",
-    "docs:generate": "typedoc src/index.ts",
-    "docs:serve": "yarn parcel docs/index.html",
-    "docs": "yarn docs:generate && yarn docs:serve",
-    "test": "jest",
-    "coverage:generate": "jest --coverage",
-    "coverage:badges": "jest-coverage-badges",
-    "coverage": "yarn coverage:generate && yarn coverage:badges"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atpe/grafig.git",
+    "directory": "packages/lib"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "scripts": {
+    "build": "scripts/build.sh",
+    "coverage": "scripts/coverage.sh",
+    "docs": "scripts/docs.sh",
+    "help": "scripts/help.sh",
+    "lint": "scripts/lint.sh",
+    "test": "scripts/test.sh",
+    "prepare": "scripts/prepare.sh",
+    "watch": "scripts/watch.sh"
+  },
+  "author": "Adam Evans",
+  "license": "UNLICENSED",
+  "description": "An example application using the grafig framework.",
   "dependencies": {},
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",

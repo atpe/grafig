@@ -12,13 +12,13 @@ type Scope struct {
 	class      antlr.ParserRuleContext
 	assignee   antlr.ParserRuleContext
 	line       int
-	sloc       int
-	lloc       int
-	params     int
-	complexity int
-	operators  map[string]int
-	operands   map[string]int
-	metrics    []Metrics
+	sloc       float64
+	lloc       float64
+	params     float64
+	complexity float64
+	operators  map[string]float64
+	operands   map[string]float64
+	reports    []Report
 }
 
 func NewScope(file string, id string, ctx antlr.ParserRuleContext) *Scope {
@@ -28,11 +28,11 @@ func NewScope(file string, id string, ctx antlr.ParserRuleContext) *Scope {
 		file:       file,
 		id:         id,
 		line:       line,
-		sloc:       sloc,
+		sloc:       float64(sloc),
 		complexity: 1,
-		operators:  make(map[string]int),
-		operands:   make(map[string]int),
-		metrics:    make([]Metrics, 0),
+		operators:  make(map[string]float64),
+		operands:   make(map[string]float64),
+		reports:    make([]Report, 0),
 	}
 }
 
@@ -53,7 +53,7 @@ func (s *Scope) addOperand(operand antlr.TerminalNode) *Scope {
 }
 
 func (s *Scope) countOperators() float64 {
-	total := 0
+	total := 0.
 	for _, count := range s.operators {
 		total += count
 	}
@@ -61,7 +61,7 @@ func (s *Scope) countOperators() float64 {
 }
 
 func (s *Scope) countOperands() float64 {
-	total := 0
+	total := 0.
 	for _, count := range s.operands {
 		total += count
 	}
@@ -69,22 +69,83 @@ func (s *Scope) countOperands() float64 {
 }
 
 func (s *Scope) aggregate(child *Scope) *Scope {
-	s.metrics = append(s.metrics, child.getMetrics())
+	s.reports = append(s.reports, child.getReport())
 	return s
+}
+
+func (s *Scope) getReport() Report {
+	return Report{
+		Metrics:   s.getMetrics(),
+		Total:     s.getTotal(),
+		Average:   s.getAverage(),
+		File:      s.file,
+		Function:  s.id,
+		Line:      s.line,
+		Functions: s.reports,
+	}
 }
 
 func (s *Scope) getMetrics() Metrics {
 	return Metrics{
-		File:       s.file,
-		Function:   s.id,
-		Line:       s.line,
-		Sloc:       s.sloc,
-		Lloc:       s.lloc,
-		Params:     s.params,
-		Halstead:   s.getHalsteadMetrics(),
-		Cyclomatic: s.getCyclomaticMetrics(),
-		Functions:  s.metrics,
+		s.sloc,
+		s.lloc,
+		s.params,
+		s.getHalsteadMetrics(),
+		s.getCyclomaticMetrics(),
 	}
+}
+
+func (s *Scope) getTotal() Metrics {
+	total := s.getMetrics()
+
+	if len(s.reports) <= 0 {
+		return total
+	}
+
+	for _, report := range s.reports {
+		total.Lloc += report.Total.Lloc
+		total.Params += report.Total.Params
+		total.Halstead.OperatorsUnique += report.Total.Halstead.OperatorsUnique
+		total.Halstead.OperandsUnique += report.Total.Halstead.OperandsUnique
+		total.Halstead.OperatorsTotal += report.Total.Halstead.OperatorsTotal
+		total.Halstead.OperandsTotal += report.Total.Halstead.OperandsTotal
+		total.Halstead.Vocabulary += report.Total.Halstead.Vocabulary
+		total.Halstead.Length += report.Total.Halstead.Length
+		total.Halstead.Volume += report.Total.Halstead.Volume
+		total.Halstead.Difficulty += report.Total.Halstead.Difficulty
+		total.Halstead.Effort += report.Total.Halstead.Effort
+		total.Halstead.Time += report.Total.Halstead.Time
+		total.Halstead.Bugs += report.Total.Halstead.Bugs
+		total.Cyclomatic.Complexity += report.Total.Cyclomatic.Complexity - 1
+		total.Cyclomatic.Density += report.Total.Cyclomatic.Density
+	}
+
+	return total
+}
+
+func (s *Scope) getAverage() Metrics {
+	average := s.getTotal()
+
+	length := 1 + float64(len(s.reports))
+
+	average.Sloc /= length
+	average.Lloc /= length
+	average.Params /= length
+	average.Halstead.OperatorsUnique /= length
+	average.Halstead.OperandsUnique /= length
+	average.Halstead.OperatorsTotal /= length
+	average.Halstead.OperandsTotal /= length
+	average.Halstead.Vocabulary /= length
+	average.Halstead.Length /= length
+	average.Halstead.Volume /= length
+	average.Halstead.Difficulty /= length
+	average.Halstead.Effort /= length
+	average.Halstead.Time /= length
+	average.Halstead.Bugs /= length
+	average.Cyclomatic.Complexity /= length
+	average.Cyclomatic.Density /= length
+
+	return average
 }
 
 func (s *Scope) getCyclomaticMetrics() CyclomaticMetrics {

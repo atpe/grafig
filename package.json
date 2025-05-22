@@ -1,12 +1,16 @@
 {
   "name": "grafig",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Adam Evans",
   "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atpe/grafig.git"
+  },
   "scripts": {
     "build": "scripts/build.sh",
     "demo": "scripts/demo.sh"

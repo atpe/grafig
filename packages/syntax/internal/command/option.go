@@ -1,12 +1,14 @@
 package command
 
 import (
+	"figsyntax/internal/analyser"
 	"figsyntax/internal/file"
 	"figsyntax/internal/logger"
 	"figsyntax/internal/parser"
 	"fmt"
 	"strings"
 
+	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )
 
@@ -30,9 +32,15 @@ func WithLong(text string) CommonCommandOption {
 	}
 }
 
-func WithSinglePathArg() CommonCommandOption {
+func WithSingleGlobArg() CommonCommandOption {
 	return func(c *CommonCommand) {
-		c.Args = file.SinglePathArg
+		c.Args = file.SingleGlobArg
+	}
+}
+
+func WithSingleArg() CommonCommandOption {
+	return func(c *CommonCommand) {
+		c.Args = cobra.ExactArgs(1)
 	}
 }
 
@@ -77,6 +85,31 @@ func WithTargetFlags() CommonCommandOption {
 		}
 
 		c.MarkFlagsMutuallyExclusive(append(languages, parser.Target)...)
+	}
+}
+
+func WithFormatFlags() CommonCommandOption {
+	return func(c *CommonCommand) {
+		flags := useFlags(c)
+		flags.StringP(analyser.Format, "f", Undefined, "specify a formatter for the complexity report")
+		c.config.BindPFlag(analyser.Format, flags.Lookup(analyser.Format))
+
+		flags.Bool(analyser.Flat, false, "don't output nested reports (JSON only)")
+		c.config.BindPFlag(analyser.Flat, flags.Lookup(analyser.Flat))
+
+		formats := []string{
+			analyser.JSON,
+			analyser.CSV,
+		}
+
+		for _, format := range formats {
+			usage := fmt.Sprintf("use the %v formatter", strings.ToUpper(format))
+			flags.Bool(format, false, usage)
+			c.config.BindPFlag(format, flags.Lookup(format))
+		}
+
+		c.MarkFlagsMutuallyExclusive(append(formats, analyser.Format)...)
+		c.MarkFlagsMutuallyExclusive(append(formats[1:], analyser.Flat)...)
 	}
 }
 

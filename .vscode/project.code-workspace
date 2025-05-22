@@ -1,0 +1,177 @@
+{
+  "folders": [
+    {
+      "name": "grafig",
+      "path": "../"
+    },
+    {
+      "name": "grafig/demo",
+      "path": "../packages/demo"
+    },
+    {
+      "name": "grafig/lib",
+      "path": "../packages/lib"
+    },
+    {
+      "name": "grafig/syntax",
+      "path": "../packages/syntax"
+    },
+    {
+      "name": "grafig/test",
+      "path": "../packages/test"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      ".parcel-cache/": true,
+      "packages/": true,
+      "yarn.lock": true,
+      "go.sum": true,
+      "**/dist/": true,
+      "**/.antlr/": true
+    },
+    "material-icon-theme.folders.associations": {
+      "grammar": "rules",
+      "internal": "private",
+      "listeners": "event",
+      "parser": "context",
+      "transpiler": "generator"
+    },
+    "explorer.fileNesting.enabled": true,
+    "debug.hideLauncherWhileDebugging": false,
+    "explorer.fileNesting.patterns": {
+      "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts, ${basename}.test.js",
+      "*.ts": "${capture}.js, ${basename}.test.ts",
+      "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock, .gitignore, tsconfig.json, *.config.mjs, .*, go.*",
+      "generate.go": "generate.sh",
+      "*.g4": "${capture}.interp, ${capture}.tokens, ${capture}.g4.bak",
+      "*.fs": "${capture}.js"
+    }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "yarn:build",
+        "command": "yarn build",
+        "type": "shell",
+        "args": [],
+        "problemMatcher": ["$tsc"],
+        "presentation": {
+          "reveal": "always"
+        },
+        "group": "build"
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "attach",
+        "name": "demo attach",
+        "url": "http://localhost:1234",
+        "webRoot": "${workspaceFolder:grafig}",
+        "sourceMapPathOverrides": {
+          "/__parcel_source_root/*": "${webRoot}/*"
+        }
+      },
+      {
+        "name": "demo launch",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:1234",
+        "webRoot": "${workspaceFolder:grafig}",
+        "sourceMapPathOverrides": {
+          "/__parcel_source_root/*": "${webRoot}/*"
+        }
+      },
+      {
+        "name": "syntax demo",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder:grafig}/packages/syntax/main.go",
+        "args": [
+          "transpile",
+          "${workspaceFolder:grafig}/packages/demo/src/*.fs",
+          "-o",
+          "${workspaceFolder:grafig}/packages/demo/src",
+          "--debug"
+        ]
+      },
+      {
+        "name": "syntax transpile",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder:grafig}/packages/syntax/main.go",
+        "args": [
+          "transpile",
+          "${workspaceFolder:grafig}/packages/syntax/example/demo.fs",
+          "-o",
+          "${workspaceFolder:grafig}/packages/syntax/example",
+          "--debug"
+        ]
+      },
+      {
+        "name": "syntax analyse",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder:grafig}/packages/syntax/main.go",
+        "args": [
+          "analyse",
+          "${workspaceFolder:grafig}/packages/syntax/example/demo.fs",
+          "--figscript"
+        ]
+      },
+      {
+        "name": "syntax analyse - demo",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder:grafig}/packages/syntax/main.go",
+        "args": [
+          "analyse",
+          "${workspaceFolder:grafig}/packages/demo/src/*.fs",
+          "--debug"
+        ]
+      },
+      {
+        "name": "syntax analyse - test",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder:grafig}/packages/syntax/main.go",
+        "args": [
+          "analyse",
+          "${workspaceFolder:grafig}/packages/test/src/*",
+          "--debug"
+        ]
+      },
+      {
+        "name": "syntax parse",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder:grafig}/packages/syntax/main.go",
+        "args": [
+          "parse",
+          "${workspaceFolder:grafig}/packages/syntax/example/demo.fs",
+          "--figscript"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "id": "path",
+        "type": "promptString",
+        "description": "path to target file",
+        "default": "${cwd}/test/bootstrap.js"
+      }
+    ]
+  }
+}

@@ -55,6 +55,17 @@ func New(logger *slog.Logger, target string, options ...CommonParserOption) (*Co
 	return p, nil
 }
 
+func WithInputLexer(data string) CommonParserOption {
+	return func(p *CommonParser) error {
+		lexer, err := NewInputLexer(p.logger.WithGroup("lexer"), data, p.target)
+		if err != nil {
+			return err
+		}
+		p.lexer = lexer
+		return nil
+	}
+}
+
 func WithFileLexer(path string) CommonParserOption {
 	return func(p *CommonParser) error {
 		lexer, err := NewFileLexer(p.logger.WithGroup("lexer"), path, p.target)

@@ -4,118 +4,26 @@ import (
 	"figsyntax/internal/logger"
 	"figsyntax/internal/parser/figscript"
 	"log/slog"
-
-	"github.com/antlr4-go/antlr/v4"
 )
 
 type FigScriptComplexityListener struct {
 	figscript.FigScriptParserListener
-	logger  *slog.Logger
-	scopes  []*Scope
-	metrics Metrics
-	path    string
+	*Reporter
 }
 
 func NewFigScriptComplexityListener(logger *slog.Logger) *FigScriptComplexityListener {
 	return &FigScriptComplexityListener{
-		FigScriptParserListener: new(figscript.BaseFigScriptParserListener),
-		logger:                  logger,
-		scopes:                  make([]*Scope, 0),
+		new(figscript.BaseFigScriptParserListener),
+		NewReporter(logger),
 	}
-}
-
-func (l *FigScriptComplexityListener) GetMetrics() Metrics {
-	logger.Trace()
-	return l.metrics
 }
 
 func (l *FigScriptComplexityListener) WithFile(path string) ComplexityListener {
 	logger.Trace()
 	l.scopes = make([]*Scope, 0)
-	l.metrics = NewMetrics(path)
+	l.report = NewReport(path)
 	l.path = path
 	return l
-}
-
-func (l *FigScriptComplexityListener) incrementLloc(ctxs ...antlr.TerminalNode) *FigScriptComplexityListener {
-	if len(ctxs) == 0 {
-		l.scopes[0].lloc++
-		return l
-	}
-
-	for _, ctx := range ctxs {
-		if ctx != nil {
-			l.scopes[0].lloc++
-		}
-	}
-
-	return l
-}
-func (l *FigScriptComplexityListener) incrementParams() *FigScriptComplexityListener {
-	l.scopes[0].params++
-	return l
-}
-
-func (l *FigScriptComplexityListener) incrementComplexity(ctxs ...antlr.TerminalNode) *FigScriptComplexityListener {
-	if len(ctxs) == 0 {
-		l.scopes[0].complexity++
-		return l
-	}
-
-	for _, ctx := range ctxs {
-		if ctx != nil {
-			l.scopes[0].complexity++
-		}
-	}
-
-	return l
-}
-
-func (l *FigScriptComplexityListener) setClass(ctx antlr.ParserRuleContext) *FigScriptComplexityListener {
-	if ctx != nil {
-		l.scopes[0].class = ctx
-	} else {
-		l.scopes[0].class = l.scopes[0].assignee
-		l.scopes[0].assignee = nil
-	}
-	return l
-}
-func (l *FigScriptComplexityListener) resetClass() *FigScriptComplexityListener {
-	l.scopes[0].class = nil
-	return l
-}
-
-func (l *FigScriptComplexityListener) setAssignee(ctx antlr.ParserRuleContext) *FigScriptComplexityListener {
-	l.scopes[0].assignee = ctx
-	return l
-}
-
-func (l *FigScriptComplexityListener) addOperators(operators ...antlr.TerminalNode) *FigScriptComplexityListener {
-	logger.Trace()
-	for _, operator := range operators {
-		l.scopes[0].addOperator(operator)
-	}
-	return l
-}
-
-func (l *FigScriptComplexityListener) addOperands(operands ...antlr.TerminalNode) *FigScriptComplexityListener {
-	logger.Trace()
-	for _, operand := range operands {
-		l.scopes[0].addOperand(operand)
-	}
-	return l
-}
-
-func (l *FigScriptComplexityListener) getScope() (*Scope, *Scope) {
-	logger.Trace()
-	switch len(l.scopes) {
-	case 0:
-		return nil, nil
-	case 1:
-		return l.scopes[0], nil
-	default:
-		return l.scopes[0], l.scopes[1]
-	}
 }
 
 func (l *FigScriptComplexityListener) pushProgram(ctx *figscript.ProgramContext) *FigScriptComplexityListener {
@@ -124,46 +32,12 @@ func (l *FigScriptComplexityListener) pushProgram(ctx *figscript.ProgramContext)
 	return l
 }
 
-func (l *FigScriptComplexityListener) pushScope(identifier antlr.ParserRuleContext, ctx antlr.ParserRuleContext) *FigScriptComplexityListener {
-	logger.Trace()
-
-	id := ""
-	if identifier == nil {
-		id = "anonymous"
-	} else {
-		id = identifier.GetText()
-	}
-
-	if len(l.scopes) > 0 && l.scopes[0].class != nil {
-		id = l.scopes[0].class.GetText() + "." + id
-	}
-
-	l.scopes = append([]*Scope{NewScope(l.path, id, ctx)}, l.scopes...)
-	return l
-}
-
-func (l *FigScriptComplexityListener) popScope(c antlr.ParserRuleContext) *FigScriptComplexityListener {
-	logger.Trace()
-	current, parent := l.getScope()
-	if parent != nil {
-		parent.aggregate(current)
-		parent.assignee = nil
-	} else {
-		l.metrics = current.getMetrics()
-	}
-	l.scopes = l.scopes[1:]
-	return l
-}
-
-// ENTER
-
 func (l *FigScriptComplexityListener) EnterProgram(c *figscript.ProgramContext) {
 	l.pushProgram(c)
 }
 func (l *FigScriptComplexityListener) EnterStatement(c *figscript.StatementContext) {
 	switch {
 	case c.Block() != nil:
-	case c.VariableStatement() != nil:
 	default:
 		l.incrementLloc()
 	}
@@ -489,9 +363,9 @@ func (l *FigScriptComplexityListener) EnterAnonymousFunctionDecl(c *figscript.An
 }
 func (l *FigScriptComplexityListener) EnterArrowFunction(c *figscript.ArrowFunctionContext) {
 	if c.ArrowFunctionBody().FunctionBody() != nil {
-		l.pushScope(l.scopes[0].assignee, c).
-			addOperators(c.Async(), c.ARROW())
+		l.pushScope(l.scopes[0].assignee, c)
 	}
+	l.addOperators(c.Async(), c.ARROW())
 }
 func (l *FigScriptComplexityListener) EnterLiteral(c *figscript.LiteralContext) {
 	l.addOperands(
@@ -538,176 +412,29 @@ func (l *FigScriptComplexityListener) EnterLet_(c *figscript.Let_Context) {
 func (l *FigScriptComplexityListener) EnterEos(c *figscript.EosContext) {
 	l.addOperators(c.SemiColon())
 }
-
-// EXIT
-
 func (l *FigScriptComplexityListener) ExitProgram(c *figscript.ProgramContext) {
 	l.popScope(c)
 }
-
-// func (l *ComplexityListener) ExitSourceElement(c *figscript.SourceElementContext) {}
-// func (l *ComplexityListener) ExitStatement(c *figscript.StatementContext) {}
-// func (l *ComplexityListener) ExitBlock(c *figscript.BlockContext) {}
-// func (l *ComplexityListener) ExitStatementList(c *figscript.StatementListContext) {}
-// func (l *ComplexityListener) ExitImportStatement(c *figscript.ImportStatementContext) {}
-// func (l *ComplexityListener) ExitImportFromBlock(c *figscript.ImportFromBlockContext) {}
-// func (l *ComplexityListener) ExitImportModuleItems(c *figscript.ImportModuleItemsContext) {}
-// func (l *ComplexityListener) ExitImportAliasName(c *figscript.ImportAliasNameContext) {}
-// func (l *ComplexityListener) ExitModuleExportName(c *figscript.ModuleExportNameContext) {}
-// func (l *ComplexityListener) ExitImportedBinding(c *figscript.ImportedBindingContext) {}
-// func (l *ComplexityListener) ExitImportDefault(c *figscript.ImportDefaultContext) {}
-// func (l *ComplexityListener) ExitImportNamespace(c *figscript.ImportNamespaceContext) {}
-// func (l *ComplexityListener) ExitImportFrom(c *figscript.ImportFromContext) {}
-// func (l *ComplexityListener) ExitAliasName(c *figscript.AliasNameContext) {}
-// func (l *ComplexityListener) ExitExportDeclaration(c *figscript.ExportDeclarationContext) {}
-// func (l *ComplexityListener) ExitExportDefaultDeclaration(c *figscript.ExportDefaultDeclarationContext) {}
-// func (l *ComplexityListener) ExitExportFromBlock(c *figscript.ExportFromBlockContext) {}
-// func (l *ComplexityListener) ExitExportModuleItems(c *figscript.ExportModuleItemsContext) {}
-// func (l *ComplexityListener) ExitExportAliasName(c *figscript.ExportAliasNameContext) {}
-// func (l *ComplexityListener) ExitDeclaration(c *figscript.DeclarationContext) {}
-// func (l *ComplexityListener) ExitVariableStatement(c *figscript.VariableStatementContext) {}
-// func (l *ComplexityListener) ExitVariableDeclarationList(c *figscript.VariableDeclarationListContext) {}
 func (l *FigScriptComplexityListener) ExitVariableDeclaration(c *figscript.VariableDeclarationContext) {
 	l.setAssignee(nil)
 }
-
-// func (l *ComplexityListener) ExitEmptyStatement_(c *figscript.EmptyStatement_Context) {}
-// func (l *ComplexityListener) ExitExpressionStatement(c *figscript.ExpressionStatementContext) {}
-// func (l *ComplexityListener) ExitIfStatement(c *figscript.IfStatementContext) {}
-// func (l *ComplexityListener) ExitDoStatement(c *figscript.DoStatementContext) {}
-// func (l *ComplexityListener) ExitWhileStatement(c *figscript.WhileStatementContext) {}
-// func (l *ComplexityListener) ExitForStatement(c *figscript.ForStatementContext) {}
-// func (l *ComplexityListener) ExitForInStatement(c *figscript.ForInStatementContext) {}
-// func (l *ComplexityListener) ExitForOfStatement(c *figscript.ForOfStatementContext) {}
-// func (l *ComplexityListener) ExitVarModifier(c *figscript.VarModifierContext) {}
-// func (l *ComplexityListener) ExitContinueStatement(c *figscript.ContinueStatementContext) {}
-// func (l *ComplexityListener) ExitBreakStatement(c *figscript.BreakStatementContext) {}
-// func (l *ComplexityListener) ExitReturnStatement(c *figscript.ReturnStatementContext) {}
-// func (l *ComplexityListener) ExitYieldStatement(c *figscript.YieldStatementContext) {}
-// func (l *ComplexityListener) ExitWithStatement(c *figscript.WithStatementContext) {}
-// func (l *ComplexityListener) ExitSwitchStatement(c *figscript.SwitchStatementContext) {}
-// func (l *ComplexityListener) ExitCaseBlock(c *figscript.CaseBlockContext) {}
-// func (l *ComplexityListener) ExitCaseClauses(c *figscript.CaseClausesContext) {}
-// func (l *ComplexityListener) ExitCaseClause(c *figscript.CaseClauseContext) {}
-// func (l *ComplexityListener) ExitDefaultClause(c *figscript.DefaultClauseContext) {}
-// func (l *ComplexityListener) ExitLabelledStatement(c *figscript.LabelledStatementContext) {}
-// func (l *ComplexityListener) ExitThrowStatement(c *figscript.ThrowStatementContext) {}
-// func (l *ComplexityListener) ExitTryStatement(c *figscript.TryStatementContext) {}
-// func (l *ComplexityListener) ExitCatchProduction(c *figscript.CatchProductionContext) {}
-// func (l *ComplexityListener) ExitFinallyProduction(c *figscript.FinallyProductionContext) {}
-// func (l *ComplexityListener) ExitDebuggerStatement(c *figscript.DebuggerStatementContext) {}
 func (l *FigScriptComplexityListener) ExitFunctionDeclaration(c *figscript.FunctionDeclarationContext) {
 	l.popScope(c)
 }
-
-// func (l *ComplexityListener) ExitClassDeclaration(c *figscript.ClassDeclarationContext) {}
 func (l *FigScriptComplexityListener) ExitClassTail(c *figscript.ClassTailContext) {
 	l.resetClass()
 }
-
-// func (l *ComplexityListener) ExitClassElement(c *figscript.ClassElementContext) {}
 func (l *FigScriptComplexityListener) ExitMethodDefinition(c *figscript.MethodDefinitionContext) {
 	l.popScope(c)
 }
-
-// func (l *ComplexityListener) ExitFieldDefinition(c *figscript.FieldDefinitionContext) {}
-// func (l *ComplexityListener) ExitClassElementName(c *figscript.ClassElementNameContext) {}
-// func (l *ComplexityListener) ExitPrivateIdentifier(c *figscript.PrivateIdentifierContext) {}
-// func (l *ComplexityListener) ExitFormalParameterList(c *figscript.FormalParameterListContext) {}
-// func (l *ComplexityListener) ExitFormalParameterArg(c *figscript.FormalParameterArgContext) {}
-// func (l *ComplexityListener) ExitLastFormalParameterArg(c *figscript.LastFormalParameterArgContext) {}
-// func (l *ComplexityListener) ExitFunctionBody(c *figscript.FunctionBodyContext) {}
-// func (l *ComplexityListener) ExitSourceElements(c *figscript.SourceElementsContext) {}
-// func (l *ComplexityListener) ExitArrayLiteral(c *figscript.ArrayLiteralContext) {}
-// func (l *ComplexityListener) ExitElementList(c *figscript.ElementListContext) {}
-// func (l *ComplexityListener) ExitArrayElement(c *figscript.ArrayElementContext) {}
-// func (l *ComplexityListener) ExitPropertyExpressionAssignment(c *figscript.PropertyExpressionAssignmentContext) {}
-// func (l *ComplexityListener) ExitComputedPropertyExpressionAssignment(c *figscript.ComputedPropertyExpressionAssignmentContext) {}
-// func (l *ComplexityListener) ExitFunctionProperty(c *figscript.FunctionPropertyContext) {}
-// func (l *ComplexityListener) ExitPropertyGetter(c *figscript.PropertyGetterContext) {}
-// func (l *ComplexityListener) ExitPropertySetter(c *figscript.PropertySetterContext) {}
-// func (l *ComplexityListener) ExitPropertyShorthand(c *figscript.PropertyShorthandContext) {}
-// func (l *ComplexityListener) ExitPropertyName(c *figscript.PropertyNameContext) {}
-// func (l *ComplexityListener) ExitArguments(c *figscript.ArgumentsContext) {}
-// func (l *ComplexityListener) ExitArgument(c *figscript.ArgumentContext) {}
-// func (l *ComplexityListener) ExitExpressionSequence(c *figscript.ExpressionSequenceContext) {}
-// func (l *ComplexityListener) ExitTemplateStringExpression(c *figscript.TemplateStringExpressionContext) {}
-// func (l *ComplexityListener) ExitTernaryExpression(c *figscript.TernaryExpressionContext) {}
-// func (l *ComplexityListener) ExitLogicalAndExpression(c *figscript.LogicalAndExpressionContext) {}
-// func (l *ComplexityListener) ExitPowerExpression(c *figscript.PowerExpressionContext) {}
-// func (l *ComplexityListener) ExitPreIncrementExpression(c *figscript.PreIncrementExpressionContext) {}
-// func (l *ComplexityListener) ExitObjectLiteralExpression(c *figscript.ObjectLiteralExpressionContext) {}
-// func (l *ComplexityListener) ExitMetaExpression(c *figscript.MetaExpressionContext) {}
-// func (l *ComplexityListener) ExitInExpression(c *figscript.InExpressionContext) {}
-// func (l *ComplexityListener) ExitLogicalOrExpression(c *figscript.LogicalOrExpressionContext) {}
-// func (l *ComplexityListener) ExitOptionalChainExpression(c *figscript.OptionalChainExpressionContext) {}
-// func (l *ComplexityListener) ExitNotExpression(c *figscript.NotExpressionContext) {}
-// func (l *ComplexityListener) ExitPreDecreaseExpression(c *figscript.PreDecreaseExpressionContext) {}
-// func (l *ComplexityListener) ExitArgumentsExpression(c *figscript.ArgumentsExpressionContext) {}
-// func (l *ComplexityListener) ExitAwaitExpression(c *figscript.AwaitExpressionContext) {}
-// func (l *ComplexityListener) ExitThisExpression(c *figscript.ThisExpressionContext) {}
-// func (l *ComplexityListener) ExitFunctionExpression(c *figscript.FunctionExpressionContext) {}
-// func (l *ComplexityListener) ExitUnaryMinusExpression(c *figscript.UnaryMinusExpressionContext) {}
 func (l *FigScriptComplexityListener) ExitAssignmentExpression(c *figscript.AssignmentExpressionContext) {
 	l.setAssignee(nil)
 }
-
-// func (l *ComplexityListener) ExitPostDecreaseExpression(c *figscript.PostDecreaseExpressionContext) {}
-// func (l *ComplexityListener) ExitTypeofExpression(c *figscript.TypeofExpressionContext) {}
-// func (l *ComplexityListener) ExitInstanceofExpression(c *figscript.InstanceofExpressionContext) {}
-// func (l *ComplexityListener) ExitUnaryPlusExpression(c *figscript.UnaryPlusExpressionContext) {}
-// func (l *ComplexityListener) ExitDeleteExpression(c *figscript.DeleteExpressionContext) {}
-// func (l *ComplexityListener) ExitImportExpression(c *figscript.ImportExpressionContext) {}
-// func (l *ComplexityListener) ExitEqualityExpression(c *figscript.EqualityExpressionContext) {}
-// func (l *ComplexityListener) ExitBitXOrExpression(c *figscript.BitXOrExpressionContext) {}
-// func (l *ComplexityListener) ExitSuperExpression(c *figscript.SuperExpressionContext) {}
-// func (l *ComplexityListener) ExitMultiplicativeExpression(c *figscript.MultiplicativeExpressionContext) {}
-// func (l *ComplexityListener) ExitBitShiftExpression(c *figscript.BitShiftExpressionContext) {}
-// func (l *ComplexityListener) ExitParenthesizedExpression(c *figscript.ParenthesizedExpressionContext) {}
-// func (l *ComplexityListener) ExitAdditiveExpression(c *figscript.AdditiveExpressionContext) {}
-// func (l *ComplexityListener) ExitRelationalExpression(c *figscript.RelationalExpressionContext) {}
-// func (l *ComplexityListener) ExitPostIncrementExpression(c *figscript.PostIncrementExpressionContext) {}
-// func (l *ComplexityListener) ExitYieldExpression(c *figscript.YieldExpressionContext) {}
-// func (l *ComplexityListener) ExitBitNotExpression(c *figscript.BitNotExpressionContext) {}
-// func (l *ComplexityListener) ExitNewExpression(c *figscript.NewExpressionContext) {}
-// func (l *ComplexityListener) ExitLiteralExpression(c *figscript.LiteralExpressionContext) {}
-// func (l *ComplexityListener) ExitArrayLiteralExpression(c *figscript.ArrayLiteralExpressionContext) {}
-// func (l *ComplexityListener) ExitMemberDotExpression(c *figscript.MemberDotExpressionContext) {}
-// func (l *ComplexityListener) ExitClassExpression(c *figscript.ClassExpressionContext) {}
-// func (l *ComplexityListener) ExitMemberIndexExpression(c *figscript.MemberIndexExpressionContext) {}
-// func (l *ComplexityListener) ExitIdentifierExpression(c *figscript.IdentifierExpressionContext) {}
-// func (l *ComplexityListener) ExitBitAndExpression(c *figscript.BitAndExpressionContext) {}
-// func (l *ComplexityListener) ExitBitOrExpression(c *figscript.BitOrExpressionContext) {}
-// func (l *ComplexityListener) ExitAssignmentOperatorExpression(c *figscript.AssignmentOperatorExpressionContext) {}
-// func (l *ComplexityListener) ExitVoidExpression(c *figscript.VoidExpressionContext) {}
-// func (l *ComplexityListener) ExitCoalesceExpression(c *figscript.CoalesceExpressionContext) {}
-// func (l *ComplexityListener) ExitInitializer(c *figscript.InitializerContext) {}
-// func (l *ComplexityListener) ExitAssignable(c *figscript.AssignableContext) {}
-// func (l *ComplexityListener) ExitObjectLiteral(c *figscript.ObjectLiteralContext) {}
-// func (l *ComplexityListener) ExitNamedFunction(c *figscript.NamedFunctionContext) {}
 func (l *FigScriptComplexityListener) ExitAnonymousFunctionDecl(c *figscript.AnonymousFunctionDeclContext) {
 	l.popScope(c)
 }
-
-// func (l *ComplexityListener) ExitArrowFunction(c *figscript.ArrowFunctionContext) {}
-// func (l *ComplexityListener) ExitArrowFunctionParameters(c *figscript.ArrowFunctionParametersContext) {}
 func (l *FigScriptComplexityListener) ExitArrowFunctionBody(c *figscript.ArrowFunctionBodyContext) {
 	if c.FunctionBody() != nil {
 		l.popScope(c)
 	}
 }
-
-// func (l *ComplexityListener) ExitAssignmentOperator(c *figscript.AssignmentOperatorContext) {}
-// func (l *ComplexityListener) ExitLiteral(c *figscript.LiteralContext) {}
-// func (l *ComplexityListener) ExitTemplateStringLiteral(c *figscript.TemplateStringLiteralContext) {}
-// func (l *ComplexityListener) ExitTemplateStringAtom(c *figscript.TemplateStringAtomContext) {}
-// func (l *ComplexityListener) ExitNumericLiteral(c *figscript.NumericLiteralContext) {}
-// func (l *ComplexityListener) ExitBigintLiteral(c *figscript.BigintLiteralContext) {}
-// func (l *ComplexityListener) ExitGetter(c *figscript.GetterContext) {}
-// func (l *ComplexityListener) ExitSetter(c *figscript.SetterContext) {}
-// func (l *ComplexityListener) ExitIdentifierName(c *figscript.IdentifierNameContext) {}
-// func (l *ComplexityListener) ExitIdentifier(c *figscript.IdentifierContext) {}
-// func (l *ComplexityListener) ExitReservedWord(c *figscript.ReservedWordContext) {}
-// func (l *ComplexityListener) ExitKeyword(c *figscript.KeywordContext) {}
-// func (l *ComplexityListener) ExitLet_(c *figscript.Let_Context) {}
-// func (l *ComplexityListener) ExitEos(c *figscript.EosContext) {}

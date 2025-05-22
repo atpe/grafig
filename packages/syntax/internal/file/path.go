@@ -12,18 +12,24 @@ const (
 	Output = "output"
 )
 
-func SinglePathArg(cmd *cobra.Command, args []string) error {
+func SingleGlobArg(cmd *cobra.Command, args []string) error {
 	if err := cobra.MinimumNArgs(1)(cmd, args); err != nil {
 		return err
 	}
 
-	files, err := filepath.Glob(args[0])
+	_, err := IsGlob(args[0])
+
+	return err
+}
+
+func IsGlob(str string) (bool, error) {
+	files, err := filepath.Glob(str)
 	if err != nil {
-		return fmt.Errorf("invalid path specified: %s", args[0])
+		return false, fmt.Errorf("invalid path specified: %s", str)
 	}
 	if len(files) == 0 {
-		return fmt.Errorf("no files found")
+		return false, fmt.Errorf("no files found")
 	}
 
-	return nil
+	return true, nil
 }

@@ -1,11 +1,11 @@
 import { describe, expect, jest, test } from '@jest/globals'
-import { Renderer } from './Renderer'
-import { ContextRenderFunction } from './context'
+import { Renderer } from './renderer'
+import { ContextRenderer } from './context'
 
 describe('Renderer()', () => {
   describe('when given context render function', () => {
     // arrange
-    const fn = jest.fn<ContextRenderFunction>()
+    const fn = jest.fn<ContextRenderer>()
 
     // act
     const sut = Renderer(fn)
